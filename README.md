@@ -27,13 +27,15 @@ No prior experience with Apache Kafka or Kafka Streams required.
 ## Topic 2: Apache Kafka for Developers
 
 - Developing Kafka Applications
-- Consumer API
-  - TopicPartition, ConsumerRecord, et al.
-- Producer API
+- [Consumer API](https://kafka.apache.org/20/javadoc/org/apache/kafka/clients/consumer/Consumer.html)
+  - [KafkaConsumer](https://kafka.apache.org/20/javadoc/org/apache/kafka/clients/consumer/KafkaConsumer.html), [TopicPartition](https://kafka.apache.org/20/javadoc/org/apache/kafka/common/TopicPartition.html), [ConsumerRecord](https://kafka.apache.org/20/javadoc/org/apache/kafka/clients/consumer/ConsumerRecord.html)
+- [Producer API](http://kafka.apache.org/20/javadoc/org/apache/kafka/clients/producer/Producer.html)
+  - [KafkaProducer](http://kafka.apache.org/20/javadoc/org/apache/kafka/clients/producer/KafkaProducer.html)
 
 ## Topic 3: Apache Kafka for Developers (Advanced Concepts)
 
-- ConsumerRebalanceListener
+- [ConsumerRebalanceListener](https://kafka.apache.org/20/javadoc/org/apache/kafka/clients/consumer/ConsumerRebalanceListener.html)
+- [AdminClient](http://kafka.apache.org/20/javadoc/org/apache/kafka/clients/admin/AdminClient.html)
 
 ## Topic 4: Kafka Streams (Scala API)
 

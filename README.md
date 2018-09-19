@@ -40,6 +40,8 @@ No prior experience with Apache Kafka or Kafka Streams required.
 ## Topic 4: Kafka Streams (Scala API)
 
 - Introduction to Kafka Streams (Core Concepts)
+  - StreamsBuilder -- High-Level Stream Processing DSL
+  - Topology -- Processor API
   - StreamsConfig and Important Configuration Properties
 - Exercise: Developing Your First Kafka Streams Application (Scala)
   - Scala API for Kafka Streams

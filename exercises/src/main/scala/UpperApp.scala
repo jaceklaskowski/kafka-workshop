@@ -25,6 +25,7 @@ object UpperApp extends App {
     .to("output")
 
   val appId = this.getClass.getSimpleName.replace("$", "")
-  val ks = new KafkaStreams(builder.build, Utils.getStreamsProperties(appId))
+  val props = Utils.getStreamsProperties(appId)
+  val ks = new KafkaStreams(builder.build, props)
   ks.start
 }

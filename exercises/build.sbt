@@ -10,6 +10,7 @@ val kafkaVersion = "2.0.0"
 libraryDependencies += "org.apache.kafka" % "kafka-streams" % kafkaVersion
 
 // Scala API for Kafka Streams
+// Note two percent signs (%%) to encode Scala version
 libraryDependencies += "org.apache.kafka" %% "kafka-streams-scala" % kafkaVersion
 
 // Logging (Backend)

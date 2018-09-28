@@ -1,3 +1,4 @@
+import helpers.Utils
 import org.apache.kafka.streams.kstream.Produced
 
 object GroupByCountProcessor extends App {

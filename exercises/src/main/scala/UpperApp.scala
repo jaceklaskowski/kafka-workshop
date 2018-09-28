@@ -1,5 +1,6 @@
 import java.util
 
+import helpers.Utils
 import org.apache.kafka.common.serialization.Serdes.StringSerde
 import org.apache.kafka.streams.{KafkaStreams, KeyValue}
 import org.apache.kafka.streams.kstream.{KStream, KeyValueMapper}

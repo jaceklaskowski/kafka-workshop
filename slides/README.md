@@ -4,6 +4,7 @@
 
 ## Table of Contents
 
+1. (Polish Edition)[Apache Kafka Workshop (2 days)](http://blog.jaceklaskowski.pl/kafka-workshop/slides/00-agenda-2-days-Apache-Kafka-Workshop-PL.html) &mdash; taught in [Warsaw, Poland](https://en.wikipedia.org/wiki/Warsaw)
 1. [Apache Kafka and Kafka Streams (2 days)](http://blog.jaceklaskowski.pl/kafka-workshop/slides/00-agenda-2-days-Kafka-and-Kafka-Streams-Workshop.html) &mdash; taught in [Warsaw, Poland](https://en.wikipedia.org/wiki/Warsaw)
 
 ## Contact The Author

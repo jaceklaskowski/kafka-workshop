@@ -1,0 +1,268 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Apache Kafka Workshop | 2 days | Warsaw Poland 17-19.10.2018</title>
+
+    <meta name="description" content="Apache Kafka Workshop | 2 days | Warsaw Poland 17-19.10.2018">
+    <meta name="author" content="Jacek Laskowski">
+
+		<link rel="stylesheet" href="reveal.js/css/reveal.css">
+		<link rel="stylesheet" href="reveal.js/css/theme/beige.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="reveal.js/lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'reveal.js/css/print/pdf.css' : 'reveal.js/css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+
+        <section class="intro" data-transition="zoom" id="home">
+          <p>
+            <img width="17%" style="background:none; border:none; box-shadow:none;" data-src="images/kafka-logo.png">
+            <img width="8%" src="images/jacek_laskowski_20141201_512px.png" style="border: 0">
+          </p>
+          <h1 style="font-size: 3.27em;">Apache Kafka <br>Workshop <small>2 Days</small></h1>
+
+          <h4 style="font-size: smaller;"><a href="https://twitter.com/jaceklaskowski">@jaceklaskowski</a> / <a href="http://stackoverflow.com/users/1305344/jacek-laskowski">StackOverflow</a> / <a href="https://github.com/jaceklaskowski">GitHub</a><br />
+          Books: <a href="https://bit.ly/mastering-apache-kafka">Mastering Apache Kafka</a> / <a href="https://bit.ly/mastering-kafka-streams">Mastering Kafka Streams</a></h4>
+
+          <footer style="font-size: small;">&copy;<a href="https://medium.com/@jaceklaskowski">Jacek Laskowski</a> 2018 / <a href="https://twitter.com/jaceklaskowski">@JacekLaskowski</a> / jacek@japila.pl / Warsaw Poland 17-19.10.2018</footer>
+        </section>
+
+        <section>
+          <section id="speaker" style="font-size: 90%" data-markdown>
+            <textarea data-template>
+              <p>
+                <img width="12%" src="images/jacek_laskowski_20141201_512px.png" style="border: 0">
+              </p>
+              * **Jacek Laskowski** is an independent consultant
+
+              * Specializing in Spark, **Kafka**, **Kafka Streams**, Scala
+
+              * Development | Consulting | Training
+
+              * Among contributors to <a href="http://spark.apache.org/releases/spark-release-2-2-0.html#credits">Spark</a> (since <a href="http://spark.apache.org/releases/spark-release-1-6-0.html#credits">1.6.0</a>)
+
+              * Contact me at **jacek@japila.pl**
+
+              * Follow [@JacekLaskowski](https://twitter.com/jaceklaskowski) on twitter <br>for more Kafka, Kafka Streams and Spark
+
+              <footer style="font-size: small;">&copy;<a href="https://medium.com/@jaceklaskowski">Jacek Laskowski</a> 2018 / <a href="https://twitter.com/jaceklaskowski">@JacekLaskowski</a> / jacek@japila.pl</footer>
+            </textarea>
+          </section>
+          <section id="gitbooks">
+            <p>
+              <img width="12%" src="images/jacek_laskowski_20141201_512px.png" style="border: 0">
+            </p>
+              <p>Jacek is best known by his <b>Gitbooks</b>:</p>
+              <ol>
+                <li><a href="https://bit.ly/mastering-apache-spark">Mastering Apache Spark</a></li>
+                <li><a href="https://bit.ly/mastering-spark-sql">Mastering Spark SQL</a></li>
+                <li><a href="https://bit.ly/spark-structured-streaming">Spark Structured Streaming</a></li>
+                <li><a href="https://bit.ly/mastering-kafka-streams">Mastering Kafka Streams</a></li>
+                <li><a href="https://bit.ly/mastering-apache-kafka">Apache Kafka Notebook</a></li>
+              </ol>
+
+              <footer style="font-size: small;">&copy;<a href="https://medium.com/@jaceklaskowski">Jacek Laskowski</a> 2018 / <a href="https://twitter.com/jaceklaskowski">@JacekLaskowski</a> / jacek@japila.pl</footer>
+          </section>
+          <section id="stackoverflow">
+            <div style="text-align: center">
+              <p>
+                <a href="http://stackoverflow.com/users/1305344/jacek-laskowski">StackOverflow</a>
+              </p>
+              <p>
+                <img width="40%" src="images/jaceklaskowski-stackoverflow-stats.png" style="border: 0">
+              </p>
+            </div>
+
+            <footer style="font-size: small;">&copy;<a href="https://medium.com/@jaceklaskowski">Jacek Laskowski</a> 2018 / <a href="https://twitter.com/jaceklaskowski">@JacekLaskowski</a> / jacek@japila.pl</footer>
+          </section>
+        </section>
+
+        <section id="goal" data-markdown>
+          <textarea data-template>
+            # Goal
+
+            Building a practical and hands-on experience in<br />
+            <b><span style="font-size: 160%">Apache Kafka</span></b>
+
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <footer style="font-size: small;">&copy;<a href="https://medium.com/@jaceklaskowski">Jacek Laskowski</a> 2018 / <a href="https://twitter.com/jaceklaskowski">@JacekLaskowski</a> / jacek@japila.pl</footer>
+          </textarea>
+        </section>
+
+        <section>
+          <section id="agenda" data-markdown>
+            <textarea data-template>
+              ## Agenda
+
+              * [Day 1](#/day1) - Apache Kafka
+              * [Day 2](#/day2) - Apache Kafka cntd.
+
+              <br />
+              <br />
+              <br />
+              <br />
+              <footer style="font-size: small;">&copy;<a href="https://medium.com/@jaceklaskowski">Jacek Laskowski</a> 2018 / <a href="https://twitter.com/jaceklaskowski">@JacekLaskowski</a> / jacek@japila.pl</footer>
+            </textarea>
+          </section>
+
+          <section id="day1" data-markdown>
+            <textarea data-template>
+              ## Day 1 - Apache Kafka
+
+              * Architektura Apache Kafka
+              * Zagubione zdarzenia w kafce: sytuacje awaryjne
+              * Co robić kiedy kafka nie działa?
+
+              <br />
+              <br />
+              <br />
+              <br />
+              <footer style="font-size: small;">&copy;<a href="https://medium.com/@jaceklaskowski">Jacek Laskowski</a> 2018 / <a href="https://twitter.com/jaceklaskowski">@JacekLaskowski</a> / jacek@japila.pl</footer>
+            </textarea>
+          </section>
+
+          <section id="day2" data-markdown>
+            <textarea data-template>
+              ## Day 2 - Apache Kafka cntd.
+
+              * Zarządzanie zmianą formatu wiadomości (Avro, testy kontraktu)
+              * Monitorowanie i administracja kafką
+              * Działanie z gwarancją „at-least-once” od strony konsumenta i producenta
+              * Projektowanie wiadomości do używania na kafce
+
+              <br />
+              <br />
+              <br />
+              <br />
+              <footer style="font-size: small;">&copy;<a href="https://medium.com/@jaceklaskowski">Jacek Laskowski</a> 2018 / <a href="https://twitter.com/jaceklaskowski">@JacekLaskowski</a> / jacek@japila.pl</footer>
+            </textarea>
+          </section>
+        </section>
+
+        <section>
+          <section id="prerequisities">
+            <h1>Prerequisities</h1>
+            <h4>Be prepared to get the most out of the workshop</h4>
+
+            <br /><br /><br /><br /><br />
+            <footer style="font-size: small;">&copy;<a href="https://medium.com/@jaceklaskowski">Jacek Laskowski</a> 2018 / @jaceklaskowski / jacek@japila.pl</footer>
+          </section>
+          <section id="to-be-installed" data-markdown>
+            <textarea data-template>
+              ## Prerequisities / To Be Installed
+
+              * Linux or macOS recommended
+              * [Java Platform, Standard Edition (Java SE) 8](http://www.oracle.com/technetwork/java/javase/downloads/index.html)
+              * [IntelliJ IDEA](https://www.jetbrains.com/idea/download/) Community Edition with the **Scala plugin**
+              * [sbt](http://www.scala-sbt.org/download.html)
+
+              <br /><br /><br /><br /><br /><br /><br />
+              <footer style="font-size: small;">&copy;<a href="https://medium.com/@jaceklaskowski">Jacek Laskowski</a> 2018 / @jaceklaskowski / jacek@japila.pl</footer>
+            </textarea>
+          </section>
+          <section id="to-be-downloaded" data-markdown>
+            <textarea data-template>
+              ## Prerequisities / To Be Downloaded
+
+              * The latest version of [Apache Kafka](http://kafka.apache.org/downloads)
+
+              <br /><br /><br /><br /><br />
+              <footer style="font-size: small;">&copy;<a href="https://medium.com/@jaceklaskowski">Jacek Laskowski</a> 2018 / @jaceklaskowski / jacek@japila.pl</footer>
+            </textarea>
+          </section>
+        </section>
+
+        <section>
+          <section id="in-class">
+            <h1>"In-Class" Preparations</h1>
+            <h4>Make Instructor's Life Easier. Thanks!</h4>
+
+            <br /><br /><br /><br /><br />
+            <footer style="font-size: small;">&copy;<a href="https://medium.com/@jaceklaskowski">Jacek Laskowski</a> 2018 / @jaceklaskowski / jacek@japila.pl</footer>
+          </section>
+          <section id="introduce-yourself" data-markdown>
+            <textarea data-template>
+              ## Introduce Yourself
+
+              * First name
+              * What do you expect from the workshop?
+
+              <br /><br /><br /><br /><br />
+              <footer style="font-size: small;">&copy;<a href="https://medium.com/@jaceklaskowski">Jacek Laskowski</a> 2018 / @jaceklaskowski / jacek@japila.pl</footer>
+            </textarea>
+          </section>
+          <section id="breaks" data-markdown>
+            <textarea data-template>
+              ## Breaks
+
+              * Breaks roughly every **45-60 mins**
+
+              <br /><br /><br /><br /><br />
+              <footer style="font-size: small;">&copy;<a href="https://medium.com/@jaceklaskowski">Jacek Laskowski</a> 2018 / @jaceklaskowski / jacek@japila.pl</footer>
+            </textarea>
+          </section>
+        </section>
+
+        <section id="questions" data-markdown>
+          <textarea data-template>
+            # Questions?
+
+            * Read <a href="https://jaceklaskowski.gitbooks.io/apache-kafka">Mastering Apache Kafka</a>
+
+            * Read <a href="https://jaceklaskowski.gitbooks.io/mastering-kafka-streams/">Mastering Kafka Streams</a> gitbook
+
+            * Follow <a href="https://twitter.com/jaceklaskowski">@jaceklaskowski</a> on twitter
+
+            * Upvote <a href="http://stackoverflow.com/users/1305344/jacek-laskowski">my questions and answers</a> on StackOverflow
+
+            <br /><br />
+            <footer style="font-size: small;">&copy;<a href="https://medium.com/@jaceklaskowski">Jacek Laskowski</a> 2018 / @jaceklaskowski / jacek@japila.pl</footer>
+          </textarea>
+        </section>
+      </div>
+		</div>
+
+		<script src="reveal.js/lib/js/head.min.js"></script>
+		<script src="reveal.js/js/reveal.js"></script>
+
+		<script>
+			// More info about config & dependencies:
+			// - https://github.com/hakimel/reveal.js#configuration
+			// - https://github.com/hakimel/reveal.js#dependencies
+			Reveal.initialize({
+        width: "100%",
+        height: "100%",
+        margin: 0,
+        minScale: 1,
+        maxScale: 1,
+        history: true,
+				dependencies: [
+					{ src: 'reveal.js/plugin/markdown/marked.js' },
+					{ src: 'reveal.js/plugin/markdown/markdown.js' },
+					{ src: 'reveal.js/plugin/notes/notes.js', async: true },
+					{ src: 'reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]
+			});
+      Reveal.configure({ slideNumber: 'c/t' });
+		</script>
+	</body>
+</html>

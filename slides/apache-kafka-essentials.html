@@ -1,0 +1,282 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+
+    <title>The Elements of Apache Kafka</title>
+
+    <meta name="description" content="The Elements of Apache Kafka">
+    <meta name="author" content="Jacek Laskowski">
+
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+    <link rel="stylesheet" href="css/reveal.css">
+    <link rel="stylesheet" href="css/theme/beige.css" id="theme">
+
+    <!-- Code syntax highlighting -->
+    <link rel="stylesheet" href="lib/css/zenburn.css">
+
+    <!-- Printing and PDF exports -->
+    <script>
+        var link = document.createElement( 'link' );
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+        document.getElementsByTagName( 'head' )[0].appendChild( link );
+    </script>
+
+    <!-- https://github.com/hakimel/reveal.js/issues/174 -->
+    <style>
+      .slides .header {
+        position: absolute;
+        top: 0px;
+        right: 0px;
+      }
+      .slides .footer {
+        position: absolute;
+        bottom: 0px;
+        left: 35%;
+      }
+    </style>
+    <!--[if lt IE 9]>
+    <script src="lib/js/html5shiv.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+    <div class="reveal">
+
+      <div class="slides">
+
+        <div class="footer">
+          <small>Copyright ©2017 Jacek Laskowski</small>
+        </div>
+
+        <section class="intro" data-transition="zoom">
+          <p>
+            <img width="20%" style="background:none; border:none; box-shadow:none;" data-src="images/kafka-logo.png">
+            <img width="10%" src="images/jacek_laskowski_20141201_512px.png" style="border: 0">
+          </p>
+          <h1>The Elements of</h1>
+          <h1>Apache Kafka</h1>
+          <h4><a href="https://twitter.com/jaceklaskowski">@jaceklaskowski</a> / <a href="http://stackoverflow.com/users/1305344/jacek-laskowski">StackOverflow</a> / <a href="https://github.com/jaceklaskowski">GitHub</a><br />
+          Gitbooks: <a href="https://jaceklaskowski.gitbooks.io/apache-kafka">Apache Kafka Gitbook</a> / <a href="http://bit.ly/spark-structured-streaming">Spark Structured Streaming</a></h4>
+        </section>
+
+        <section id="agenda" data-markdown>
+          <script type="text/template">
+            ## Agenda
+
+            1. [Introduction](#/intro)
+            1. [Concepts](#/concepts)
+            1. [Features of Kafka](#/kafka-features)
+            1. [Exercises](#/exercises)
+          </script>
+        </section>
+
+        <section>
+          <section id="intro" data-markdown>
+            <script type="text/template">
+              ## Introduction
+
+              **Apache Kafka** is an open source **publish-subscribe messaging system** based on the concept of a **distributed commit log**.
+
+              **Messages** (aka **records**) in Kafka are distributed, stored durably and in order, and can be read deterministically.
+            </script>
+          </section>
+          <section>
+            <h2>Kafka Producers and Consumers</h2>
+            <img style="background:none; border:none; box-shadow:none;" data-src="images/kafka-producers-topics-consumers.png">
+            <small>From <a href="https://www.infoq.com/articles/apache-kafka">Apache Kafka: Next Generation Distributed Messaging System</a></small>
+          </section>
+          <section>
+            <h2>Kafka Topics and Partitions</h2>
+            <img width="70%" style="background:none; border:none; box-shadow:none;" data-src="images/kafka-topic-anatomy.png">
+            <br>
+            <small>From <a href="https://kafka.apache.org/documentation">Official Documentation of Apache Kafka</a></small>
+          </section>
+          <section>
+            <h2>Kafka Producers and Consumers <small>(cntd)</small></h2>
+            <img width="70%" style="background:none; border:none; box-shadow:none;" data-src="images/kafka-producers-consumers.png">
+            <small>From <a href="https://kafka.apache.org/documentation">Official Documentation of Apache Kafka</a></small>
+          </section>
+        </section>
+
+        <section>
+          <section id="concepts" data-markdown>
+            <script type="text/template">
+              # Kafka Concepts
+            </script>
+          </section>
+          <section>
+            <h2>Concepts (1 of 3)</h2>
+            <ol>
+              <li><b>Message</b> (<i>record</i>) is the unit of data in Kafka
+                <ul>
+                  <li>Array of bytes in any format (with no meaning to Kafka)</li>
+                  <li><a href="http://avro.apache.org/">Apache Avro</a> often used</li>
+                </ul>
+              </li>
+              <li>Messages are categorized into <b>topics</b> (<i>table</i> or <i>directory</i>)</li>
+              <li>Topics are made up of one or many <b>partitions</b>
+                <ul>
+                  <li>A partition is a single log (and hence <i>distributed commit log</i>)</li>
+                  <li>Ordered immutable sequence of records</li>
+                  <li>Messages written to partitions in an append-only fashion</li>
+                  <li>Messages read from beginning to end in order</li>
+                  <li>Partitions can be hosted on different servers</li>
+                </ul>
+              </li>
+            </ol>
+          </section>
+          <section>
+            <h2>Kafka Partitions</h2>
+            <img width="150%" style="background:none; border:none; box-shadow:none;" data-src="images/kafka-partitions.png">
+            <br>
+            <small>From <a href="https://www.safaribooksonline.com/library/view/kafka-the-definitive/9781491936153/">Kafka: The Definitive Guide</a></small>
+          </section>
+          <section>
+            <h2>Concepts (2 of 3)</h2>
+            <ol>
+              <li><b>Kafka Broker</b> is a Kafka server.
+                <ul>
+                  <li>Receives messages, assigns offsets, and commits messages to storage on disk</li>
+                </ul>
+              </li>
+              <li><b>Kafka Cluster</b> consists of one or more brokers</li>
+              <li><b>Kafka Producers</b> publish messages to one or more topics
+                <ul>
+                  <li>May or may not have preference for partitions</li>
+                </ul>
+              </li>
+              <li><b>Kafka Consumers</b> read messages from one or more topics
+                <ul>
+                  <li>Subscribe to topics</li>
+                  <li>Read messages in the order they were produced</li>
+                </ul>
+              </li>
+              <li><b>Offset</b> is a unique sequential numerical position of a message in a partition in a topic</li>
+            </ol>
+          </section>
+          <section>
+            <h2>Concepts (3 of 3)</h2>
+            <ol>
+              <li><b>Retention</b> of messages in topics is how long messages are stored in topics.
+                <ul>
+                  <li><i>Durable message retention</i></li>
+                  <li>For some period of time, e.g. 7 days</li>
+                  <li>Until a topic reaches a certain size in bytes, e.g. 1 gigabyte</li>
+                </ul>
+              </li>
+              <li>Once these limits are reached, messages are expired and deleted.</li>
+              <li>Can be selected on a per-topic basis.</li>
+              <li><b>ZooKeeper</b> coordinates brokers</li>
+            </ol>
+          </section>
+        </section>
+
+        <section id="kafka-features">
+          <h2>Features of Kafka</h2>
+          <ol>
+            <li>Thousands of Producers</li>
+            <li>Thousand of Consumers</li>
+            <li>Client Independence</li>
+            <li>High Throughput</li>
+            <li>Message Persistence</li>
+            <li>Disk-based Retention</li>
+            <li>Scalability</li>
+            <li>High Performance</li>
+          </ol>
+        </section>
+
+        <section>
+          <section id="exercises" data-markdown>
+            <script type="text/template">
+              # Exercises
+            </script>
+          </section>
+          <section id="exercise-setting-up-kafka-cluster" data-markdown>
+            <script type="text/template">
+              ## Exercise &mdash; Setting Up Kafka Cluster
+
+              1. Setting up a multiple-broker single-node Kafka cluster
+                1. Start ZooKeeper and Kafka servers
+                1. Create Topic
+              1. Switch to (Mastering) Apache Kafka Gitbook
+                * [Starting Kafka Broker](https://jaceklaskowski.gitbooks.io/apache-kafka/content/kafka-broker.html#starting-broker)
+                * [Kafka Tools](https://jaceklaskowski.gitbooks.io/apache-kafka/content/kafka-tools.html)
+            </script>
+          </section>
+        </section>
+
+        <section id="recap" data-markdown>
+          <script type="text/template">
+            ## Recap
+
+            1. [Introduction](#/intro)
+            1. [Concepts](#/concepts)
+            1. [Features of Kafka](#/kafka-features)
+            1. [Exercises](#/exercises)
+          </script>
+        </section>
+
+        <section id="questions" style="text-align: left" data-markdown>
+          <script type="text/template">
+            # Questions?
+
+              * Read [Apache Kafka Gitbook](https://jaceklaskowski.gitbooks.io/apache-kafka)
+              * Read [Spark Structured Streaming Gitbook](http://bit.ly/spark-structured-streaming)
+              * Follow [@jaceklaskowski](https://twitter.com/jaceklaskowski) on twitter
+              * Upvote [my questions and answers on StackOverflow](http://stackoverflow.com/users/1305344/jacek-laskowski)
+              * Use [Jacek's code at GitHub](https://github.com/jaceklaskowski)
+              * Read [blog posts on Medium](https://medium.com/@jaceklaskowski)
+              * Upvote [my answers on Quora](https://www.quora.com/profile/Jacek-Laskowski)
+              * Connect on [LinkedIn](https://www.linkedin.com/in/jaceklaskowski/)
+              * Visit [Jacek Laskowski's blog](https://blog.jaceklaskowski.pl)
+          </script>
+        </section>
+      </div>
+    </div>
+
+    <script src="lib/js/head.min.js"></script>
+    <script src="js/reveal.js"></script>
+
+    <script>
+
+        // Full list of configuration options available at:
+        // https://github.com/hakimel/reveal.js#configuration
+        Reveal.initialize({
+            controls: true,
+            progress: true,
+            history: true,
+            center: true,
+
+            transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+            // Optional reveal.js plugins
+            dependencies: [
+                { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+                { src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                { src: 'plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+                { src: 'plugin/zoom-js/zoom.js', async: true },
+                { src: 'plugin/notes/notes.js', async: true }
+            ]
+        });
+
+    </script>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-45999426-3', 'auto');
+      ga('send', 'pageview');
+
+    </script>
+  </body>
+</html>

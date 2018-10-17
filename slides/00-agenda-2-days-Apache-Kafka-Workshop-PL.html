@@ -66,16 +66,20 @@
             <p>
               <img width="12%" src="images/jacek_laskowski_20141201_512px.png" style="border: 0">
             </p>
+            <div style="text-align: center">
               <p>Jacek is best known by his <b>Gitbooks</b>:</p>
-              <ol>
-                <li><a href="https://bit.ly/mastering-apache-spark">Mastering Apache Spark</a></li>
-                <li><a href="https://bit.ly/mastering-spark-sql">Mastering Spark SQL</a></li>
-                <li><a href="https://bit.ly/spark-structured-streaming">Spark Structured Streaming</a></li>
-                <li><a href="https://bit.ly/mastering-kafka-streams">Mastering Kafka Streams</a></li>
-                <li><a href="https://bit.ly/mastering-apache-kafka">Apache Kafka Notebook</a></li>
-              </ol>
-
-              <footer style="font-size: small;">&copy;<a href="https://medium.com/@jaceklaskowski">Jacek Laskowski</a> 2018 / <a href="https://twitter.com/jaceklaskowski">@JacekLaskowski</a> / jacek@japila.pl</footer>
+              <p>
+                <ol>
+                  <li><a href="https://bit.ly/mastering-apache-spark">Mastering Apache Spark</a></li>
+                  <li><a href="https://bit.ly/mastering-spark-sql">Mastering Spark SQL</a></li>
+                  <li><a href="https://bit.ly/spark-structured-streaming">Spark Structured Streaming</a></li>
+                  <li><a href="https://bit.ly/mastering-kafka-streams">Mastering Kafka Streams</a></li>
+                  <li><a href="https://bit.ly/mastering-apache-kafka">Apache Kafka Notebook</a></li>
+                </ol>
+              </p>
+              <br>
+            </div>
+            <footer style="font-size: small;">&copy;<a href="https://medium.com/@jaceklaskowski">Jacek Laskowski</a> 2018 / <a href="https://twitter.com/jaceklaskowski">@JacekLaskowski</a> / jacek@japila.pl</footer>
           </section>
           <section id="stackoverflow">
             <div style="text-align: center">
@@ -96,9 +100,9 @@
             # Goal
 
             Building a practical and hands-on experience in<br />
+            administration and development of <br>
             <b><span style="font-size: 160%">Apache Kafka</span></b>
 
-            <br />
             <br />
             <br />
             <br />
@@ -113,8 +117,8 @@
             <textarea data-template>
               ## Agenda
 
-              * [Day 1](#/day1) - Apache Kafka
-              * [Day 2](#/day2) - Apache Kafka cntd.
+              * [Day 1](#/day1) - Essentials of **Apache Kafka**
+              * [Day 2](#/day2) - Using **Kafka Streams** For Developing Streaming Applications
 
               <br />
               <br />
@@ -126,9 +130,12 @@
 
           <section id="day1" data-markdown>
             <textarea data-template>
-              ## Day 1 - Apache Kafka
+              ## Day 1 - Essentials of Apache Kafka
 
-              * Architektura Apache Kafka
+              * Architecture of Apache Kafka
+                * Exercise: Installing and Running Apache Kafka
+                * Exercise: Setting Up Multi-Broker Kafka Cluster
+              * Kafka Configuration (Properties)
               * Zagubione zdarzenia w kafce: sytuacje awaryjne
               * Co robić kiedy kafka nie działa?
 
@@ -142,8 +149,11 @@
 
           <section id="day2" data-markdown>
             <textarea data-template>
-              ## Day 2 - Apache Kafka cntd.
+              ## Day 2 - Using Kafka Streams <br> For Developing Streaming Applications
 
+              * Introduction to Kafka Streams (Core Concepts)
+                * Exercise: Developing Your First Kafka Streams Application (Scala)
+              * Stateful Stream Processing in Kafka Streams
               * Zarządzanie zmianą formatu wiadomości (Avro, testy kontraktu)
               * Monitorowanie i administracja kafką
               * Działanie z gwarancją „at-least-once” od strony konsumenta i producenta

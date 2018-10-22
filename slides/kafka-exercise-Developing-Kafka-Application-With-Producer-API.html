@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>Apache Kafka Workshop | Exercise: Developing Kafka Application With Producer API</title>
+
+    <meta name="description" content="Apache Kafka Workshop | Exercise: Developing Kafka Application With Producer API">
+    <meta name="author" content="Jacek Laskowski">
+
+    <link rel="stylesheet" href="reveal.js/css/reveal.css">
+    <link rel="stylesheet" href="reveal.js/css/theme/beige.css" id="theme">
+
+    <!-- Theme used for syntax highlighting of code -->
+    <link rel="stylesheet" href="reveal.js/lib/css/zenburn.css">
+
+    <!-- Printing and PDF exports -->
+    <script>
+        var link = document.createElement( 'link' );
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = window.location.search.match( /print-pdf/gi ) ? 'reveal.js/css/print/pdf.css' : 'reveal.js/css/print/paper.css';
+        document.getElementsByTagName( 'head' )[0].appendChild( link );
+    </script>
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+
+        <section class="intro" data-transition="zoom" id="home">
+          <p>
+            <img width="17%" style="background:none; border:none; box-shadow:none;" data-src="images/kafka-logo.png">
+            <img width="8%" src="images/jacek_laskowski_20141201_512px.png" style="border: 0">
+          </p>
+          <h1 style="font-size: 100px;">Developing Kafka Application With Producer API</h1>
+          <h3>Exercise</h3>
+
+          <h4 style="font-size: smaller;"><a href="https://twitter.com/jaceklaskowski">@jaceklaskowski</a> / <a href="http://stackoverflow.com/users/1305344/jacek-laskowski">StackOverflow</a> / <a href="https://github.com/jaceklaskowski">GitHub</a><br />
+          Books: <a href="https://bit.ly/mastering-apache-kafka">Mastering Apache Kafka</a> / <a href="https://bit.ly/mastering-kafka-streams">Mastering Kafka Streams</a></h4>
+
+          <footer style="font-size: small;">&copy;<a href="https://medium.com/@jaceklaskowski">Jacek Laskowski</a> 2018 / <a href="https://twitter.com/jaceklaskowski">@JacekLaskowski</a> / jacek@japila.pl</footer>
+        </section>
+
+        <section id="exercise" data-markdown>
+          <textarea data-template>
+            ## Exercise: Developing Kafka Application With Producer API
+
+            1. Use [Producer](http://kafka.apache.org/20/javadoc/org/apache/kafka/clients/producer/Producer.html) API (with [KafkaProducer](http://kafka.apache.org/20/javadoc/org/apache/kafka/clients/producer/KafkaProducer.html))
+            1. Use <b>kafka-console-consumer</b> to verify that the message got through
+          </textarea>
+        </section>
+
+        <section id="exercise-sample-app">
+          <h2>Sample Application</h2>
+          <pre><code class="scala" data-trim data-noescape style="font-size: 20px;">
+            val props = new Properties()
+            props.put(
+              ProducerConfig.KEY_SERIALIZER_CLASS_CONFIG,
+              classOf[StringSerializer].getName)
+            props.put(
+              ProducerConfig.VALUE_SERIALIZER_CLASS_CONFIG,
+              classOf[StringSerializer].getName)
+            props.put(
+              ProducerConfig.BOOTSTRAP_SERVERS_CONFIG,
+              "localhost:9092,localhost:9192,localhost:9292")
+            val producer = new KafkaProducer[String, String](props)
+            val r = new ProducerRecord[String, String]("demo", 1, "1", "hello 1s")
+            producer.send(r)
+            producer.close()
+          </code></pre>
+        </section>
+
+        <section id="questions" data-markdown>
+          <textarea data-template>
+            # Questions?
+
+            * Read <a href="https://bit.ly/mastering-apache-kafka">Mastering Apache Kafka</a>
+            * Read <a href="https://bit.ly/mastering-kafka-streams">Mastering Kafka Streams</a>
+            * Follow <a href="https://twitter.com/jaceklaskowski">@jaceklaskowski</a> on twitter
+            * Upvote <a href="http://stackoverflow.com/users/1305344/jacek-laskowski">my questions and answers</a> on StackOverflow
+
+            <br /><br />
+            <footer style="font-size: small;">&copy;<a href="https://medium.com/@jaceklaskowski">Jacek Laskowski</a> 2018 / @jaceklaskowski / jacek@japila.pl</footer>
+          </textarea>
+        </section>
+      </div>
+    </div>
+
+    <script src="reveal.js/lib/js/head.min.js"></script>
+    <script src="reveal.js/js/reveal.js"></script>
+
+    <script>
+
+        // Full list of configuration options available at:
+        // https://github.com/hakimel/reveal.js#configuration
+        Reveal.initialize({
+            controls: true,
+            progress: true,
+            history: true,
+            center: true,
+
+            transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+            // Optional reveal.js plugins
+            dependencies: [
+                { src: 'reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+                { src: 'reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                { src: 'reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                { src: 'reveal.js/plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+                { src: 'reveal.js/plugin/zoom-js/zoom.js', async: true },
+                { src: 'reveal.js/plugin/notes/notes.js', async: true }
+            ]
+        });
+    </script>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-45999426-3', 'auto');
+      ga('send', 'pageview');
+
+    </script>
+  </body>
+</html>

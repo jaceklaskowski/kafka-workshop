@@ -4,9 +4,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-    <title>Apache Kafka Workshop | Exercise: Setting Up Multi-Broker Kafka Cluster</title>
+    <title>Apache Kafka Workshop | Exercise: Sending Records with Callback in Producer API</title>
 
-    <meta name="description" content="Apache Kafka Workshop | Exercise: Setting Up Multi-Broker Kafka Cluster">
+    <meta name="description" content="Apache Kafka Workshop | Exercise: Sending Records with Callback in Producer API">
     <meta name="author" content="Jacek Laskowski">
 
     <link rel="stylesheet" href="reveal.js/css/reveal.css">
@@ -33,7 +33,7 @@
             <img width="17%" style="background:none; border:none; box-shadow:none;" data-src="images/kafka-logo.png">
             <img width="8%" src="images/jacek_laskowski_20141201_512px.png" style="border: 0">
           </p>
-          <h1 style="font-size: 120px;">Setting Up Multi-Broker Kafka Cluster</h1>
+          <h1 style="font-size: 100px;">Sending Records with Callback in Producer API</h1>
           <h3>Exercise</h3>
 
           <h4 style="font-size: smaller;"><a href="https://twitter.com/jaceklaskowski">@jaceklaskowski</a> / <a href="http://stackoverflow.com/users/1305344/jacek-laskowski">StackOverflow</a> / <a href="https://github.com/jaceklaskowski">GitHub</a><br />
@@ -43,16 +43,28 @@
         </section>
 
         <section id="exercise" data-markdown>
-          <script type="text/template">
-            ## Exercise: Setting Up Kafka Cluster
+          <textarea data-template>
+            ## Exercise: Sending Records with Callback in Producer API
 
-            1. Setting up a multiple-broker single-node Kafka cluster
-              1. Start ZooKeeper and Kafka servers
-              1. Create Topic
-            1. Switch to (Mastering) Apache Kafka Gitbook
-              * [Starting Kafka Broker](https://jaceklaskowski.gitbooks.io/apache-kafka/content/kafka-broker.html#starting-broker)
-              * [Kafka Tools](https://jaceklaskowski.gitbooks.io/apache-kafka/content/kafka-tools.html)
-          </script>
+            1. Use [Producer.send](http://kafka.apache.org/20/javadoc/org/apache/kafka/clients/producer/KafkaProducer.html#send-org.apache.kafka.clients.producer.ProducerRecord-org.apache.kafka.clients.producer.Callback-) with a <b>Callback</b> object
+            1. send​(ProducerRecord<K,V> record, Callback callback)
+          </textarea>
+        </section>
+
+        <section id="exercise-sample-app">
+          <h2>Sample Application</h2>
+          <pre><code class="scala" data-trim data-noescape style="font-size: 20px;">
+            val callback = new Callback {
+              override def onCompletion(metadata: RecordMetadata, exception: Exception): Unit = {
+                if (exception != null) {
+                  println(s"Error while sending $metadata")
+                } else {
+                  println(s"Success: $metadata")
+                }
+              }
+            }
+            producer.send(r, callback)
+          </code></pre>
         </section>
 
         <section id="questions" data-markdown>

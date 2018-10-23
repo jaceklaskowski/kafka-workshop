@@ -1,6 +1,6 @@
 # Apache Kafka™ and Kafka Streams Workshop
 
-The repository contains the materials (i.e. agenda, [slides](slides), [exercises](exercises)) for [Apache Kafka™](https://kafka.apache.org/) and [Kafka Streams](https://kafka.apache.org/documentation/streams/) workshops led by Jacek Laskowski.
+The repository contains the materials (i.e. agenda, [slides](slides), [demos](demos), [exercises](exercises)) for [Apache Kafka™](https://kafka.apache.org/) and [Kafka Streams](https://kafka.apache.org/documentation/streams/) workshops led by Jacek Laskowski.
 
 The current version of the workshop may take up to 3 days and is intended for a variety of IT roles (e.g. software developers, administrators, operators and architects).
 
@@ -13,9 +13,9 @@ No prior experience with Apache Kafka or Kafka Streams required.
 - Architecture of Apache Kafka (Essentials, Core Concepts)
   - Kafka As Distributed Log
   - Brokers, Topics, Producers, Consumers, Partitions, Replicas, ISR
-- Exercise: Installing Apache Kafka
-- Exercise: Setting Up Multi-Broker Kafka Cluster
-- Exercise: Using Kafka with Docker
+- [Exercise: Installing and Running Kafka Broker](exercises/kafka-exercise-Installing-and-Running-Kafka-Broker.md)
+- [Exercise: Configuring Multi-Broker Kafka Cluster](exercises/kafka-exercise-Configuring-Multi-Broker-Kafka-Cluster.md)
+- [Exercise: Using Kafka with Docker](exercises/kafka-exercise-Using-Kafka-with-Docker.md)
 - Working with Topics
 - Kafka Configuration
   - Kafka Server and Scheduled Recurring Tasks

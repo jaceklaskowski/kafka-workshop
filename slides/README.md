@@ -10,10 +10,8 @@
 ### Day 1 &mdash; Apache Kafka
 
 1. [The Essentials of Apache Kafka](http://blog.jaceklaskowski.pl/kafka-workshop/slides/apache-kafka-essentials.html)
-1. Exercise: [Installing and Running Kafka Broker](http://blog.jaceklaskowski.pl/kafka-workshop/slides/kafka-exercise-installing-and-running-kafka-broker.html)
-1. Exercise: [Configuring Multi-Broker Kafka Cluster](http://blog.jaceklaskowski.pl/kafka-workshop/slides/kafka-exercise-configuring-multi-broker-kafka-cluster.html)
-1. Exercise: [Developing Kafka Application With Producer API](http://blog.jaceklaskowski.pl/kafka-workshop/slides/kafka-exercise-Developing-Kafka-Application-With-Producer-API.html)
-1. Exercise: [Sending Records with Callback in Producer API](http://blog.jaceklaskowski.pl/kafka-workshop/slides/kafka-exercise-Sending-Records-with-Callback-in-Producer-API.html)
+2. Exercise: [Developing Kafka Application With Producer API](http://blog.jaceklaskowski.pl/kafka-workshop/slides/kafka-exercise-Developing-Kafka-Application-With-Producer-API.html)
+3. Exercise: [Sending Records with Callback in Producer API](http://blog.jaceklaskowski.pl/kafka-workshop/slides/kafka-exercise-Sending-Records-with-Callback-in-Producer-API.html)
 
 ## Contact The Author
 

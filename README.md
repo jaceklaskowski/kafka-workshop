@@ -10,29 +10,31 @@ No prior experience with Apache Kafka or Kafka Streams required.
 
 ## Topic 1: Apache Kafka for Administrators
 
-- [The Essentials of Apache Kafka](http://blog.jaceklaskowski.pl/kafka-workshop/slides/apache-kafka-essentials.html) (Architecture and Core Concepts)
-  - Kafka As Distributed Log
-  - Brokers, Topics, Producers, Consumers, Partitions, Replicas, ISR
-- [Exercise: Installing and Running Kafka Broker](exercises/kafka-exercise-Installing-and-Running-Kafka-Broker.md)
-- [Exercise: Configuring Multi-Broker Kafka Cluster](exercises/kafka-exercise-Configuring-Multi-Broker-Kafka-Cluster.md)
-- [Exercise: Using Kafka with Docker](exercises/kafka-exercise-Using-Kafka-with-Docker.md)
-- Working with Topics
-- Kafka Configuration
-  - Kafka Server and Scheduled Recurring Tasks
-- Monitoring, Troubleshooting and Debugging
-  - KafkaMetricsGroup
-  - LogManager and /tmp/kafka-logs (Failure and Recovery)
-- Exercise: Using jconsole for monitoring
-- Internals of KafkaServer and Other Services
+1. [The Essentials of Apache Kafka](http://blog.jaceklaskowski.pl/kafka-workshop/slides/apache-kafka-essentials.html) (Architecture and Core Concepts)
+    1. [Exercise: Installing and Running Kafka Broker](exercises/kafka-exercise-Installing-and-Running-Kafka-Broker.md)
+    2. [Exercise: Configuring Multi-Broker Kafka Cluster](exercises/kafka-exercise-Configuring-Multi-Broker-Kafka-Cluster.md)
+    3. [Exercise: Using Kafka with Docker](exercises/kafka-exercise-Using-Kafka-with-Docker.md)
+2. Working with Topics
+    1. Replicas and In-Sync Replicas (ISRs)
+    2. Managing Topics with `kafka-topics` shell script
+3. Kafka Configuration
+    1. Kafka Server and Scheduled Recurring Tasks
+4. Monitoring, Troubleshooting and Debugging
+    1. KafkaMetricsGroup
+    2. LogManager and /tmp/kafka-logs (Failure and Recovery)
+    3. Exercise: Using jconsole for monitoring
+5. Internals of KafkaServer and Other Services
 
 ## Topic 2: Apache Kafka for Developers
 
-- Developing Kafka Applications
 - Kafka Producers and Consumers
+- Developing Kafka Applications Using Producer API
+  - [Producer API](http://kafka.apache.org/20/javadoc/org/apache/kafka/clients/producer/Producer.html)
+  - [KafkaProducer](http://kafka.apache.org/20/javadoc/org/apache/kafka/clients/producer/KafkaProducer.html)
+  - [Exercise: Developing Kafka Producer](exercises/kafka-exercise-Developing-Kafka-Producer.md)
+  - [Exercise: Sending Messages with Callback](exercises/kafka-exercise-Sending-Messages-with-Callback.md)
 - [Consumer API](https://kafka.apache.org/20/javadoc/org/apache/kafka/clients/consumer/Consumer.html)
   - [KafkaConsumer](https://kafka.apache.org/20/javadoc/org/apache/kafka/clients/consumer/KafkaConsumer.html), [TopicPartition](https://kafka.apache.org/20/javadoc/org/apache/kafka/common/TopicPartition.html), [ConsumerRecord](https://kafka.apache.org/20/javadoc/org/apache/kafka/clients/consumer/ConsumerRecord.html)
-- [Producer API](http://kafka.apache.org/20/javadoc/org/apache/kafka/clients/producer/Producer.html)
-  - [KafkaProducer](http://kafka.apache.org/20/javadoc/org/apache/kafka/clients/producer/KafkaProducer.html)
 
 ## Topic 3: Apache Kafka for Developers (Advanced Concepts)
 

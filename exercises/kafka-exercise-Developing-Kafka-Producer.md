@@ -11,7 +11,7 @@
 4. Write the code of a Kafka producer
     1. Name of the object: **KafkaProducerApp**
     2. Start with an empty `Properties` object and fill out the missing properties per exceptions at runtime
-    3. Use [ProducerConfig](https://kafka.apache.org/20/javadoc/org/apache/kafka/clients/producer/KafkaProducer.html) constants (not string values for properties)
+    3. Use [ProducerConfig](https://kafka.apache.org/20/javadoc/org/apache/kafka/clients/producer/ProducerConfig.html) constants (not string values for properties)
     4. Don't forget to `close` the producer (so the messages are actually sent out to the broker)
 5. Run the producer
     1. Use `kafka-console-consumer` to receive the messages

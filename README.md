@@ -13,10 +13,12 @@ No prior experience with Apache Kafka or Kafka Streams required.
 1. [The Essentials of Apache Kafka](http://blog.jaceklaskowski.pl/kafka-workshop/slides/apache-kafka-essentials.html) (Architecture and Core Concepts)
     1. [Exercise: Installing and Running Kafka Broker](exercises/kafka-exercise-Installing-and-Running-Kafka-Broker.md)
     2. [Exercise: Configuring Multi-Broker Kafka Cluster](exercises/kafka-exercise-Configuring-Multi-Broker-Kafka-Cluster.md)
-    3. [Exercise: Using Kafka with Docker](exercises/kafka-exercise-Using-Kafka-with-Docker.md)
+    3. [Exercise: Exploring Zookeeper](exercises/kafka-exercise-Exploring-Zookeeper.md)
+    4. [Exercise: Using Kafka with Docker](exercises/kafka-exercise-Using-Kafka-with-Docker.md)
 2. Working with Topics
     1. Replicas and In-Sync Replicas (ISRs)
     2. Managing Topics with `kafka-topics` shell script
+    3. [Exercise: Using kafka-topics with Multi-Broker Cluster](exercises/kafka-exercise-Using-kafka-topics-with-Multi-Broker-Cluster.md)
 3. Kafka Configuration
     1. Kafka Server and Scheduled Recurring Tasks
 4. Monitoring, Troubleshooting and Debugging
@@ -27,14 +29,22 @@ No prior experience with Apache Kafka or Kafka Streams required.
 
 ## Topic 2: Apache Kafka for Developers
 
-- Kafka Producers and Consumers
-- Developing Kafka Applications Using Producer API
-  - [Producer API](http://kafka.apache.org/20/javadoc/org/apache/kafka/clients/producer/Producer.html)
-  - [KafkaProducer](http://kafka.apache.org/20/javadoc/org/apache/kafka/clients/producer/KafkaProducer.html)
-  - [Exercise: Developing Kafka Producer](exercises/kafka-exercise-Developing-Kafka-Producer.md)
-  - [Exercise: Sending Messages with Callback](exercises/kafka-exercise-Sending-Messages-with-Callback.md)
-- [Consumer API](https://kafka.apache.org/20/javadoc/org/apache/kafka/clients/consumer/Consumer.html)
-  - [KafkaConsumer](https://kafka.apache.org/20/javadoc/org/apache/kafka/clients/consumer/KafkaConsumer.html), [TopicPartition](https://kafka.apache.org/20/javadoc/org/apache/kafka/common/TopicPartition.html), [ConsumerRecord](https://kafka.apache.org/20/javadoc/org/apache/kafka/clients/consumer/ConsumerRecord.html)
+1. Kafka Producers and Consumers
+2. Developing Kafka Producers
+    1. [Producer API](http://kafka.apache.org/20/javadoc/org/apache/kafka/clients/producer/Producer.html)
+    2. [KafkaProducer](http://kafka.apache.org/20/javadoc/org/apache/kafka/clients/producer/KafkaProducer.html)
+    3. [Exercise: Developing Kafka Producer](exercises/kafka-exercise-Developing-Kafka-Producer.md)
+    4. [Exercise: Sending Messages with Callback](exercises/kafka-exercise-Sending-Messages-with-Callback.md)
+    5. [Exercise: Using Custom Partitioner](exercises/kafka-exercise-Using-Custom-Partitioner.md)
+    6. [Exercise: Using Custom Keys](exercises/kafka-exercise-Using-Custom-Keys.md)
+    7. [Exercise: Message Delivery Acknowledgement](exercises/kafka-exercise-Message-Delivery-Acknowledgement.md)
+3. Developing Kafka Consumers
+    1. [Consumer API](https://kafka.apache.org/20/javadoc/org/apache/kafka/clients/consumer/Consumer.html)
+    2. [KafkaConsumer](https://kafka.apache.org/20/javadoc/org/apache/kafka/clients/consumer/KafkaConsumer.html), [TopicPartition](https://kafka.apache.org/20/javadoc/org/apache/kafka/common/TopicPartition.html), [ConsumerRecord](https://kafka.apache.org/20/javadoc/org/apache/kafka/clients/consumer/ConsumerRecord.html)
+    3. [Exercise: Developing Kafka Consumer](exercises/kafka-exercise-Developing-Kafka-Consumer.md)
+4. [Exercise: Kafka Application as Consumer and Producer](exercises/kafka-exercise-Kafka-Application-as-Consumer-and-Producer.md)
+5. [Exercise: Word Count Per Record](exercises/kafka-exercise-Word-Count-Per-Record.md)
+6. [Exercise: Global Word Count](exercises/kafka-exercise-Global-Word-Count.md)
 
 ## Topic 3: Apache Kafka for Developers (Advanced Concepts)
 

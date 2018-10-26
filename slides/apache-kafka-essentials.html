@@ -73,7 +73,7 @@
           <section id="records">
             <h2>Records</h2>
             <ol>
-              <li><b>Record</b> (aka <b>message</b>) is the unit of data in Kafka</li>
+              <li><b>Record</b> (aka <b>message</b> or <b>event</b>) is the unit of data in Kafka</li>
               <li>Array of bytes (in no particular format)
                 <ul>
                   <li><a href="http://avro.apache.org/">Apache Avro</a> as data serialization framework</li>
@@ -91,27 +91,47 @@
                   <li>Think a <i>table</i> or a <i>directory</i></li>
                 </ul>
               </li>
-              <li>Topics are the namespaces of one or many <b>partitions</b></li>
+              <li>Producers write data to topics and consumers read from them</li>
+              <li>Topics are partitioned
+                <ul>
+                  <li>Create the namespaces of one or many <b>partitions</b></li>
+                </ul>
+              </li>
+              <li><b>kafka-topics</b> shell script manages Kafka topics</li>
             </ol>
           </section>
           <section id="partitions">
             <h2>Partitions</h2>
             <ol>
-              <li>Topics are the namespaces of <b>partitions</b></li>
-              <li>Partitions hold records</li>
+              <li>Topics are partitioned into one or more <b>partitions</b></li>
+              <li>Partitions store records</li>
               <li>Ordered (by offsets) immutable sequence of records</li>
-              <li>A partition is a single log</li>
+              <li>A partition is a single ordered log</li>
               <li>Stored durably on disk</li>
               <li>Records are added to partitions in <b>append-only</b> fashion</li>
               <li>Partitions are replicated among Kafka brokers as <b>replicas</b></li>
               <li><b>In-sync replicas (ISRs)</b></li>
             </ol>
           </section>
+          <section id="replicas">
+            <h2>Replicas and In-Sync Replicas</h2>
+            <ol>
+              <li><b>Replica</b> is a copy of a partition</li>
+              <li>There can be one or many replicas of a partition</li>
+              <li><b>Replication factor</b> specifies the number of replicas of the partitions of a topic</li>
+              <li><b>In-Sync Replica</b> is a replica that has <i>enough</i> records to be considered in <b>partition leader election</b></li>
+              <li>Use <b>kafka-topics --describe</b> to list the details of a topic (incl. replicas and in-sync replicas)</li>
+            </ol>
+          </section>
           <section id="offsets">
             <h2>Offsets</h2>
             <ol>
-              <li><b>Offset</b> is a unique sequential numerical position of a record (in a partition of a topic)</li>
-              <li>Starts from 0</li>
+              <li><b>Offset</b> is a unique sequential numerical position of a record (in a partition of a topic)
+                <ul>
+                  <li>A message in a partition has a unique offset</li>
+                </ul>
+              </li>
+              <li>Offsets start from 0</li>
               <li>Offsets are unique per partition only
                 <ul>
                   <li>Not across partitions</li>

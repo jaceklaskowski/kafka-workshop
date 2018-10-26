@@ -1,6 +1,6 @@
 # Apache Kafka™ and Kafka Streams Workshop
 
-The repository contains the materials (i.e. agenda, [slides](slides#apache-kafka-and-kafka-streams-workshops), [demos](demos), [exercises](exercises)) for [Apache Kafka™](https://kafka.apache.org/) and [Kafka Streams](https://kafka.apache.org/documentation/streams/) workshops led by Jacek Laskowski.
+The repository contains the materials (i.e. agenda, [slides](slides#apache-kafka-and-kafka-streams-workshops), [demos](demos), [exercises](exercises)) for [Apache Kafka™](https://kafka.apache.org/) and [Kafka Streams](https://kafka.apache.org/documentation/streams/) workshops led by [Jacek Laskowski](https://twitter.com/jaceklaskowski).
 
 The current version of the workshop may take up to 3 days and is intended for a variety of IT roles (e.g. software developers, administrators, operators and architects).
 
@@ -15,7 +15,7 @@ No prior experience with Apache Kafka or Kafka Streams required.
     2. [Exercise: Configuring Multi-Broker Kafka Cluster](exercises/kafka-exercise-Configuring-Multi-Broker-Kafka-Cluster.md)
     3. [Exercise: Exploring Zookeeper](exercises/kafka-exercise-Exploring-Zookeeper.md)
     4. [Exercise: Using Kafka with Docker](exercises/kafka-exercise-Using-Kafka-with-Docker.md)
-2. Working with Topics
+2. Working with Kafka Topics
     1. Replicas and In-Sync Replicas (ISRs)
     2. Managing Topics with `kafka-topics` shell script
     3. [Exercise: Using kafka-topics with Multi-Broker Cluster](exercises/kafka-exercise-Using-kafka-topics-with-Multi-Broker-Cluster.md)

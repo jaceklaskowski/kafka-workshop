@@ -1,0 +1,32 @@
+/* https://github.com/hakimel/reveal.js/issues/174 */
+.slides .header {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+}
+
+.reveal .footer {
+  position: absolute;
+  bottom: 1em;
+  font-size: small;
+  width: 100%;
+  text-align: center;
+  z-index: 2147483647;
+}
+
+.reveal .slide-number {
+  font-size: 0.6em;
+}
+
+body section img {
+  background: none !important;
+  margin-top: 0 !important;
+  border:none !important;
+  box-shadow:none !important;
+}
+body section {
+  height: 100%;
+  width: 100%;
+}
+section .info { color: #5bc0de; }
+section .success { color: #5cb85c; }

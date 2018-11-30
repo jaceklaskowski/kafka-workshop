@@ -6,26 +6,27 @@ The current version of the workshop may take up to 3 days and is intended for a 
 
 The course is designed to help you master the essential aspects and operation of Apache Kafka and Kafka Streams in a fairly short time. After the course, you should have a clear understanding of Kafka with regard to administration, operation and application development.
 
-No prior experience with Apache Kafka or Kafka Streams required.
+No prior experience with Apache Kafka™ or Kafka Streams required.
 
-## Topic 1: Apache Kafka for Administrators
+## Topic 1: Apache Kafka™ for Administrators and Operators
 
 1. [The Essentials of Apache Kafka](http://blog.jaceklaskowski.pl/kafka-workshop/slides/apache-kafka-essentials.html) (Architecture and Core Concepts)
     1. [Exercise: Installing and Running Kafka Broker](exercises/kafka-exercise-Installing-and-Running-Kafka-Broker.md)
     2. [Exercise: Configuring Multi-Broker Kafka Cluster](exercises/kafka-exercise-Configuring-Multi-Broker-Kafka-Cluster.md)
     3. [Exercise: Exploring Zookeeper](exercises/kafka-exercise-Exploring-Zookeeper.md)
     4. [Exercise: Using Kafka with Docker](exercises/kafka-exercise-Using-Kafka-with-Docker.md)
-2. Working with Kafka Topics
+1. Working with Kafka Topics
     1. Replicas and In-Sync Replicas (ISRs)
     2. Managing Topics with `kafka-topics` shell script
     3. [Exercise: Using kafka-topics with Multi-Broker Cluster](exercises/kafka-exercise-Using-kafka-topics-with-Multi-Broker-Cluster.md)
-3. Kafka Configuration
+1. Kafka Configuration
     1. Kafka Server and Scheduled Recurring Tasks
-4. Monitoring, Troubleshooting and Debugging
+1. [Monitoring Kafka Cluster](http://blog.jaceklaskowski.pl/kafka-workshop/slides/Monitoring-Kafka-Cluster.html)
+1. Troubleshooting and Debugging
     1. KafkaMetricsGroup
     2. LogManager and /tmp/kafka-logs (Failure and Recovery)
     3. Exercise: Using jconsole for monitoring
-5. Internals of KafkaServer and Other Services
+1. Internals of KafkaServer and Other Services
 
 ## Topic 2: Apache Kafka for Developers
 

@@ -12,6 +12,7 @@
 1. [The Essentials of Apache Kafka](http://blog.jaceklaskowski.pl/kafka-workshop/slides/apache-kafka-essentials.html)
 2. Exercise: [Developing Kafka Application With Producer API](http://blog.jaceklaskowski.pl/kafka-workshop/slides/kafka-exercise-Developing-Kafka-Application-With-Producer-API.html)
 3. Exercise: [Sending Records with Callback in Producer API](http://blog.jaceklaskowski.pl/kafka-workshop/slides/kafka-exercise-Sending-Records-with-Callback-in-Producer-API.html)
+4. [Monitoring Kafka Cluster](http://blog.jaceklaskowski.pl/kafka-workshop/slides/Monitoring-Kafka-Cluster.html)
 
 ## Contact The Author
 

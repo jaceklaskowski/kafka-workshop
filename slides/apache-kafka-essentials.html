@@ -15,6 +15,9 @@
     <!-- Theme used for syntax highlighting of code -->
     <link rel="stylesheet" href="reveal.js/lib/css/zenburn.css">
 
+    <!-- Jacek: custom formatting -->
+    <link rel="stylesheet" href="revealjs-css/jacek.css">
+
     <!-- Printing and PDF exports -->
     <script>
         var link = document.createElement( 'link' );
@@ -24,21 +27,29 @@
         document.getElementsByTagName( 'head' )[0].appendChild( link );
     </script>
   </head>
+
   <body>
     <div class="reveal">
+
+      <div class="footer">
+        <footer style="font-size: small;">&copy;<a href="https://medium.com/@jaceklaskowski">Jacek Laskowski</a> 2018 / <a href="https://twitter.com/jaceklaskowski">@JacekLaskowski</a> / jacek@japila.pl</footer>
+      </div>
+
       <div class="slides">
 
         <section class="intro" data-transition="zoom" id="home">
           <p>
-            <img width="17%" style="background:none; border:none; box-shadow:none;" data-src="images/kafka-logo.png">
-            <img width="8%" src="images/jacek_laskowski_20141201_512px.png" style="border: 0">
+            <img width="15%" style="background:none; border:none; box-shadow:none;" data-src="images/kafka-logo.png">
+            <img width="7%" src="images/jacek_laskowski_20141201_512px.png" style="border: 0">
           </p>
-          <h1>The Essentials of<br>Apache Kafka™</h1>
+          <h1 style="font-size: 3.44em;">The Essentials of<br>Apache Kafka™</h1>
+          <h3>Apache Kafka™ 2.1.0</h3>
 
-          <h4 style="font-size: smaller;"><a href="https://twitter.com/jaceklaskowski">@jaceklaskowski</a> / <a href="http://stackoverflow.com/users/1305344/jacek-laskowski">StackOverflow</a> / <a href="https://github.com/jaceklaskowski">GitHub</a><br />
-          Books: <a href="https://bit.ly/mastering-apache-kafka">Mastering Apache Kafka</a> / <a href="https://bit.ly/mastering-kafka-streams">Mastering Kafka Streams</a></h4>
-
-          <footer style="font-size: small;">&copy;<a href="https://medium.com/@jaceklaskowski">Jacek Laskowski</a> 2018 / <a href="https://twitter.com/jaceklaskowski">@JacekLaskowski</a> / jacek@japila.pl</footer>
+          <h4 style="font-size: smaller;">
+            <a href="https://twitter.com/jaceklaskowski">@jaceklaskowski</a> / <a href="http://stackoverflow.com/users/1305344/jacek-laskowski">StackOverflow</a> / <a href="https://github.com/jaceklaskowski">GitHub</a>
+            <br>
+            Books: <a href="https://bit.ly/mastering-apache-kafka">The Internals of Apache Kafka</a> / <a href="https://bit.ly/mastering-kafka-streams">Mastering Kafka Streams</a>
+          </h4>
         </section>
 
         <section id="agenda" data-markdown>
@@ -48,6 +59,9 @@
             1. [Introduction](#/intro)
             1. [Core Concepts of Apache Kafka™](#/concepts)
             1. [Features of Kafka](#/kafka-features)
+            1. [Kafka Streams](#/kafka-streams)
+            1. [Kafka Connect](#/kafka-connect)
+            1. [Confluent KSQL](#/confluent-ksql)
           </textarea>
         </section>
 
@@ -230,29 +244,65 @@
           </ol>
         </section>
 
+        <section id="kafka-streams" data-markdown>
+          <textarea data-template>
+            ## Kafka Streams
+
+            1. **Kafka Streams** is a client library for building applications with the input and output data in Kafka topics
+            1. Elastic, highly scalable, fault-tolerant
+            1. [Home Page](https://kafka.apache.org/documentation/streams/)
+          </textarea>
+        </section>
+
+        <section id="kafka-connect" data-markdown>
+          <textarea data-template>
+            ## Kafka Connect
+
+            1. **Kafka Connect** is a framework for a scalable and reliable data streaming between Apache Kafka and other systems
+            1. A framework for Kafka connectors
+            1. Distributed and standalone (single process) modes
+            1. REST interface for connector deployment and management
+            1. [Home Page](https://kafka.apache.org/documentation/#connect)
+          </textarea>
+        </section>
+
+        <section id="confluent-ksql" data-markdown>
+          <textarea data-template>
+            ## Confluent KSQL
+
+            1. **Confluent KSQL** is the open source, streaming SQL engine that enables real-time data processing using Apache Kafka™
+            1. "KSQL: Query Your Streams Without Writing Code"
+            1. Interactive SQL interface for stream processing on Kafka
+            1. No need to write code in a programming language like Java or Python
+            1. Leverages Kafka Streams under the covers
+            1. [Home Page](https://www.confluent.io/product/ksql/)
+          </textarea>
+        </section>
+
         <section id="recap" data-markdown>
-          <script type="text/template">
+          <textarea data-template>
             ## Recap
 
             1. [Introduction](#/intro)
-            1. [Concepts](#/concepts)
+            1. [Core Concepts of Apache Kafka™](#/concepts)
             1. [Features of Kafka](#/kafka-features)
-          </script>
+            1. [Kafka Streams](#/kafka-streams)
+            1. [Kafka Connect](#/kafka-connect)
+            1. [Confluent KSQL](#/confluent-ksql)
+          </textarea>
         </section>
 
-        <section id="questions" data-markdown>
+        <section style="text-align: left" data-markdown id="questions">
           <textarea data-template>
             # Questions?
 
-            * Read <a href="https://bit.ly/mastering-apache-kafka">Mastering Apache Kafka</a>
-            * Read <a href="https://bit.ly/mastering-kafka-streams">Mastering Kafka Streams</a>
-            * Follow <a href="https://twitter.com/jaceklaskowski">@jaceklaskowski</a> on twitter
-            * Upvote <a href="http://stackoverflow.com/users/1305344/jacek-laskowski">my questions and answers</a> on StackOverflow
-
-            <br /><br />
-            <footer style="font-size: small;">&copy;<a href="https://medium.com/@jaceklaskowski">Jacek Laskowski</a> 2018 / @jaceklaskowski / jacek@japila.pl</footer>
+            * Read [The Internals of Apache Kafka](http://bit.ly/mastering-apache-kafka)
+            * Read [Mastering Kafka Streams](http://bit.ly/mastering-kafka-streams)
+            * Follow [@jaceklaskowski](https://twitter.com/jaceklaskowski) on twitter
+            * Upvote [my questions and answers on StackOverflow](http://stackoverflow.com/users/1305344/jacek-laskowski)
           </textarea>
         </section>
+
       </div>
     </div>
 
@@ -260,33 +310,39 @@
     <script src="reveal.js/js/reveal.js"></script>
 
     <script>
+      // More info about config & dependencies:
+      // - https://github.com/hakimel/reveal.js#configuration
+      // - https://github.com/hakimel/reveal.js#dependencies
+      Reveal.initialize({
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+        slideNumber: true,
 
-        // Full list of configuration options available at:
-        // https://github.com/hakimel/reveal.js#configuration
-        Reveal.initialize({
-            controls: true,
-            progress: true,
-            history: true,
-            center: true,
+        transition: 'slide', // none/fade/slide/convex/concave/zoom
 
-            transition: 'slide', // none/fade/slide/convex/concave/zoom
-
-            // Optional reveal.js plugins
-            dependencies: [
-                { src: 'reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
-                { src: 'reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-                { src: 'reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-                { src: 'reveal.js/plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
-                { src: 'reveal.js/plugin/zoom-js/zoom.js', async: true },
-                { src: 'reveal.js/plugin/notes/notes.js', async: true }
-            ]
-        });
+        menu: {
+          markers: true,
+          openSlideNumber: true
+        },
+        dependencies: [
+          { src: 'reveal.js/lib/js/classList.js', condition: function () { return !document.body.classList; } },
+          { src: 'reveal.js/plugin/markdown/marked.js' },
+          { src: 'reveal.js/plugin/markdown/markdown.js' },
+          { src: 'reveal.js/plugin/zoom-js/zoom.js', async: true },
+          { src: 'reveal.js/plugin/notes/notes.js', async: true },
+          { src: 'reveal.js/plugin/highlight/highlight.js', async: true, callback: function () { hljs.initHighlightingOnLoad(); } }
+        ]
+      });
     </script>
     <script>
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+      (function (i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+          (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date(); a = s.createElement(o),
+          m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+      })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
 
       ga('create', 'UA-45999426-3', 'auto');
       ga('send', 'pageview');

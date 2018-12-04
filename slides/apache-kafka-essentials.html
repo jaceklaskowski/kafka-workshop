@@ -65,23 +65,49 @@
           </textarea>
         </section>
 
-        <section id="intro" data-markdown>
-          <textarea data-template>
-            ## Introduction
-
-            **Apache Kafka** is an open source **publish-subscribe messaging system** based on the concept of a **distributed commit log**.
-
-            **Messages** (aka **records**) in Kafka are distributed, stored durably and in order, and can be read deterministically.
-          </textarea>
-        </section>
-
-        <section id="concepts" data-markdown>
-          <script type="text/template">
-            # Core Concepts of
-            # Apache Kafka™
-          </script>
-        </section>
         <section>
+          <section id="intro" data-markdown>
+            <textarea data-template>
+              ## Introduction <small>(1 of 2)</small>
+
+              **Apache Kafka** is an open source **publish-subscribe messaging system** based on the concept of a **distributed commit log**.
+
+              **Messages** (aka **records**) in Kafka are distributed, stored durably and in order, and can be read deterministically.
+            </textarea>
+          </section>
+          <section data-markdown>
+            <textarea data-template>
+              ## Introduction <small>(2 of 2)</small>
+
+              **Apache Kafka** is an open source "umbrella" project with the following modules:
+
+              * Kafka Core
+                * Broker
+                * Producer and Consumer APIs
+              * Kafka Streams
+              * Kafka Connector
+
+              _From a messaging queue to a distributed streaming platform_
+            </textarea>
+          </section>
+        </section>
+
+        <section>
+          <section id="concepts" data-markdown>
+            <script type="text/template">
+              ## Core Concepts of Kafka (Core)
+
+              * [Records](#/records)
+              * [Topics](#/topics)
+              * [Partitions](#/partitions)
+              * [Replicas and In-Sync Replicas](#/replicas)
+              * [Offsets](#/offsets)
+              * [Brokers](#/brokers)
+              * [Producers](#/producers)
+              * [Consumers](#/consumers)
+              * [Retention](#/retention)
+            </script>
+          </section>
           <section id="records">
             <h2>Records</h2>
             <ol>
@@ -131,6 +157,7 @@
               <li><b>Replica</b> is a copy of a partition</li>
               <li>There can be one or many replicas of a partition</li>
               <li><b>Replication factor</b> specifies the number of replicas of the partitions of a topic</li>
+              <li>One <b>leader</b> and many <b>followers</b></li>
               <li><b>In-Sync Replica</b> is a replica that has <i>enough</i> records to be considered in <b>partition leader election</b></li>
               <li>Use <b>kafka-topics --describe</b> to list the details of a topic (incl. replicas and in-sync replicas)</li>
             </ol>

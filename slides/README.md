@@ -7,9 +7,9 @@
 1. (Polish Edition) [Apache Kafka Workshop (2 days)](http://blog.jaceklaskowski.pl/kafka-workshop/slides/00-agenda-2-days-Apache-Kafka-Workshop-PL.html) &mdash; taught in [Warsaw, Poland](https://en.wikipedia.org/wiki/Warsaw)
 1. [Apache Kafka and Kafka Streams (2 days)](http://blog.jaceklaskowski.pl/kafka-workshop/slides/00-agenda-2-days-Kafka-and-Kafka-Streams-Workshop.html) &mdash; taught in [Warsaw, Poland](https://en.wikipedia.org/wiki/Warsaw)
 
-### Day 1 &mdash; Apache Kafka
+### Day 1 &mdash; Apache Kafka™
 
-1. [The Essentials of Apache Kafka](http://blog.jaceklaskowski.pl/kafka-workshop/slides/apache-kafka-essentials.html)
+1. [The Essentials of Apache Kafka™](http://blog.jaceklaskowski.pl/kafka-workshop/slides/apache-kafka-essentials.html)
 2. Exercise: [Developing Kafka Application With Producer API](http://blog.jaceklaskowski.pl/kafka-workshop/slides/kafka-exercise-Developing-Kafka-Application-With-Producer-API.html)
 3. Exercise: [Sending Records with Callback in Producer API](http://blog.jaceklaskowski.pl/kafka-workshop/slides/kafka-exercise-Sending-Records-with-Callback-in-Producer-API.html)
 4. [Monitoring Kafka Cluster](http://blog.jaceklaskowski.pl/kafka-workshop/slides/Monitoring-Kafka-Cluster.html)

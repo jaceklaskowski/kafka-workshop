@@ -1,5 +1,3 @@
-<a id="toc" />
-
 # Apache Kafka™ and Kafka Streams Workshops
 
 ## Table of Contents

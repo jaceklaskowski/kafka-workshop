@@ -1,6 +1,6 @@
 # Apache Kafka™ and Kafka Streams Workshop
 
-The repository contains the materials (i.e. agenda, [slides](slides#apache-kafka-and-kafka-streams-workshops), [demos](demos), [exercises](exercises)) for [Apache Kafka™](https://kafka.apache.org/) and [Kafka Streams](https://kafka.apache.org/documentation/streams/) workshops led by [Jacek Laskowski](https://twitter.com/jaceklaskowski).
+The repository contains the materials (i.e. [agendas](slides/#table-of-contents), [slides](slides/#apache-kafka-and-kafka-streams-workshops), [demos](demos), [exercises](exercises)) for [Apache Kafka™](https://kafka.apache.org/) and [Kafka Streams](https://kafka.apache.org/documentation/streams/) workshops led by [Jacek Laskowski](https://twitter.com/jaceklaskowski).
 
 The current version of the workshop may take up to 3 days and is intended for a variety of IT roles (e.g. software developers, administrators, operators and architects).
 

@@ -13,6 +13,10 @@
 3. Exercise: [Sending Records with Callback in Producer API](http://blog.jaceklaskowski.pl/kafka-workshop/slides/kafka-exercise-Sending-Records-with-Callback-in-Producer-API.html)
 4. [Monitoring Kafka Cluster](http://blog.jaceklaskowski.pl/kafka-workshop/slides/Monitoring-Kafka-Cluster.html)
 
+### Day 2 &mdash; Kafka Streams
+
+1. [Kafka Streams](http://blog.jaceklaskowski.pl/kafka-workshop/slides/kafka-streams-essentials.html)
+
 ## Contact The Author
 
 * Read [Mastering Apache Kafka](https://bit.ly/mastering-apache-kafka)

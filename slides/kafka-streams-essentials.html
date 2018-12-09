@@ -4,9 +4,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-    <title>Apache Kafka™ Workshop | Kafka Streams</title>
+    <title>Kafka Streams Workshop | Kafka Streams</title>
 
-    <meta name="description" content="Apache Kafka™ Workshop | Kafka Streams">
+    <meta name="description" content="Kafka Streams Workshop | Kafka Streams">
     <meta name="author" content="Jacek Laskowski">
 
     <link rel="stylesheet" href="reveal.js/css/reveal.css">
@@ -44,12 +44,12 @@
           </p>
           <h1 style="font-size: 3.44em;">Kafka Streams</h1>
           <h2>stream processing applications</h2>
-          <h3>Apache Kafka™ 2.1.0</h3>
+          <h3>Kafka Streams 2.1.0</h3>
 
           <h4 style="font-size: smaller;">
             <a href="https://twitter.com/jaceklaskowski">@jaceklaskowski</a> / <a href="http://stackoverflow.com/users/1305344/jacek-laskowski">StackOverflow</a> / <a href="https://github.com/jaceklaskowski">GitHub</a>
             <br>
-            Books: <a href="https://bit.ly/mastering-apache-kafka">The Internals of Apache Kafka</a> / <a href="https://bit.ly/mastering-kafka-streams">Mastering Kafka Streams</a>
+            The "Internals" Books: <a href="https://bit.ly/mastering-apache-kafka">Apache Kafka</a> / <a href="https://bit.ly/mastering-kafka-streams">Kafka Streams</a>
           </h4>
         </section>
 
@@ -59,14 +59,7 @@
 
             1. [Kafka Streams](#/intro)
             1. [High-Level Streams DSL](#/high-level-streams-dsl)
-            1. [KStream](#/dsl-kstream)
-            1. [KTable](#/dsl-ktable)
-            1. [GlobalKTable](#/dsl-globalktable)
-            1. [StreamsBuilder](#/dsl-streamsbuilder)
-            1. [KafkaStreams](#/dsl-kafkastreams)
-            1. [Demo: Processing Record Stream (KStream)](#/demo-processing-record-stream-kstream)
-            1. [Kafka Streams DSL for Scala](#/kafka-streams-dsl-for-scala)
-            1. [Demo: Kafka Streams DSL for Scala](#/demo-kafka-streams-dsl-for-scala)
+            1. [Low-Level Processor API](#/low-level-processor-api)
           </textarea>
         </section>
 
@@ -117,95 +110,12 @@
           </section>
         </section>
 
-        <section style="font-size: 90%" data-markdown id="dsl-kstream">
+        <section data-markdown id="low-level-processor-api" style="font-size: 90%">
           <textarea data-template>
-            ## KStream
+            ## Low-Level Processor API
 
-            1. **KStream** is an abstraction of a **record stream** (of key-value pairs)
-            1. Data record represents a self-contained datum in the unbounded data set
-            1. Data records (in a record stream) are always interpreted as an "INSERT"
-              * No record replaces an existing row with the same key
-            1. Examples: credit card transactions, page view events, server log entries
-            1. [KStream API](http://kafka.apache.org/21/javadoc/org/apache/kafka/streams/kstream/KStream.html)
-          </textarea>
-        </section>
+            1. **Processor API** is...FIXME
 
-        <section style="font-size: 90%" data-markdown id="dsl-ktable">
-          <textarea data-template>
-            ## KTable
-
-            1. **KTable** is an abstraction of a **changelog stream**
-            1. Data records (in a record stream) are interpreted as an "UPSERT"
-              * "UPDATE" of the last value for the same record key
-              * "INSERT" if a given key doesn't exist yet
-            1. A record with a **null** value represents a "DELETE" or tombstone for the record's key
-            1. [KTable API](http://kafka.apache.org/21/javadoc/org/apache/kafka/streams/kstream/KTable.html)
-          </textarea>
-        </section>
-
-        <section style="font-size: 90%" data-markdown id="dsl-globalktable">
-          <textarea data-template>
-            ## GlobalKTable
-
-            1. **GlobalKTable** is an abstraction of a **changelog stream**
-              * Similarly to KTable
-            1. Fully replicated per KafkaStreams instance
-              * Local GlobalKTable instance of each application instance will be populated with data from all partitions of the topic
-            1. Provides the ability to look up current values of data records by keys
-            1. Can only be used as right-hand side input for stream-table joins
-            1. [GlobalKTable API](http://kafka.apache.org/21/javadoc/org/apache/kafka/streams/kstream/GlobalKTable.html)
-          </textarea>
-        </section>
-
-        <section style="font-size: 90%" data-markdown id="dsl-streamsbuilder">
-          <textarea data-template>
-            ## StreamsBuilder
-
-            1. **StreamsBuilder** is used to specify a Kafka Streams topology
-            1. Creates a KStream from the specified Kafka input topics
-            1. Reads the specified Kafka input topic into a KTable
-            1. Reads the specified Kafka input topic into a GlobalKTable
-            1. [StreamsBuilder API](http://kafka.apache.org/21/javadoc/org/apache/kafka/streams/StreamsBuilder.html)
-          </textarea>
-        </section>
-
-        <section style="font-size: 90%" data-markdown id="dsl-kafkastreams">
-          <textarea data-template>
-            ## KafkaStreams
-
-            1. **KafkaStreams** is a Kafka client
-            1. Performs continuous computation on data from one or more input topics
-            1. Sends output to zero, one, or more output topics
-            1. Executes a DAG topology of Processors
-            1. [KafkaStreams API](http://kafka.apache.org/21/javadoc/org/apache/kafka/streams/KafkaStreams.html)
-          </textarea>
-        </section>
-
-        <section id="demo-processing-record-stream-kstream" data-markdown>
-          <textarea data-template>
-            # Demo
-            ## Processing Record Stream <br> with KStream
-          </textarea>
-        </section>
-
-        <section style="font-size: 90%" data-markdown id="kafka-streams-dsl-for-scala">
-          <textarea data-template>
-            ## Kafka Streams DSL for Scala
-
-            1. **Kafka Streams DSL for Scala** is a wrapper over the existing Java APIs for Kafka Streams DSL
-            1. Making the Java APIs more usable in Scala
-              * Better type inferencing
-              * Enhanced expressiveness
-              * Less boilerplates
-            1. [Official documentation](https://kafka.apache.org/21/documentation/streams/developer-guide/dsl-api.html#scala-dsl)
-            1. [Scala API for Kafka Streams](https://jaceklaskowski.gitbooks.io/mastering-kafka-streams/kafka-streams-scala.html) in the Mastering Kafka Streams gitbook
-          </textarea>
-        </section>
-
-        <section id="demo-kafka-streams-dsl-for-scala" data-markdown>
-          <textarea data-template>
-            # Demo
-            ## Kafka Streams DSL for Scala
           </textarea>
         </section>
 
@@ -215,14 +125,7 @@
 
             1. [Kafka Streams](#/intro)
             1. [High-Level Streams DSL](#/high-level-streams-dsl)
-            1. [KStream](#/dsl-kstream)
-            1. [KTable](#/dsl-ktable)
-            1. [GlobalKTable](#/dsl-globalktable)
-            1. [StreamsBuilder](#/dsl-streamsbuilder)
-            1. [KafkaStreams](#/dsl-kafkastreams)
-            1. [Demo: Processing Record Stream (KStream)](#/demo-processing-record-stream-kstream)
-            1. [Kafka Streams DSL for Scala](#/kafka-streams-dsl-for-scala)
-            1. [Demo: Kafka Streams DSL for Scala](#/demo-kafka-streams-dsl-for-scala)
+            1. [Low-Level Processor API](#/low-level-processor-api)
           </textarea>
         </section>
 
@@ -231,7 +134,7 @@
             # Questions?
             
             * Read [The Internals of Apache Kafka](http://bit.ly/mastering-apache-kafka)
-            * Read [Mastering Kafka Streams](http://bit.ly/mastering-kafka-streams)
+            * Read [The Internals of Kafka Streams](http://bit.ly/mastering-kafka-streams)
             * Follow [@jaceklaskowski](https://twitter.com/jaceklaskowski) on twitter
             * Upvote [my questions and answers on StackOverflow](http://stackoverflow.com/users/1305344/jacek-laskowski)
           </textarea>

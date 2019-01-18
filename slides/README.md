@@ -18,6 +18,7 @@
 1. [Kafka Streams](http://blog.jaceklaskowski.pl/kafka-workshop/slides/kafka-streams-essentials.html)
 2. [High-Level Streams DSL](http://blog.jaceklaskowski.pl/kafka-workshop/slides/kafka-streams-streams-dsl.html)
 3. [Low-Level Processor API](http://blog.jaceklaskowski.pl/kafka-workshop/slides/kafka-streams-processor-api.html)
+4. [Internals of Kafka Streams](http://blog.jaceklaskowski.pl/kafka-workshop/slides/kafka-streams-internals.html)
 
 ## Contact The Author
 

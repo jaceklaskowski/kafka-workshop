@@ -2,6 +2,7 @@
 
 ## Table of Contents
 
+1. [Apache Kafka™ Workshop (3 days)](http://blog.jaceklaskowski.pl/kafka-workshop/slides/00_agenda-3-days-Apache-Kafka-Workshop.html) &mdash; taught in [Győr, Hungary](https://en.wikipedia.org/wiki/Gy%C5%91r), 13-15 February 2019
 1. [Apache Kafka™ Workshop (5 days)](http://blog.jaceklaskowski.pl/kafka-workshop/slides/00_agenda-5-days-Apache-Kafka-Workshop.html) &mdash; taught in [Warsaw, Poland](https://en.wikipedia.org/wiki/Warsaw), 5-11 December 2018
 1. (Polish Edition) [Apache Kafka Workshop (2 days)](http://blog.jaceklaskowski.pl/kafka-workshop/slides/00-agenda-2-days-Apache-Kafka-Workshop-PL.html) &mdash; taught in [Warsaw, Poland](https://en.wikipedia.org/wiki/Warsaw)
 1. [Apache Kafka and Kafka Streams (2 days)](http://blog.jaceklaskowski.pl/kafka-workshop/slides/00-agenda-2-days-Kafka-and-Kafka-Streams-Workshop.html) &mdash; taught in [Warsaw, Poland](https://en.wikipedia.org/wiki/Warsaw)

@@ -109,7 +109,7 @@
             <textarea data-template>
               # Goal
               <p>
-                Better understanding of the use cases of<br />
+                Practical understanding of the use cases of<br />
                 <b><span style="font-size: 140%">Apache Kafka™</span></b><br />
                 for developers<br />
                 (incl. <b><span style="font-size: 120%">Kafka Streams</span></b>)
@@ -144,39 +144,48 @@
               ## Day 1 &mdash; The Essentials of Apache Kafka™
 
               1. [The Essentials of Apache Kafka](apache-kafka-essentials.html)
-              1. Exercise: [Installing and Running Kafka Broker](http://blog.jaceklaskowski.pl/kafka-workshop/exercises/kafka-exercise-Installing-and-Running-Kafka-Broker.html)
-              1. [Exercise: Exploring Zookeeper](http://blog.jaceklaskowski.pl/kafka-workshop/exercises/kafka-exercise-Exploring-Zookeeper.html)
+                * [Exercise: Installing and Running Kafka Broker](http://blog.jaceklaskowski.pl/kafka-workshop/exercises/kafka-exercise-Installing-and-Running-Kafka-Broker.html)
+                * [Exercise: Exploring Zookeeper](http://blog.jaceklaskowski.pl/kafka-workshop/exercises/kafka-exercise-Exploring-Zookeeper.html)
               1. Kafka Configuration (Properties)
-              1. Exercise: [Configuring Multi-Broker Kafka Cluster](http://blog.jaceklaskowski.pl/kafka-workshop/exercises/kafka-exercise-Configuring-Multi-Broker-Kafka-Cluster.html)
-              1. Administration and Monitoring
+                * [Exercise: Configuring Multi-Broker Kafka Cluster](http://blog.jaceklaskowski.pl/kafka-workshop/exercises/kafka-exercise-Configuring-Multi-Broker-Kafka-Cluster.html)
+              1. [Monitoring Kafka Cluster](Monitoring-Kafka-Cluster.html)
+                * Exercise: Using jconsole for monitoring
             </textarea>
           </section>
 
-          <section id="day2" data-markdown>
+          <section id="day2" data-markdown style="font-size: 80%">
             <textarea data-template>
               ## Day 2 &mdash; Apache Kafka for Developers
 
-              1. [Exploring KafkaProducer API](http://kafka.apache.org/21/javadoc/org/apache/kafka/clients/producer/KafkaProducer.html)
-                1. [Exercise: Developing Kafka Producer Application](http://blog.jaceklaskowski.pl/kafka-workshop/exercises/kafka-exercise-Developing-Kafka-Producer.html)
-              1. [Exploring KafkaConsumer API](http://kafka.apache.org/21/javadoc/org/apache/kafka/clients/consumer/KafkaConsumer.html)
-                1. [Exercise: Developing Kafka Consumer Application](http://blog.jaceklaskowski.pl/kafka-workshop/exercises/kafka-exercise-Developing-Kafka-Consumer.html)
-              1. [Exercise: Kafka Application as Consumer and Producer](http://blog.jaceklaskowski.pl/kafka-workshop/exercises/kafka-exercise-Kafka-Application-as-Consumer-and-Producer.html)
-
+              1. [Kafka Producer API](http://kafka.apache.org/21/javadoc/org/apache/kafka/clients/producer/KafkaProducer.html)
+                * [Exercise: Developing Kafka Producer Application](http://blog.jaceklaskowski.pl/kafka-workshop/exercises/kafka-exercise-Developing-Kafka-Producer.html)
+                * Exercise: Clean Shutdown with Shutdown Hooks
+                * Exercise: Programmatically assigning partitions (to records)
+                * Exercise: KafkaProducer.send vs sendAsync
+                * Exercise: Exploring acks Producer Configuration
+              1. [Kafka Consumer API](http://kafka.apache.org/21/javadoc/org/apache/kafka/clients/consumer/KafkaConsumer.html)
+                * [Exercise: Developing Kafka Consumer Application](http://blog.jaceklaskowski.pl/kafka-workshop/exercises/kafka-exercise-Developing-Kafka-Consumer.html)
+                * [Exercise: Kafka Application as Consumer and Producer](http://blog.jaceklaskowski.pl/kafka-workshop/exercises/kafka-exercise-Kafka-Application-as-Consumer-and-Producer.html)
+                * Exercise: Printing out partition IDs to stdout
+                * Exercise: Consumer Groups and Partitions Assignment (Multi-Instance Deployments)
+                * Exercise: Using ConsumerRebalanceListener
             </textarea>
           </section>
 
-          <section id="day3a" data-markdown>
+          <section id="day3a" data-markdown style="font-size: 80%">
             <textarea data-template>
               ## Day 3a &mdash; Kafka Streams <small>(1 of 2)</small>
 
               1. [Kafka Streams](kafka-streams-essentials.html)
-                1. [Exercise: Processing Record Stream with KStream](http://blog.jaceklaskowski.pl/kafka-workshop/exercises/kafka-streams-exercise-Processing-Record-Stream-with-KStream.html)
-              1. Demo: Application Configuration for Logging (slf4j)
-              1. Exercise: Using jconsole for monitoring
-              1. Demo: Using KStream.mapValues operator
-              1. Demo: Using KStream.flatMapValues operator
-              1. Demo: Using KStream.branch operator
-              1. Demo: Using KStream.join operator
+              1. [High-Level Streams DSL](kafka-streams-streams-dsl.html)
+                * [Exercise: Processing Record Stream with KStream](http://blog.jaceklaskowski.pl/kafka-workshop/exercises/kafka-streams-exercise-Processing-Record-Stream-with-KStream.html)
+                * Exercise: Using slf4j for logging
+              1. Developing Kafka Streams Applications (Streams DSL)
+                * Exercise: Using KStream.mapValues operator
+                * Exercise: Using KStream.flatMapValues operator
+                * Exercise: KStream.groupBy vs KStream.groupByKey operators
+                * Exercise: Using KStream.foreach operator
+                * Exercise: Using KStream.peek operator
             </textarea>
           </section>
 
@@ -185,14 +194,11 @@
               ## Day 3b &mdash; Kafka Streams <small>(2 of 2)</small>
 
               1. [Scala API for Kafka Streams](https://jaceklaskowski.gitbooks.io/mastering-kafka-streams/kafka-streams-scala.html)
-              1. Demo: Using Consumed and Produced APIs
-              1. Demo: Migrating Kafka Streams Application to use Scala API
-              1. Demo: Running Kafka Streams Application from Command Line
-                * Using [sbt-assembly](https://github.com/sbt/sbt-assembly) plugin
-              1. Exercise: Using KTable As Reference Data for KStream
-                * Using KStream.join and Scala API
-              1. Exercise: Word Count (High-Level Streams DSL)
-                * Using KStream.flatMapValues and groupBy
+              1. Developing Kafka Streams Applications (Streams DSL)
+                * Exercise: Using KStream.branch operator
+                * Exercise: Using KStream.transformValues (to mimic KStream.branch)
+                * Exercise: Using KStream.join operator
+              1. [Internals of Kafka Streams](http://blog.jaceklaskowski.pl/kafka-workshop/slides/kafka-streams-internals.html)
             </textarea>
           </section>
 
@@ -206,7 +212,7 @@
           <section id="prerequisities-experience">
             <h2>Prerequisities / Experience</h2>
             <ol>
-              <li>Some programming experience using a modern programming language (Scala, Java, Python)</li>
+              <li>Some programming experience in Scala or Java</li>
               <li>Experience with shell / command line</li>
             </ol>
           </section>
@@ -239,8 +245,8 @@
               <li>First name</li>
               <li>What's your experience with Kafka?</li>
               <li>Any production experience with Kafka?</li>
+              <li>Describe your programming environment (IDE, frameworks, tools)</li>
               <li>What do you expect from the workshop?</li>
-              <li>What are your expectations for this class?</li>
             </ol>
           </section>
           <section id="addendum">

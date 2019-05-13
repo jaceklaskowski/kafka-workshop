@@ -6,7 +6,7 @@
 
     <title>Kafka Streams Workshop | Internals of Kafka Streams</title>
 
-    <meta name="description" content="Kafka Streams Workshop | Internals of Kafka Streams">
+    <meta name="description" content="Kafka Streams Workshop | Deep Dive Into / Internals of Kafka Streams">
     <meta name="author" content="Jacek Laskowski">
 
     <link rel="stylesheet" href="reveal.js/css/reveal.css">
@@ -32,7 +32,9 @@
     <div class="reveal">
 
       <div class="footer">
-        <footer style="font-size: small;">&copy;<a href="https://medium.com/@jaceklaskowski">Jacek Laskowski</a> 2019 / <a href="https://twitter.com/jaceklaskowski">@JacekLaskowski</a> / jacek@japila.pl</footer>
+        <footer style="font-size: small;">
+          &copy; <a href="https://medium.com/@jaceklaskowski">Jacek Laskowski</a> 2019 / <a href="https://twitter.com/jaceklaskowski">@JacekLaskowski</a> / jacek@japila.pl
+        </footer>
       </div>
 
       <div class="slides">
@@ -42,15 +44,55 @@
             <img width="15%" style="background:none; border:none; box-shadow:none;" data-src="images/kafka-logo.png">
             <img width="7%" src="images/jacek_laskowski_20141201_512px.png" style="border: 0">
           </p>
-          <h1 style="font-size: 2.44em;">The Internals Of</h1>
+          <h1 style="font-size: 2.44em;">Deep Dive Into / Internals of</h1>
           <h1>Kafka Streams</h1>
-          <h3>Kafka Streams 2.1.0</h3>
+          <h3>Kafka Streams 2.2.0</h3>
 
           <h4 style="font-size: smaller;">
             <a href="https://twitter.com/jaceklaskowski">@jaceklaskowski</a> / <a href="http://stackoverflow.com/users/1305344/jacek-laskowski">StackOverflow</a> / <a href="https://github.com/jaceklaskowski">GitHub</a>
             <br>
-            The "Internals" Books: <a href="https://bit.ly/mastering-apache-kafka">Apache Kafka</a> / <a href="https://bit.ly/mastering-kafka-streams">Kafka Streams</a>
+            The "Internals" Books: <a href="https://bit.ly/kafka-streams-internals">Kafka Streams</a> / <a href="https://bit.ly/apache-kafka-internals">Apache Kafka</a>
           </h4>
+        </section>
+
+        <section>
+          <section id="speaker" style="font-size: 90%" data-markdown>
+            <textarea data-template>
+              <p><img width="12%" src="images/jacek_laskowski_20141201_512px.png" style="border: 0"></p>
+
+              * **Jacek Laskowski** is a freelance IT consultant
+              * Core competencies in Spark, Kafka, **Kafka Streams**, Scala
+              * Development | Consulting | Training
+              * Among contributors to <a href="https://github.com/apache/spark/graphs/contributors">Apache Spark</a>
+              * Contact me at **jacek@japila.pl**
+              * Follow [@JacekLaskowski](https://twitter.com/jaceklaskowski) on twitter <br>for more #ApacheSpark, #ApacheKafka, #KafkaStreams
+            </textarea>
+          </section>
+          <section id="gitbooks">
+            <p><img width="12%" src="images/jacek_laskowski_20141201_512px.png" style="border: 0"></p>
+            <div style="text-align: center">
+              <p>Jacek is best known by the online "Internals" books:</p>
+              <p>
+                <ol>
+                  <li><a href="https://bit.ly/apache-spark-internals">The Internals of Apache Spark</a></li>
+                  <li><a href="https://bit.ly/spark-sql-internals">The Internals of Spark SQL</a></li>
+                  <li><a href="https://bit.ly/spark-structured-streaming">The Internals of Spark Structured Streaming</a></li>
+                  <li><a href="https://bit.ly/kafka-streams-internals">The Internals of Kafka Streams</a></li>
+                  <li><a href="https://bit.ly/apache-kafka-internals">The Internals of Apache Kafka</a></li>
+                </ol>
+              </p>
+            </div>
+          </section>
+          <section id="stackoverflow">
+            <div style="text-align: center">
+              <p>
+                Jacek is "active" on <a href="http://stackoverflow.com/users/1305344/jacek-laskowski">StackOverflow</a> 🥳
+              </p>
+              <p>
+                <a href="https://stackoverflow.com/tags/apache-kafka-streams/topusers"><img width="38%" src="images/jaceklaskowski-stackoverflow-apache-kafka-streams.png" style="border: 0"></a>
+              </p>
+            </div>
+          </section>
         </section>
 
         <section id="agenda" style="font-size: 90%" data-markdown>
@@ -70,19 +112,31 @@
           </textarea>
         </section>
 
-        <section id="intro" style="font-size: 90%" data-markdown>
-          <textarea data-template>
-            ## Kafka Streams
+        <section>
+          <section id="intro" data-markdown style="font-size: 90%">
+            <textarea data-template>
+              ## Kafka Streams <small>(1 of 2)</small>
 
-            1. **Kafka Streams** is a client library for **stream processing applications** that process records in Kafka topics
-              * Low-level **Processor API**
-            1. Stream processing primitives, e.g. **KStream** and **KTable**
-              * High-level **Streams DSL**
-            1. **Topology** to describe the processing flow
-              * One record at a time
-            1. Wrapper around the Kafka Producer and Consumer APIs
-            1. Supports **fault-tolerant local state** for stateful operations (e.g. windowed aggregations and joins)
-          </textarea>
+              1. **Kafka Streams** is a client library for **stream processing applications** that process records in Kafka topics
+                * Low-level **Processor API**
+              1. Stream processing primitives, e.g. **KStream** and **KTable**
+                * High-level **Streams DSL**
+              1. **Topology** to describe the processing flow
+                * » One record at a time «
+              1. Wrapper around the Kafka Producer and Consumer APIs
+              1. Supports **fault-tolerant local state** for stateful operations (e.g. windowed aggregations and joins)
+            </textarea>
+          </section>
+          <section style="font-size: 90%" data-markdown>
+            <textarea data-template>
+              ## Kafka Streams <small>(2 of 2)</small>
+
+              1. "Groundbreaking" facts (which changed my life):
+                1. When started, a topology processes one record at a time
+                1. A Kafka Streams application can be run in multiple instances (e.g. as Docker containers)
+                1. Increasing stream processing power is about increasing number of threads or even instances
+            </textarea>
+          </section>
         </section>
 
         <section id="main-development-entities" data-markdown>
@@ -100,7 +154,7 @@
               ## Topology
 
               1. Represents the **stream processing logic** of a Kafka Streams application
-              1. Directed Acyclic Graph of Stream Processing Nodes (aka _Processors_)
+              1. Directed Acyclic Graph of **Processors** (Stream Processing Nodes)
               1. Logical representation
               1. Created directly or indirectly (using Streams DSL)
               1. Topology API
@@ -148,13 +202,15 @@ Processor: demo-processor-supplier (stores: [in-memory-key-value-store])
           </section>
         </section>
         <section>
-          <section id="kafkastreams" data-markdown>
+          <section id="kafkastreams" data-markdown style="font-size: 90%">
             <textarea data-template>
               ## KafkaStreams
 
               1. Manages execution of a topology of a Kafka Streams application
                 * Start, close (shut down), state
               1. Consumes messages from and produces processing results to Kafka topics
+              1. Acceptable to create multiple KafkaStreams instances per Kafka Streams application
+              1. For better performance, consider creating multiple KafkaStreams instances as separate instances of Kafka Streams application
             </textarea>
           </section>
           <section id="kafkastreams-example" data-markdown>
@@ -186,18 +242,21 @@ ks.start  // &lt-- starts execution
         </section>
 
         <section>
-          <section id="StreamThread" data-markdown>
+          <section id="StreamThread" data-markdown style="font-size: 85%;">
             <textarea data-template>
               ## StreamThread <small>(1 of 2)</small>
 
               1. Stream Processor Thread
-                * Runs the main record processing loop
+                * Runs the **main record processing loop**
                 * Thread of execution (**java.lang.Thread**)
-              1. Uses Kafka Consumer to subscribe to source topics
+              1. StreamThread is a Kafka consumer (that polls for records)
+                * Assigned to source partitions
                 * Think of Consumer Group
               1. **num.stream.threads** configuration property (default: **1**)
-              1. Registers **StreamsPartitionAssignor**
-              1. Uses **RebalanceListener** to intercept changes to the partitions assigned
+              1. Uses Kafka Consumer "tools" for operation
+                * Registers **StreamsPartitionAssignor**
+                * Uses **RebalanceListener** to intercept changes to the partitions assigned
+              1. Uses TaskManager for processing task management <small><i>(on next slide)</i></small>
             </textarea>
           </section>
           <section id="StreamThread-2">
@@ -217,13 +276,14 @@ ks.start  // &lt-- starts execution
 
               1. Task manager of a StreamThread
               1. Manages active and standby tasks
+                * Only active StreamTasks process records
               1. Creates processor tasks for assigned partitions
                 * **RebalanceListener.onPartitionsAssigned**
             </textarea>
           </section>
           <section id="TaskManager-2">
             <h2>TaskManager <small>(2 of 2)</small></h2>
-          
+
             <img
               width="75%"
               style="background:none; border:none; box-shadow:none;"
@@ -232,14 +292,16 @@ ks.start  // &lt-- starts execution
         </section>
 
         <section>
-          <section id="kafka-streams-tasks" data-markdown>
+          <section id="kafka-streams-tasks" data-markdown style="font-size: 90%;">
             <textarea data-template>
               ## Stream Processor Tasks <small>(1 of 2)</small>
 
-              1. Managed by **TaskManager** to run a topology of streaming processors
+              1. Managed by **TaskManager** to run a topology of stream processors
               1. **StreamTask** - the default processor task
                 * As many as partitions assigned
                 * Managed as a group as **AssignedStreamsTasks**
+                * Only active StreamTasks process records
+                * Use FIFO RecordQueues (per Kafka TopicPartition)
               1. **StandbyTask** - a backup processor task
                 * "Ghost" tasks for active StreamTasks
                 * Default: **0** standby tasks
@@ -248,25 +310,34 @@ ks.start  // &lt-- starts execution
           </section>
           <section id="kafka-streams-tasks-2">
             <h2>Stream Processor Tasks <small>(2 of 2)</small></h2>
-          
+
             <img width="75%" style="background:none; border:none; box-shadow:none;" data-src="images/kafka-streams-TaskManager.png">
           </section>
         </section>
 
-        <section id="StreamsPartitionAssignor" data-markdown style="font-size: 80%;">
-          <textarea data-template>
-            ## StreamsPartitionAssignor
+        <section>
+          <section id="StreamsPartitionAssignor" data-markdown style="font-size: 75%;">
+            <textarea data-template>
+              ## StreamsPartitionAssignor <small>(1 of 2)</small>
 
-            1. Custom **PartitionAssignor** from the Kafka Consumer API
-              * Used for dynamic partition assignment and distributing partition ownership across the members
-              of a consumer group
-              * **partition.assignment.strategy** / **ConsumerConfig.PARTITION_ASSIGNMENT_STRATEGY_CONFIG** configuration property
-            1. Group management protocol
-              * **group membership**
-              * **state synchronization**
-            1. Assigns partitions dynamically across the instances of a Kafka Streams application
-              * Required **application.id** / **StreamsConfig.APPLICATION_ID_CONFIG** configuration property
-          </textarea>
+              1. Custom **PartitionAssignor** from the Kafka Consumer API
+                * Used for dynamic partition assignment and distributing partition ownership across the members
+                of a consumer group
+                * **partition.assignment.strategy** / **ConsumerConfig.PARTITION_ASSIGNMENT_STRATEGY_CONFIG** configuration property
+              1. Group management protocol
+                * **group membership**
+                * **state synchronization**
+              1. Assigns partitions dynamically across the instances of a Kafka Streams application
+                * Required **application.id** / **StreamsConfig.APPLICATION_ID_CONFIG** configuration property
+            </textarea>
+          </section>
+          <section id="StreamsPartitionAssignor-2" data-markdown>
+            <textarea data-template>
+              ## StreamsPartitionAssignor <small>(2 of 2)</small>
+
+              <img style="background:none; border:none; box-shadow:none;" data-src="images/kafka-streams-StreamsPartitionAssignor-onAssignment.png">
+            </textarea>
+          </section>
         </section>
 
         <section>
@@ -283,7 +354,7 @@ ks.start  // &lt-- starts execution
           </section>
           <section id="RebalanceListener-2">
             <h2>RebalanceListener <small>(2 of 2)</small></h2>
-          
+
             <img
               style="background:none; border:none; box-shadow:none;"
               data-src="images/kafka-streams-RebalanceListener.png">
@@ -310,11 +381,12 @@ ks.start  // &lt-- starts execution
         <section style="text-align: left" data-markdown id="questions">
           <textarea data-template>
             # Questions?
-            
-            * Read [The Internals of Apache Kafka](http://bit.ly/mastering-apache-kafka)
-            * Read [The Internals of Kafka Streams](http://bit.ly/mastering-kafka-streams)
-            * Follow [@jaceklaskowski](https://twitter.com/jaceklaskowski) on twitter
+
+            * Read [The Internals of Kafka Streams](http://bit.ly/kafka-streams-internals)
+            * Read [The Internals of Apache Kafka](http://bit.ly/apache-kafka-internals)
+            * Follow [@jaceklaskowski](https://twitter.com/jaceklaskowski) on twitter (DMs open)
             * Upvote [my questions and answers on StackOverflow](http://stackoverflow.com/users/1305344/jacek-laskowski)
+            * Contact me at **jacek@japila.pl**
           </textarea>
         </section>
 

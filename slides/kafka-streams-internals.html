@@ -55,6 +55,19 @@
           </h4>
         </section>
 
+        <section id="kafkasummit" data-markdown>
+          <textarea data-template>
+            ## My Very First #KafkaSummit!
+
+            <a href="https://twitter.com/rmoff/status/1128221572974764032">
+            <img
+              width="75%"
+              style="background:none; border:none; box-shadow:none;"
+              data-src="images/kafkasummit2019-robin-jakub.jpeg">
+            </a>
+          </textarea>
+        </section>
+
         <section>
           <section id="speaker" style="font-size: 90%" data-markdown>
             <textarea data-template>
@@ -249,14 +262,14 @@ ks.start  // &lt-- starts execution
               1. Stream Processor Thread
                 * Runs the **main record processing loop**
                 * Thread of execution (**java.lang.Thread**)
-              1. StreamThread is a Kafka consumer (that polls for records)
-                * Assigned to source partitions
+              1. StreamThread uses a Kafka consumer (to poll for records)
+                * Subscribes to source topics
                 * Think of Consumer Group
               1. **num.stream.threads** configuration property (default: **1**)
               1. Uses Kafka Consumer "tools" for operation
                 * Registers **StreamsPartitionAssignor**
                 * Uses **RebalanceListener** to intercept changes to the partitions assigned
-              1. Uses TaskManager for processing task management <small><i>(on next slide)</i></small>
+              1. Uses TaskManager to manage processing tasks <small><i>(on next slide)</i></small>
             </textarea>
           </section>
           <section id="StreamThread-2">
@@ -311,7 +324,9 @@ ks.start  // &lt-- starts execution
           <section id="kafka-streams-tasks-2">
             <h2>Stream Processor Tasks <small>(2 of 2)</small></h2>
 
-            <img width="75%" style="background:none; border:none; box-shadow:none;" data-src="images/kafka-streams-TaskManager.png">
+            <img
+              style="background:none; border:none; box-shadow:none;"
+              data-src="images/kafka-streams-logs-current-tasks.png">
           </section>
         </section>
 

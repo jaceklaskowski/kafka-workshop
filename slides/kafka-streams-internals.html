@@ -140,14 +140,15 @@
               1. Supports **fault-tolerant local state** for stateful operations (e.g. windowed aggregations and joins)
             </textarea>
           </section>
-          <section style="font-size: 90%" data-markdown>
+          <section data-markdown style="font-size: 80%">
             <textarea data-template>
               ## Kafka Streams <small>(2 of 2)</small>
 
               1. "Groundbreaking" facts (which changed my life):
-                1. When started, a topology processes one record at a time
+                1. When started, a topology processes one record at a time only
                 1. A Kafka Streams application can be run in multiple instances (e.g. as Docker containers)
-                1. Increasing stream processing power is about increasing number of threads or even instances
+                1. Increasing stream processing power is to increase number of threads and instances
+                1. Processor itself decides whether to forward a record downstream or not
             </textarea>
           </section>
         </section>
@@ -246,18 +247,18 @@ ks.start  // &lt-- starts execution
           <textarea data-template>
             ## Main Execution Entities
 
-            1. StreamThread
-            1. TaskManager
-            1. StreamTask and StandbyTask
-            1. StreamsPartitionAssignor
-            1. RebalanceListener
+            1. [StreamThread](#/StreamThread)
+            1. [TaskManager](#/TaskManager)
+            1. [StreamTask and StandbyTask](#/kafka-streams-tasks)
+            1. [StreamsPartitionAssignor](#/StreamsPartitionAssignor)
+            1. [RebalanceListener](#/RebalanceListener)
           </textarea>
         </section>
 
         <section>
           <section id="StreamThread" data-markdown style="font-size: 85%;">
             <textarea data-template>
-              ## StreamThread <small>(1 of 2)</small>
+              ## StreamThread <small>(1 of 4)</small>
 
               1. Stream Processor Thread
                 * Runs the **main record processing loop**
@@ -273,12 +274,26 @@ ks.start  // &lt-- starts execution
             </textarea>
           </section>
           <section id="StreamThread-2">
-            <h2>StreamThread <small>(2 of 2)</small></h2>
+            <h2>StreamThread <small>(2 of 4)</small></h2>
 
             <img
               width="40%"
               style="background:none; border:none; box-shadow:none;"
               data-src="images/kafka-streams-StreamThread.png">
+          </section>
+          <section id="StreamThread-3">
+            <h2>StreamThread <small>(3 of 4)</small></h2>
+
+            <img
+              style="background:none; border:none; box-shadow:none;"
+              data-src="images/kafka-streams-StreamThread-runLoop.png">
+          </section>
+          <section id="StreamThread-4">
+            <h2>StreamThread <small>(4 of 4)</small></h2>
+
+            <img
+              style="background:none; border:none; box-shadow:none;"
+              data-src="images/kafka-streams-StreamThread-runOnce.png">
           </section>
         </section>
 
@@ -307,7 +322,7 @@ ks.start  // &lt-- starts execution
         <section>
           <section id="kafka-streams-tasks" data-markdown style="font-size: 90%;">
             <textarea data-template>
-              ## Stream Processor Tasks <small>(1 of 2)</small>
+              ## Stream Processor Tasks <small>(1 of 3)</small>
 
               1. Managed by **TaskManager** to run a topology of stream processors
               1. **StreamTask** - the default processor task
@@ -322,7 +337,14 @@ ks.start  // &lt-- starts execution
             </textarea>
           </section>
           <section id="kafka-streams-tasks-2">
-            <h2>Stream Processor Tasks <small>(2 of 2)</small></h2>
+            <h2>Stream Processor Tasks <small>(2 of 3)</small></h2>
+
+            <img
+              style="background:none; border:none; box-shadow:none;"
+              data-src="images/kafka-streams-StreamTask-process.png">
+          </section>
+          <section id="kafka-streams-tasks-3">
+            <h2>Stream Processor Tasks <small>(3 of 3)</small></h2>
 
             <img
               style="background:none; border:none; box-shadow:none;"

@@ -14,6 +14,7 @@
 2. Exercise: [Developing Kafka Application With Producer API](http://blog.jaceklaskowski.pl/kafka-workshop/slides/kafka-exercise-Developing-Kafka-Application-With-Producer-API.html)
 3. Exercise: [Sending Records with Callback in Producer API](http://blog.jaceklaskowski.pl/kafka-workshop/slides/kafka-exercise-Sending-Records-with-Callback-in-Producer-API.html)
 4. [Monitoring Kafka Cluster](http://blog.jaceklaskowski.pl/kafka-workshop/slides/Monitoring-Kafka-Cluster.html)
+1. [Kafka Consumers, Consumer Groups, and Partition Rebalancing](http://blog.jaceklaskowski.pl/kafka-workshop/slides/kafka-consumers-consumer-groups-and-partition-rebalancing.html)
 
 ### Day 2 &mdash; Kafka Streams
 

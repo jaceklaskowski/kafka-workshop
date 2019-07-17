@@ -14,6 +14,7 @@ No prior experience with Apache Kafka™ or Kafka Streams required.
 2. Working with Kafka Topics
     1. Replicas and In-Sync Replicas (ISRs)
     2. Managing Topics with `kafka-topics` shell script
+1. [Kafka Consumers, Consumer Groups, and Partition Rebalancing](http://blog.jaceklaskowski.pl/kafka-workshop/slides/kafka-consumers-consumer-groups-and-partition-rebalancing.html)
 3. Kafka Configuration
     1. Kafka Server and Scheduled Recurring Tasks
     2. [AdminClient](http://kafka.apache.org/20/javadoc/org/apache/kafka/clients/admin/AdminClient.html)

@@ -32,23 +32,26 @@
     <div class="reveal">
 
       <div class="footer">
-        <footer style="font-size: small;">&copy;<a href="https://medium.com/@jaceklaskowski">Jacek Laskowski</a> 2018 / <a href="https://twitter.com/jaceklaskowski">@JacekLaskowski</a> / jacek@japila.pl</footer>
+        <footer style="font-size: small;">
+          &copy; <a href="https://medium.com/@jaceklaskowski">Jacek Laskowski</a> 2019 / <a href="https://twitter.com/jaceklaskowski">@JacekLaskowski</a>
+          / jacek@japila.pl
+        </footer>
       </div>
 
       <div class="slides">
 
         <section class="intro" data-transition="zoom" id="home">
           <p>
-            <img width="15%" style="background:none; border:none; box-shadow:none;" data-src="images/kafka-logo.png">
-            <img width="7%" src="images/jacek_laskowski_20141201_512px.png" style="border: 0">
+            <img width="12%" style="background:none; border:none; box-shadow:none;" data-src="images/kafka-logo.png">
+            <img width="6%" src="images/jacek_laskowski_20141201_512px.png" style="border: 0">
           </p>
           <h1 style="font-size: 3.44em;">The Essentials of<br>Apache Kafka™</h1>
-          <h3>Apache Kafka™ 2.1.0</h3>
+          <h3>Apache Kafka™ 2.3.0</h3>
 
           <h4 style="font-size: smaller;">
-            <a href="https://twitter.com/jaceklaskowski">@jaceklaskowski</a> / <a href="http://stackoverflow.com/users/1305344/jacek-laskowski">StackOverflow</a> / <a href="https://github.com/jaceklaskowski">GitHub</a>
+            <a href="https://twitter.com/jaceklaskowski">@jaceklaskowski</a> / <a href="https://stackoverflow.com/users/1305344/jacek-laskowski">StackOverflow</a> / <a href="https://github.com/jaceklaskowski">GitHub</a>
             <br>
-            Books: <a href="https://bit.ly/mastering-apache-kafka">The Internals of Apache Kafka</a> / <a href="https://bit.ly/mastering-kafka-streams">Mastering Kafka Streams</a>
+            The "Internals" Books: <a href="https://bit.ly/apache-kafka-internals">Apache Kafka</a> / <a href="https://bit.ly/kafka-streams-internals">Kafka Streams</a>
           </h4>
         </section>
 
@@ -117,7 +120,11 @@
                   <li><a href="http://avro.apache.org/">Apache Avro</a> as data serialization framework</li>
                 </ul>
               </li>
-              <li>Record has a <b>key</b> and a <b>value</b></li>
+              <li>Record has a <b>key</b> and a <b>value</b>
+                <ul>
+                  <li>Both could be <b>null</b></li>
+                </ul>
+              </li>
               <li>Records are categorized into <b>topics</b></li>
             </ol>
           </section>
@@ -129,10 +136,10 @@
                   <li>Think a <i>table</i> or a <i>directory</i></li>
                 </ul>
               </li>
-              <li>Producers write data to topics and consumers read from them</li>
+              <li>Producers publish messages to topics while consumers consume them</li>
               <li>Topics are partitioned
                 <ul>
-                  <li>Create the namespaces of one or many <b>partitions</b></li>
+                  <li>Namespaces of one or many <b>partitions</b></li>
                 </ul>
               </li>
               <li><b>kafka-topics</b> shell script manages Kafka topics</li>
@@ -142,22 +149,30 @@
             <h2>Partitions</h2>
             <ol>
               <li>Topics are partitioned into one or more <b>partitions</b></li>
-              <li>Partitions store records</li>
+              <li>Partitions hold zero, one or many records</li>
               <li>Ordered (by offsets) immutable sequence of records</li>
               <li>A partition is a single ordered log</li>
               <li>Stored durably on disk</li>
               <li>Records are added to partitions in <b>append-only</b> fashion</li>
-              <li>Partitions are replicated among Kafka brokers as <b>replicas</b></li>
+              <li>Partitions are replicated among brokers as <b>replicas</b></li>
               <li><b>In-sync replicas (ISRs)</b></li>
             </ol>
           </section>
-          <section id="replicas">
+          <section id="replicas" style="font-size: 90%">
             <h2>Replicas and In-Sync Replicas</h2>
             <ol>
               <li><b>Replica</b> is a copy of a partition</li>
-              <li>There can be one or many replicas of a partition</li>
-              <li><b>Replication factor</b> specifies the number of replicas of the partitions of a topic</li>
-              <li>One <b>leader</b> and many <b>followers</b></li>
+              <li><b>Replication factor</b> is the number of replicas of a topic
+                <ul>
+                  <li>There can be one or many replicas</li>
+                  <li>Allows for automatic failover when a broker fails</li>
+                </ul>
+              </li>
+              <li>One replica is the <b>leader</b> while others are <b>followers</b>
+                <ul>
+                  <li>Leader handles writes from producers, and the followers merely copy the leader's log</li>
+                </ul>
+              </li>
               <li><b>In-Sync Replica</b> is a replica that has <i>enough</i> records to be considered in <b>partition leader election</b></li>
               <li>Use <b>kafka-topics --describe</b> to list the details of a topic (incl. replicas and in-sync replicas)</li>
             </ol>

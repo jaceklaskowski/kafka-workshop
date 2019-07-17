@@ -16,10 +16,11 @@ No prior experience with Apache Kafka™ or Kafka Streams required.
     2. Managing Topics with `kafka-topics` shell script
 3. Kafka Configuration
     1. Kafka Server and Scheduled Recurring Tasks
+    2. [AdminClient](http://kafka.apache.org/20/javadoc/org/apache/kafka/clients/admin/AdminClient.html)
 4. [Monitoring Kafka Cluster](http://blog.jaceklaskowski.pl/kafka-workshop/slides/Monitoring-Kafka-Cluster.html)
-5. Troubleshooting and Debugging
     1. KafkaMetricsGroup
-    2. LogManager and /tmp/kafka-logs (Failure and Recovery)
+5. Troubleshooting and Debugging
+    1. LogManager and log.dirs (/tmp/kafka-logs) - Failure and Recovery
 6. Internals of KafkaServer and Other Services
 
 ## Topic 2: Apache Kafka for Developers
@@ -35,7 +36,6 @@ No prior experience with Apache Kafka™ or Kafka Streams required.
 ## Topic 3: Apache Kafka for Developers (Advanced Concepts)
 
 - [ConsumerRebalanceListener](https://kafka.apache.org/20/javadoc/org/apache/kafka/clients/consumer/ConsumerRebalanceListener.html)
-- [AdminClient](http://kafka.apache.org/20/javadoc/org/apache/kafka/clients/admin/AdminClient.html)
 
 ## Topic 4: Kafka Streams (Scala API)
 

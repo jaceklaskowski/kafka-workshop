@@ -1,10 +1,17 @@
-# Exercise: Installing and Running Kafka Broker
+# Exercise: Installing and Running Kafka
 
-Duration: **15 mins**
+This exercise is to install **Apache Kafka** and start the very first Kafka server (aka Kafka broker).
+
+Duration: **30 mins**
+
+**TIP** Use [bit.ly/kafka-exercise-admin-01](https://bit.ly/kafka-exercise-admin-01) to access the exercise.
 
 ## Procedure
 
-1. Download the binary download of Apache Kafka from the [Download](http://kafka.apache.org/downloads) page
-    1. Use the binary download for **Scala 2.12**, e.g. **kafka_2.12-2.1.0.tgz**
-2. Follow [1.3 Quick Start](http://kafka.apache.org/documentation/#quickstart) from the offical documentation of Apache Kafka
-    1. Up to and including the **Step 5: Start a consumer**
+1. Install the latest version of **Java 11**
+  * [OpenJDK 11.0.2 (build 11.0.2+9)](https://jdk.java.net/archive/)
+1. Download the latest version of **Apache Kafka**
+  * [Download](http://kafka.apache.org/downloads) page
+  * Use the binary download for **Scala 2.12**
+2. Follow [Quick Start](http://kafka.apache.org/documentation/#quickstart) document from the [offical documentation of Apache Kafka](http://kafka.apache.org/documentation/)
+    * Do the steps up to and including the **Step 5: Start a consumer**

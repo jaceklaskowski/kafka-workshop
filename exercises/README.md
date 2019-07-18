@@ -4,7 +4,7 @@ This repository contains the exercises for [Apache Kafka™ and Kafka Streams Wo
 
 ## Topic 1: Apache Kafka™ for Administrators and Operators
 
-1. [Exercise: Installing and Running Kafka Broker](kafka-exercise-Installing-and-Running-Kafka-Broker.md)
+1. [Exercise: Installing and Running Kafka](kafka-exercise-Installing-and-Running-Kafka-Broker.md)
 1. [Exercise: Configuring Multi-Broker Kafka Cluster](kafka-exercise-Configuring-Multi-Broker-Kafka-Cluster.md)
 1. [Exercise: Exploring Zookeeper](kafka-exercise-Exploring-Zookeeper.md)
 1. [Exercise: Using Kafka with Docker](kafka-exercise-Using-Kafka-with-Docker.md)

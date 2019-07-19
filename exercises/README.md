@@ -9,6 +9,8 @@ This repository contains the exercises for [Apache Kafka™ and Kafka Streams Wo
 1. [Exercise: Exploring Zookeeper](kafka-exercise-Exploring-Zookeeper.md)
 1. [Exercise: Using Kafka with Docker](kafka-exercise-Using-Kafka-with-Docker.md)
 1. [Exercise: Using kafka-topics with Multi-Broker Cluster](kafka-exercise-Using-kafka-topics-with-Multi-Broker-Cluster.md)
+1. [Exercise: Using Consumer Group](kafka-exercise-using-consumer-group.md)
+1. [Exercise: Partition Leader Election and Consumer Fail-Over](kafka-exercise-partition-leader-election-and-consumer-fail-over.md)
 
 ## Topic 2: Apache Kafka for Developers
 

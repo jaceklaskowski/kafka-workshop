@@ -13,5 +13,5 @@ Duration: **30 mins**
 1. Download the latest version of **Apache Kafka**
   * [Download](http://kafka.apache.org/downloads) page
   * Use the binary download for **Scala 2.12**
-2. Follow [Quick Start](http://kafka.apache.org/documentation/#quickstart) document from the [offical documentation of Apache Kafka](http://kafka.apache.org/documentation/)
+1. Follow [Quick Start](http://kafka.apache.org/documentation/#quickstart) document from the [offical documentation of Apache Kafka](http://kafka.apache.org/documentation/)
     * Do the steps up to and including the **Step 5: Start a consumer**

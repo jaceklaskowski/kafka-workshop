@@ -1,19 +1,27 @@
 # Exercise: Configuring Multi-Broker Kafka Cluster
 
+In this exercise you will configure a Kafka cluster with 3 brokers.
+
+Duration: **30 mins**
+
 ## Procedure
 
-1. Review `config/zookeeper.properties` configuration file
-2. Start Zookeeper
-    1. Use `zookeeper-server-start.sh` as usual
-3. Review `config/server.properties` configuration file
-4. Start a Kafka server with `broker.id=0` (the default configuration)
-    1. Use `kafka-server-start.sh` as usual
-5. Start another Kafka server with `broker.id=1`
-    1. Create a separate **server.properties** configuration file, e.g. `server-1.properties`
-    2. You will have to change at least two more configuration properties before the server gets up and running
-6. Start another Kafka server with `broker.id=2`
-    1. Use **--override** command-line option (of `kafka-server-start.sh`) to override configuration properties
+1. Review **config/zookeeper.properties** default configuration file of Zookeeper
+1. Start a Zookeeper server
+    * Use **zookeeper-server-start.sh** shell script
+1. Use **zookeeper-shell.sh :2181 ls /brokers/ids** to make sure no Kafka brokers are available
+1. Review **config/server.properties** default configuration file of a Kafka broker
+1. Start a Kafka broker with the default configuration
+    * Use **kafka-server-start.sh** shell script
+1. Use **zookeeper-shell.sh :2181 ls /brokers/ids** to make sure that 2 brokers are registered
+1. Start another Kafka broker with **broker.id=10**
+    * Create a separate **server.properties** configuration file, e.g. **server-10.properties**
+    * Set other configuration properties to have the server up and running
+1. Use **zookeeper-shell.sh :2181 ls /brokers/ids** to make sure that 2 brokers are registered
+1. Start another Kafka broker with **broker.id=20**
+    * Use **--override** command-line option (of **kafka-server-start.sh**) to override configuration properties
+1. Use **zookeeper-shell.sh :2181 ls /brokers/ids** to make sure that 3 brokers are registered
 
 ## Further Reading and Learning
 
-1. [Kafka Tools](https://jaceklaskowski.gitbooks.io/apache-kafka/content/kafka-tools.html) (Mastering Apache Kafka)
+1. [Kafka Tools](https://jaceklaskowski.gitbooks.io/apache-kafka/content/kafka-tools.html)

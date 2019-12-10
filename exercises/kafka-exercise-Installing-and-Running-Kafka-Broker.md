@@ -4,7 +4,7 @@ This exercise is to install **Apache Kafka** and start the very first Kafka serv
 
 Duration: **30 mins**
 
-**TIP** Use [bit.ly/kafka-exercise-admin-01](https://bit.ly/kafka-exercise-admin-01) to access the exercise.
+**TIP** Use [bit.ly/kafka-exercise-admin-01](https://bit.ly/kafka-exercise-admin-01) to access this exercise.
 
 ## Procedure
 

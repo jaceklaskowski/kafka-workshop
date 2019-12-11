@@ -2,6 +2,8 @@
 
 ## Table of Contents
 
+1. [Apache Kafka™ for Administrators and Operators Workshop (2 days)](http://blog.jaceklaskowski.pl/kafka-workshop/slides/00_agenda-2-days-Apache-Kafka-Administration-Workshop.html) &mdash; taught in [Warsaw, Poland](https://en.wikipedia.org/wiki/Warsaw), 10-11 December 2019
+1. [Apache Kafka™ for Administrators and Operators Workshop (2 days)](http://blog.jaceklaskowski.pl/kafka-workshop/slides/00_agenda-2-days-Apache-Kafka-Administration-Workshop.html) &mdash; taught in [Lodz, Poland](https://en.wikipedia.org/wiki/%C5%81%C3%B3d%C5%BA), 5-6 and 12-13 September 2019
 1. [Apache Kafka™ for Administrators and Operators Workshop (2 days)](http://blog.jaceklaskowski.pl/kafka-workshop/slides/00_agenda-2-days-Apache-Kafka-Administration-Workshop.html) &mdash; taught in [Porto, Portugal](https://en.wikipedia.org/wiki/Porto), 16-17 and 18-19 July 2019
 1. [Apache Kafka™ Workshop (3 days)](http://blog.jaceklaskowski.pl/kafka-workshop/slides/00_agenda-3-days-Apache-Kafka-Workshop.html) &mdash; taught in [Győr, Hungary](https://en.wikipedia.org/wiki/Gy%C5%91r), 13-15 February 2019
 1. [Apache Kafka™ Workshop (5 days)](http://blog.jaceklaskowski.pl/kafka-workshop/slides/00_agenda-5-days-Apache-Kafka-Workshop.html) &mdash; taught in [Warsaw, Poland](https://en.wikipedia.org/wiki/Warsaw), 5-11 December 2018

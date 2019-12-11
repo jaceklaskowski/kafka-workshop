@@ -4,6 +4,8 @@ In this exercise you will create a **consumer group** and observe what happens w
 
 Duration: **30 mins**
 
+**TIP** Use [bit.ly/kafka-exercise-admin-06](https://bit.ly/kafka-exercise-admin-06) to access this exercise.
+
 ## Procedure
 
 1. (optional) Install [kafkacat - Apache Kafka producer and consumer tool](https://github.com/edenhill/kafkacat)

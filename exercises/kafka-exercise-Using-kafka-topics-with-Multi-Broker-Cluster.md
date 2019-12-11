@@ -4,10 +4,13 @@ In this exercise you will use **kafka-topics** shell script to manage a topic on
 
 Duration: **30 mins**
 
+**TIP** Use [bit.ly/kafka-exercise-admin-04](https://bit.ly/kafka-exercise-admin-04) to access this exercise.
+
 ## Procedure
 
 1. Configure a 3-broker Kafka cluster
   * Use custom **broker.id** to make sure the ids are yours in kafka-topics later
+  * Use **--override** command-line option (of `./bin/kafka-server-start.sh`)
   * KafkaServer id=59
   * KafkaServer id=66
   * KafkaServer id=47

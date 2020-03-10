@@ -23,6 +23,7 @@ No prior experience with Apache Kafka™ or Kafka Streams required.
 5. Troubleshooting and Debugging
     1. LogManager and log.dirs (/tmp/kafka-logs) - Failure and Recovery
 6. Internals of KafkaServer and Other Services
+1. [Kafka Security](https://jaceklaskowski.github.io/kafka-workshop/slides/kafka-security.html)
 
 ## Topic 2: Apache Kafka for Developers
 

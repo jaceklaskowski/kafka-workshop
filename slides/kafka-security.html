@@ -57,82 +57,123 @@
           </h4>
         </section>
 
-        <section id="agenda" data-markdown style="font-size: 80%;">
-          <textarea data-template>
-            ## Agenda
+        <section>
+          <section id="agenda" data-markdown>
+            <textarea data-template>
+              ## Agenda <small>(1 of 2)</small>
 
-            1. [Data Encryption Using SSL](#/data-encryption-using-ssl)
-              * [Keys and Certificates](#/keys-and-certificates)
-              * [Key and Trust Stores](#/key-and-trust-stores)
-              * [security.protocol Client Property](#/security-protocol-client-property)
-              * [Demo: Secure Communication Using SSL](#/demo-secure-communication-using-ssl)
-            1. [SSL Authentication](#/ssl-authentication)
-              * [ssl.client.auth Broker Property](#/ssl-client-auth-broker-property)
-              * [Demo: SSL Authentication](#/demo-ssl-authentication)
-            1. [ACL Authorization](#/acl-authorization)
-              * [authorizer.class.name Broker Property](#/authorizer-class-name-broker-property)
-              * [Other Broker Properties](#/other-broker-properties)
-              * [kafka-acls Utility](#/kafka-acls-utility)
-              * [Demo: ACL Authorization](#/demo-acl-authorization)
-          </textarea>
+              1. [Secure Communication Using SSL](#/secure-communication-using-ssl)
+                * [Keys and Certificates](#/keys-and-certificates)
+                * [Key and Trust Stores](#/key-and-trust-stores)
+                * [security.protocol Client Property](#/security-protocol-client-property)
+                * [Demo: Secure Communication Using SSL](#/demo-secure-communication-using-ssl)
+              1. [Secure Inter-Broker Communication](#/secure-inter-broker-communication)
+                * [security.inter.broker.protocol Broker Property](#/security-inter-broker-protocol-broker-property)
+                * [listeners Broker Property](#/listeners-broker-property)
+                * [Demo: Secure Inter-Broker Communication](#/demo-secure-inter-broker-communication)
+            </textarea>
+          </section>
+          <section data-markdown>
+            <textarea data-template>
+              ## Agenda <small>(2 of 2)</small>
+
+              1. [SSL Authentication](#/ssl-authentication)
+                * [ssl.client.auth Broker Property](#/ssl-client-auth-broker-property)
+                * [Demo: SSL Authentication](#/demo-ssl-authentication)
+              1. [ACL Authorization](#/acl-authorization)
+                * [authorizer.class.name Broker Property](#/authorizer-class-name-broker-property)
+                * [Other Broker Properties](#/other-broker-properties)
+                * [kafka-acls Utility](#/kafka-acls-utility)
+                * [Demo: ACL Authorization](#/demo-acl-authorization)
+            </textarea>
+          </section>
         </section>
 
-        <section id="data-encryption-using-ssl" data-markdown>
-          <textarea data-template>
-            ## Data Encryption Using SSL
+        <section>
+          <section id="secure-communication-using-ssl" data-markdown>
+            <textarea data-template>
+              ## Secure Communication Using SSL
 
-            * **Secure Sockets Layer (SSL)** - a cryptographic protocol for communications security over a computer network
-            * Deprecated by **Transport Layer Security (TLS)**
-            * Often referred to as **SSL/TLS**
-            * Used for **data encryption** (communication channel encryption) and **authentication**
-            * [Transport Layer Security](https://en.wikipedia.org/wiki/Transport_Layer_Security) in Wikipedia
-          </textarea>
+              * **Secure Sockets Layer (SSL)** - a cryptographic protocol for communications security over a computer network
+              * Used for **secure communication** (data encryption) and **authentication**
+              * Deprecated by **Transport Layer Security (TLS)**
+              * Often referred to as **SSL/TLS**
+              * [Transport Layer Security](https://en.wikipedia.org/wiki/Transport_Layer_Security) in Wikipedia
+            </textarea>
+          </section>
+          <section id="keys-and-certificates" data-markdown style="font-size: 95%;">
+            <textarea data-template>
+              ## Keys and Certificates
+
+              * **Private And Public Keys**
+                * Identity of an entity (such as a computer or a website)
+              * **Public Key Certificate** (Digital Identity Certificate)
+                * Identity of the owner (the subject)
+                * Digital signature of an entity that has verified the certificate's contents (the issuer)
+                * The certificate issuer is a **Certificate Authority (CA)**
+              * **Certificate Signing Request (CSR)**
+                * Request to Certificate Authority to sign a certificate
+            </textarea>
+          </section>
+          <section id="key-and-trust-stores" data-markdown style="font-size: 80%;">
+            <textarea data-template>
+              ## Key and Trust Stores
+
+              * **Key Store** (or Keystore) is a database of keys and certificates
+                * By default the Java keystore is implemented as a file
+                * Contains the private key and any certificates to complete a chain of trust of the primary certificate
+                * Initially only with the private key
+                * Eventually the certificate and any root certificates after a CSR (Certificate Signing Request)
+              * **Trust Store** is a file with trusted certificates (public keys)
+              * Each certificate is associated with a unique alias
+              * Java **keytool** to manage keys and certificates
+            </textarea>
+          </section>
+          <section id="security-protocol-client-property" data-markdown style="font-size: 95%;">
+            <textarea data-template>
+              ## security.protocol Client Property
+
+              * Consult [The Internals Of Apache Kafka](https://jaceklaskowski.gitbooks.io/apache-kafka/kafka-clients-CommonClientConfigs.html#security.protocol)
+            </textarea>
+          </section>
+          <section id="demo-secure-communication-using-ssl" data-markdown style="font-size: 95%;">
+            <textarea data-template>
+              ## Demo
+
+              👉 [Securing Communication Between Clients and Brokers Using SSL](https://jaceklaskowski.gitbooks.io/apache-kafka/kafka-demo-securing-communication-between-clients-and-brokers.html)
+            </textarea>
+          </section>
         </section>
 
-        <section id="keys-and-certificates" data-markdown style="font-size: 95%;">
-          <textarea data-template>
-            ## Keys and Certificates
+        <section>
+          <section id="secure-inter-broker-communication" data-markdown>
+            <textarea data-template>
+              ## Secure Inter-Broker Communication
 
-            * **Private And Public Keys**
-              * Identity of an entity (such as a computer or a website)
-            * **Public Key Certificate** (Digital Identity Certificate)
-              * Identity of the owner (the subject)
-              * Digital signature of an entity that has verified the certificate's contents (the issuer)
-              * The certificate issuer is a **Certificate Authority (CA)**
-            * **Certificate Signing Request (CSR)**
-              * Request to Certificate Authority to sign a certificate
-          </textarea>
-        </section>
+              * ...
+            </textarea>
+          </section>
+          <section id="security-inter-broker-protocol-broker-property" data-markdown>
+            <textarea data-template>
+              ## security.inter.broker.protocol Broker Property
 
-        <section id="key-and-trust-stores" data-markdown style="font-size: 80%;">
-          <textarea data-template>
-            ## Key and Trust Stores
+              * Consult [The Internals Of Apache Kafka](https://jaceklaskowski.gitbooks.io/apache-kafka/kafka-properties.html#security.inter.broker.protocol)
+            </textarea>
+          </section>
+          <section id="listeners-broker-property" data-markdown>
+            <textarea data-template>
+              ## listeners Broker Property
 
-            * **Key Store** (or Keystore) is a database of keys and certificates
-              * By default the Java keystore is implemented as a file
-              * Contains the private key and any certificates to complete a chain of trust of the primary certificate
-              * Initially only with the private key
-              * Eventually the certificate and any root certificates after a CSR (Certificate Signing Request)
-            * **Trust Store** is a file with trusted certificates (public keys)
-            * Each certificate is associated with a unique alias
-            * Java **keytool** to manage keys and certificates
-          </textarea>
-        </section>
+              * Consult [The Internals Of Apache Kafka](https://jaceklaskowski.gitbooks.io/apache-kafka/kafka-properties.html#listeners)
+            </textarea>
+          </section>
+          <section id="demo-secure-inter-broker-communication" data-markdown style="font-size: 95%;">
+            <textarea data-template>
+              ## Demo
 
-        <section id="security-protocol-client-property" data-markdown style="font-size: 95%;">
-          <textarea data-template>
-            ## security.protocol Client Property
-
-            * Consult [The Internals Of Apache Kafka](https://jaceklaskowski.gitbooks.io/apache-kafka/kafka-clients-CommonClientConfigs.html#security.protocol)
-          </textarea>
-        </section>
-
-        <section id="demo-secure-communication-using-ssl" data-markdown style="font-size: 95%;">
-          <textarea data-template>
-            ## Demo
-
-            👉 [Securing Communication Between Clients and Brokers Using SSL](https://jaceklaskowski.gitbooks.io/apache-kafka/kafka-demo-securing-communication-between-clients-and-brokers.html)
-          </textarea>
+              👉 [Secure Inter-Broker Communication](https://jaceklaskowski.gitbooks.io/apache-kafka/kafka-demo-secure-inter-broker-communication.html)
+            </textarea>
+          </section>
         </section>
 
         <section id="ssl-authentication" data-markdown>

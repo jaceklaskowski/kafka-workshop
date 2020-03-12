@@ -176,80 +176,102 @@
           </section>
         </section>
 
-        <section id="ssl-authentication" data-markdown>
-          <textarea data-template>
-            ## SSL Authentication
+        <section>
+          <section id="ssl-authentication" data-markdown>
+            <textarea data-template>
+              ## SSL Authentication
 
-            * In SSL authentication, Kafka brokers authenticate clients (using "2-way authentication")
-            * Requires SSL encryption <small>discussed earlier</small>
-              * Client Truststore Only
-            * Broker and clients use keystores (for identity) and truststores with the Certificate Authority (CA)
-          </textarea>
+              * In SSL authentication, Kafka brokers authenticate clients (using "2-way authentication")
+              * Requires SSL encryption <small>discussed earlier</small>
+                * Client Truststore Only
+              * Broker and clients use keystores (for identity) and truststores with the Certificate Authority (CA)
+            </textarea>
+          </section>
+          <section id="ssl-client-auth-broker-property" data-markdown>
+            <textarea data-template>
+              ## ssl.client.auth Broker Property
+
+              * Consult [The Internals Of Apache Kafka](https://jaceklaskowski.gitbooks.io/apache-kafka/kafka-properties.html#ssl.client.auth)
+            </textarea>
+          </section>
+          <section id="demo-ssl-authentication" data-markdown>
+            <textarea data-template>
+              ## Demo
+
+              👉 [SSL Authentication](https://jaceklaskowski.gitbooks.io/apache-kafka/kafka-demo-ssl-authentication.html)
+            </textarea>
+          </section>
         </section>
 
-        <section id="ssl-client-auth-broker-property" data-markdown>
-          <textarea data-template>
-            ## ssl.client.auth Broker Property
+        <section>
+          <section id="acl-authorization" data-markdown>
+            <textarea data-template>
+              ## ACL Authorization
 
-            * Consult [The Internals Of Apache Kafka](https://jaceklaskowski.gitbooks.io/apache-kafka/kafka-properties.html#ssl.client.auth)
-          </textarea>
+              * FIXME
+            </textarea>
+          </section>
+          <section id="authorizer-class-name-broker-property" data-markdown>
+            <textarea data-template>
+              ## authorizer.class.name Broker Property
+
+              * Consult [The Internals Of Apache Kafka](https://jaceklaskowski.gitbooks.io/apache-kafka/kafka-properties.html#authorizer.class.name)
+            </textarea>
+          </section>
+          <section id="other-broker-properties" data-markdown>
+            <textarea data-template>
+              ## Other Broker Properties
+
+              * allow.everyone.if.no.acl.found
+              * super.users
+            </textarea>
+          </section>
+          <section id="kafka-acls-utility" data-markdown>
+            <textarea data-template>
+              ## kafka-acls Utility
+
+              * FIXME
+            </textarea>
+          </section>
+          <section id="demo-acl-authorization" data-markdown>
+            <textarea data-template>
+              ## Demo
+
+              👉 [ACL Authorization](https://jaceklaskowski.gitbooks.io/apache-kafka/kafka-demo-acl-authorization.html)
+            </textarea>
+          </section>
         </section>
 
-        <section id="demo-ssl-authentication" data-markdown>
-          <textarea data-template>
-            ## Demo
+        <section>
+          <section id="recap" data-markdown>
+            <textarea data-template>
+              ## Recap <small>(1 of 2)</small>
 
-            👉 [SSL Authentication](https://jaceklaskowski.gitbooks.io/apache-kafka/kafka-demo-ssl-authentication.html)
-          </textarea>
-        </section>
+              1. [Secure Communication Using SSL](#/secure-communication-using-ssl)
+                * [Keys and Certificates](#/keys-and-certificates)
+                * [Key and Trust Stores](#/key-and-trust-stores)
+                * [security.protocol Client Property](#/security-protocol-client-property)
+                * [Demo: Secure Communication Using SSL](#/demo-secure-communication-using-ssl)
+              1. [Secure Inter-Broker Communication](#/secure-inter-broker-communication)
+                * [security.inter.broker.protocol Broker Property](#/security-inter-broker-protocol-broker-property)
+                * [listeners Broker Property](#/listeners-broker-property)
+                * [Demo: Secure Inter-Broker Communication](#/demo-secure-inter-broker-communication)
+            </textarea>
+          </section>
+          <section data-markdown>
+            <textarea data-template>
+              ## Recap <small>(2 of 2)</small>
 
-        <section id="acl-authorization" data-markdown>
-          <textarea data-template>
-            ## ACL Authorization
-
-            * FIXME
-          </textarea>
-        </section>
-
-        <section id="authorizer-class-name-broker-property" data-markdown>
-          <textarea data-template>
-            ## authorizer.class.name Broker Property
-
-            * Consult [The Internals Of Apache Kafka](https://jaceklaskowski.gitbooks.io/apache-kafka/kafka-properties.html#authorizer.class.name)
-          </textarea>
-        </section>
-
-        <section id="other-broker-properties" data-markdown>
-          <textarea data-template>
-            ## Other Broker Properties
-
-            * allow.everyone.if.no.acl.found
-            * super.users
-          </textarea>
-        </section>
-
-        <section id="kafka-acls-utility" data-markdown>
-          <textarea data-template>
-            ## kafka-acls Utility
-
-            * FIXME
-          </textarea>
-        </section>
-
-        <section id="demo-acl-authorization" data-markdown>
-          <textarea data-template>
-            ## Demo
-
-            👉 [ACL Authorization](https://jaceklaskowski.gitbooks.io/apache-kafka/kafka-demo-acl-authorization.html)
-          </textarea>
-        </section>
-
-        <section id="recap" data-markdown>
-          <textarea data-template>
-            ## Recap
-
-            1. FIXME
-          </textarea>
+              1. [SSL Authentication](#/ssl-authentication)
+                * [ssl.client.auth Broker Property](#/ssl-client-auth-broker-property)
+                * [Demo: SSL Authentication](#/demo-ssl-authentication)
+              1. [ACL Authorization](#/acl-authorization)
+                * [authorizer.class.name Broker Property](#/authorizer-class-name-broker-property)
+                * [Other Broker Properties](#/other-broker-properties)
+                * [kafka-acls Utility](#/kafka-acls-utility)
+                * [Demo: ACL Authorization](#/demo-acl-authorization)
+            </textarea>
+          </section>
         </section>
 
         <section style="text-align: left" data-markdown id="questions">

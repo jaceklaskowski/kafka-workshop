@@ -33,7 +33,7 @@
 
       <div class="footer">
         <footer style="font-size: small;">
-          &copy; <a href="https://medium.com/@jaceklaskowski">Jacek Laskowski</a> 2020 / <a href="https://twitter.com/jaceklaskowski">@JacekLaskowski</a>
+          &copy; <a href="https://medium.com/@jaceklaskowski">Jacek Laskowski</a> 2021 / <a href="https://twitter.com/jaceklaskowski">@JacekLaskowski</a>
           / jacek@japila.pl
         </footer>
       </div>
@@ -46,7 +46,7 @@
             <img width="7%" src="images/jacek_laskowski_20141201_512px.png" style="border: 0">
           </p>
           <h1 style="font-size: 3.44em;">The Essentials of<br>Apache Kafka™</h1>
-          <h3>Apache Kafka™ 2.4.0</h3>
+          <h3>Apache Kafka™ 2.7.0</h3>
 
           <h4 style="font-size: smaller;">
             <a href="https://twitter.com/jaceklaskowski">@jaceklaskowski</a> / <a href="https://stackoverflow.com/users/1305344/jacek-laskowski">StackOverflow</a> / <a href="https://github.com/jaceklaskowski">GitHub</a> / <a href="https://www.linkedin.com/in/jaceklaskowski/">LinkedIn</a>
@@ -64,7 +64,7 @@
             1. [Features of Kafka](#/kafka-features)
             1. [Kafka Streams](#/kafka-streams)
             1. [Kafka Connect](#/kafka-connect)
-            1. [Confluent KSQL](#/confluent-ksql)
+            1. [ksqlDB](#/ksqldb)
           </textarea>
         </section>
 
@@ -230,7 +230,7 @@
                   <li>Can optionally specify partitions</li>
                 </ul>
               </li>
-              <li><a href="https://kafka.apache.org/20/javadoc/org/apache/kafka/clients/producer/KafkaProducer.html">KafkaProducer</a> API for Java</li>
+              <li><a href="https://kafka.apache.org/27/javadoc/org/apache/kafka/clients/producer/KafkaProducer.html">KafkaProducer</a> API for Java</li>
             </ol>
           </section>
           <section id="consumers">
@@ -243,7 +243,7 @@
                   <li>Per partition only</li>
                 </ul>
               </li>
-              <li><a href="https://kafka.apache.org/20/javadoc/org/apache/kafka/clients/consumer/KafkaConsumer.html">KafkaConsumer</a> API for Java</li>
+              <li><a href="https://kafka.apache.org/27/javadoc/org/apache/kafka/clients/consumer/KafkaConsumer.html">KafkaConsumer</a> API for Java</li>
             </ol>
           </section>
           <section>
@@ -309,17 +309,17 @@
           </textarea>
         </section>
 
-        <section id="confluent-ksql" data-markdown style="font-size: 90%;">
+        <section id="ksqldb" data-markdown style="font-size: 90%;">
           <textarea data-template>
-            ## Confluent KSQL
+            ## ksqlDB
 
-            1. **Confluent KSQL** is an open source streaming SQL engine for stream processing on Kafka
+            1. **ksqlDB** is an open source streaming SQL engine for stream processing on Kafka
             1. Interactive SQL interface
             1. "KSQL: Query Your Streams Without Writing Code"
             1. No need to write code in a programming language like Java or Python
-            1. Uses Kafka Streams
+            1. SQL layer atop Kafka Streams
               * Executing SQL on tables and streams
-            1. [Home Page](https://www.confluent.io/product/ksql/)
+            1. [Home Page](https://ksqldb.io/)
           </textarea>
         </section>
 
@@ -332,7 +332,7 @@
             1. [Features of Kafka](#/kafka-features)
             1. [Kafka Streams](#/kafka-streams)
             1. [Kafka Connect](#/kafka-connect)
-            1. [Confluent KSQL](#/confluent-ksql)
+            1. [ksqlDB](#/ksqldb)
           </textarea>
         </section>
 

@@ -1,0 +1,259 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>Apache Kafka™ and Kafka Streams Workshop | 2 days</title>
+
+    <meta name="description" content="Apache Kafka™ and Kafka Streams Workshop | 2 days">
+    <meta name="author" content="Jacek Laskowski">
+
+    <link rel="stylesheet" href="reveal.js/css/reveal.css">
+    <link rel="stylesheet" href="reveal.js/css/theme/beige.css">
+
+    <!-- Theme used for syntax highlighting of code -->
+    <link rel="stylesheet" href="reveal.js/lib/css/zenburn.css">
+
+    <!-- Jacek: custom formatting -->
+    <link rel="stylesheet" href="revealjs-css/jacek.css">
+
+    <!-- Printing and PDF exports -->
+    <script>
+      var link = document.createElement('link');
+      link.rel = 'stylesheet';
+      link.type = 'text/css';
+      link.href = window.location.search.match(/print-pdf/gi) ? 'reveal.js/css/print/pdf.css' : 'reveal.js/css/print/paper.css';
+      document.getElementsByTagName('head')[0].appendChild(link);
+    </script>
+  </head>
+
+  <body>
+    <div class="reveal">
+
+      <div class="footer">
+        <footer style="font-size: small;">
+          &copy; <a href="https://medium.com/@jaceklaskowski">Jacek Laskowski</a> 2021 / <a
+            href="https://twitter.com/jaceklaskowski">@JacekLaskowski</a>
+          / jacek@japila.pl
+        </footer>
+      </div>
+
+      <div class="slides">
+
+        <section class="intro" data-transition="zoom" id="home">
+          <p>
+            <img width="14%" style="background:none; border:none; box-shadow:none;" data-src="images/kafka-logo.png">
+            <img width="7%" src="images/jacek_laskowski_20141201_512px.png" style="border: 0">
+          </p>
+          <h1 style="font-size: 3em;">Apache Kafka™<br>and Kafka Streams<br>Workshop <small>2 Days</small></h1>
+
+          <h4 style="font-size: smaller;">
+            <a href="https://twitter.com/jaceklaskowski">@jaceklaskowski</a> / <a
+              href="https://stackoverflow.com/users/1305344/jacek-laskowski">StackOverflow</a> / <a
+              href="https://github.com/jaceklaskowski">GitHub</a> / <a
+              href="https://www.linkedin.com/in/jaceklaskowski/">LinkedIn</a>
+            <br>
+            The "Internals" Books: <a href="https://bit.ly/apache-kafka-internals">Apache Kafka</a> • <a
+              href="https://bit.ly/kafka-streams-internals">Kafka Streams</a>
+          </h4>
+        </section>
+
+        <section>
+          <section id="speaker" style="font-size: 85%" data-markdown>
+            <textarea data-template>
+              <p><img width="12%" src="images/jacek_laskowski_20141201_512px.png" style="border: 0"></p>
+
+              * **Jacek Laskowski** is a Freelance IT Consultant
+              * Specializing in [Spark](https://spark.apache.org), [Delta Lake](https://delta.io/), [Kafka](https://kafka.apache.org), [Kafka Streams](https://kafka.apache.org)
+              * Development | Consulting | Training | Speaking
+              * Best known by "The Internals Of" online books
+              * Among contributors to [Apache Spark](https://github.com/apache/spark/graphs/contributors)
+              * Among [Confluent Community Catalyst](https://www.confluent.io/nominate/) (Class of 2019 - 2020)
+              * Contact me at **jacek@japila.pl**
+              * Follow [@JacekLaskowski](https://twitter.com/jaceklaskowski) on twitter <br>for more #ApacheSpark, #DeltaLake, #ApacheKafka, #KafkaStreams
+            </textarea>
+          </section>
+          <section id="gitbooks">
+            <p><img width="12%" src="images/jacek_laskowski_20141201_512px.png" style="border: 0"></p>
+            <div style="text-align: left">
+              <p>"The Internals Of" Online Books:</p>
+              <p>
+                <ol>
+                  <li>Quite a few at <a href="https://books.japila.pl/">https://books.japila.pl/</a></li>
+                </ol>
+              </p>
+            </div>
+          </section>
+          <section id="stackoverflow-apache-kafka-streams">
+            <div style="text-align: center">
+              <p>
+                Jacek is active on <a href="https://stackoverflow.com/tags/apache-kafka-streams/topusers">StackOverflow</a> <br><small>(Apache Kafka Streams)</small>
+              </p>
+              <p>
+                <img width="35%" src="images/jaceklaskowski-stackoverflow-apache-kafka-streams.png" style="border: 0">
+              </p>
+            </div>
+          </section>
+        </section>
+
+        <section>
+          <section id="goal" data-markdown>
+            <textarea data-template>
+              # Goal
+              <p>
+                Practical understanding of<br />
+                <b><span style="font-size: 140%">Apache Kafka™</span></b> and <b><span style="font-size: 140%">Kafka Streams</span></b><br />
+                for developers<br />
+                <span style="font-size: 70%">(incl. architecture, installation, configuration, monitoring, and troubleshooting)</span>
+              </p>
+            </textarea>
+          </section>
+        </section>
+
+        <section>
+          <section id="agenda" data-markdown>
+            <textarea data-template>
+              ## Agenda
+
+              1. [Day 1](#/day1) &mdash; Apache Kafka
+              1. [Day 2](#/day2) &mdash; Kafka Streams
+            </textarea>
+          </section>
+
+          <section id="day1" data-markdown>
+            <textarea data-template>
+              ## Day 1 &mdash; Apache Kafka
+
+              1. [The Essentials of Apache Kafka](apache-kafka-essentials.html)
+                * [Exercise: Installing and Running Kafka](https://jaceklaskowski.github.io/kafka-workshop/exercises/kafka-exercise-Installing-and-Running-Kafka-Broker.html)
+                * [Exercise: Exploring Zookeeper](https://jaceklaskowski.github.io/kafka-workshop/exercises/kafka-exercise-Exploring-Zookeeper.html)
+              1. Kafka Configuration (Properties)
+                * [Exercise: Configuring Multi-Broker Kafka Cluster](https://jaceklaskowski.github.io/kafka-workshop/exercises/kafka-exercise-Configuring-Multi-Broker-Kafka-Cluster.html)
+            </textarea>
+          </section>
+
+          <section id="day2" data-markdown style="font-size: 80%">
+            <textarea data-template>
+              ## Day 2 &mdash; Kafka Streams
+
+              1. [Managing Kafka Topics](kafka-managing-kafka-topics.html)
+                * [Exercise: Using kafka-topics with Multi-Broker Cluster](https://jaceklaskowski.github.io/kafka-workshop/exercises/kafka-exercise-Using-kafka-topics-with-Multi-Broker-Cluster.html)
+                * [Exercise: Partition Leader Election and Consumer Fail-Over](https://jaceklaskowski.github.io/kafka-workshop/exercises/kafka-exercise-partition-leader-election-and-consumer-fail-over.html)
+              1. [Kafka Consumers, Consumer Groups, and Partition Rebalancing](kafka-consumers-consumer-groups-and-partition-rebalancing.html)
+                * [Exercise: Using Consumer Group](https://jaceklaskowski.github.io/kafka-workshop/exercises/kafka-exercise-using-consumer-group.html)
+              1. [Confluent Control Center](https://docs.google.com/presentation/d/e/2PACX-1vR9wuvESq8VNiPVj0cPmYRDtvMtQiHHU_9ksMyufGcTbqLJFHQQoZK4MILVPzCnYZQy4Bv8OTFU1OZz/pub)
+              1. [Monitoring Kafka Cluster](Monitoring-Kafka-Cluster.html)
+                * Exercise: Using jconsole for monitoring
+            </textarea>
+          </section>
+
+        </section>
+
+        <section>
+          <section id="prerequisities">
+            <h1>Prerequisities</h1>
+            <h4>Be prepared to get the most out of the workshop</h4>
+          </section>
+          <section id="prerequisities-experience">
+            <h2>Prerequisities / Experience</h2>
+            <ol>
+              <li>Some familiarity with messaging systems</li>
+              <li>Experience with shell / command line</li>
+            </ol>
+          </section>
+          <section id="prerequisities-to-be-installed">
+            <h2>Prerequisities / To Be Installed</h2>
+            <ul>
+              <li>Linux or macOS</li>
+              <li><a href="https://adoptopenjdk.net/?variant=openjdk11&jvmVariant=hotspot">OpenJDK 11</a></li>
+              <li><a href="https://www.docker.com/">Docker</a>
+                <ul>
+                  <li><a href="https://docs.docker.com/docker-for-mac/">Docker Desktop for Mac</a></li>
+                  <li><a href="https://docs.docker.com/docker-for-windows/">Docker for Windows</a></li>
+                </ul>
+              </li>
+              <li><a href="https://docs.docker.com/compose/">Docker Compose</a></li>
+              <li><a href="https://git-scm.com/">git</a></li>
+              <li><a href="https://docs.confluent.io/current/quickstart/ce-docker-quickstart.html#step-1-download-and-start-cp-using-docker">Confluent Platform Using Docker</a> (Step 1 Only)</li>
+              <li><a href="https://github.com/edenhill/kafkacat#kafkacat">kafkacat Utility</a></li>
+              <li><a href="https://www.openssl.org/">OpenSSL toolkit</a></li>
+            </ul>
+          </section>
+        </section>
+
+        <section>
+          <section id="in-da-clazz">
+            <h1>In-Class Preparations</h1>
+            <h4>Make Instructor's Life Slightly Easier. Thanks!</h4>
+          </section>
+          <section id="introduce-yourself">
+            <h2>Introduce Yourself</h2>
+            <ol>
+              <li>First name</li>
+              <li>What's your experience with Kafka?</li>
+              <li>Any production experience with Kafka?</li>
+              <li>What do you expect from the workshop?</li>
+            </ol>
+          </section>
+        </section>
+
+        <section style="text-align: left" data-markdown id="questions">
+          <textarea data-template>
+            # Questions?
+
+            * Read [The Internals of Apache Kafka](https://bit.ly/apache-kafka-internals)
+            * Read [The Internals of Kafka Streams](https://bit.ly/kafka-streams-internals)
+            * Follow [@jaceklaskowski](https://twitter.com/jaceklaskowski) on twitter (DMs open)
+            * Upvote [my questions and answers on StackOverflow](http://stackoverflow.com/users/1305344/jacek-laskowski)
+            * Contact me at **jacek@japila.pl**
+          </textarea>
+        </section>
+
+      </div>
+    </div>
+
+    <script src="reveal.js/lib/js/head.min.js"></script>
+    <script src="reveal.js/js/reveal.js"></script>
+
+    <script>
+      // More info about config & dependencies:
+      // - https://github.com/hakimel/reveal.js#configuration
+      // - https://github.com/hakimel/reveal.js#dependencies
+      Reveal.initialize({
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+        slideNumber: true,
+
+        transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+        menu: {
+          markers: true,
+          openSlideNumber: true
+        },
+        dependencies: [
+          { src: 'reveal.js/lib/js/classList.js', condition: function () { return !document.body.classList; } },
+          { src: 'reveal.js/plugin/markdown/marked.js' },
+          { src: 'reveal.js/plugin/markdown/markdown.js' },
+          { src: 'reveal.js/plugin/zoom-js/zoom.js', async: true },
+          { src: 'reveal.js/plugin/notes/notes.js', async: true },
+          { src: 'reveal.js/plugin/highlight/highlight.js', async: true, callback: function () { hljs.initHighlightingOnLoad(); } }
+        ]
+      });
+    </script>
+    <script>
+      (function (i, s, o, g, r, a, m) {
+      i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+        (i[r].q = i[r].q || []).push(arguments)
+      }, i[r].l = 1 * new Date(); a = s.createElement(o),
+        m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+      })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+      ga('create', 'UA-45999426-3', 'auto');
+      ga('send', 'pageview');
+
+    </script>
+  </body>
+</html>

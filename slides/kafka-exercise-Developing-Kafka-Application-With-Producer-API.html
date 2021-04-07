@@ -15,17 +15,30 @@
     <!-- Theme used for syntax highlighting of code -->
     <link rel="stylesheet" href="reveal.js/lib/css/zenburn.css">
 
+    <!-- Jacek: custom formatting -->
+    <link rel="stylesheet" href="revealjs-css/jacek.css">
+
     <!-- Printing and PDF exports -->
     <script>
-        var link = document.createElement( 'link' );
-        link.rel = 'stylesheet';
-        link.type = 'text/css';
-        link.href = window.location.search.match( /print-pdf/gi ) ? 'reveal.js/css/print/pdf.css' : 'reveal.js/css/print/paper.css';
-        document.getElementsByTagName( 'head' )[0].appendChild( link );
+      var link = document.createElement( 'link' );
+      link.rel = 'stylesheet';
+      link.type = 'text/css';
+      link.href = window.location.search.match( /print-pdf/gi ) ? 'reveal.js/css/print/pdf.css' : 'reveal.js/css/print/paper.css';
+      document.getElementsByTagName( 'head' )[0].appendChild( link );
     </script>
   </head>
+
   <body>
     <div class="reveal">
+
+      <div class="footer">
+        <footer style="font-size: small;">
+          &copy; <a href="https://medium.com/@jaceklaskowski">Jacek Laskowski</a> 2021 / <a
+            href="https://twitter.com/jaceklaskowski">@JacekLaskowski</a>
+          / jacek@japila.pl
+        </footer>
+      </div>
+
       <div class="slides">
 
         <section class="intro" data-transition="zoom" id="home">
@@ -33,20 +46,25 @@
             <img width="17%" style="background:none; border:none; box-shadow:none;" data-src="images/kafka-logo.png">
             <img width="8%" src="images/jacek_laskowski_20141201_512px.png" style="border: 0">
           </p>
-          <h1 style="font-size: 100px;">Developing Kafka Application With Producer API</h1>
+          <h1 style="font-size: 2.66em;">Developing Kafka Application With Producer API</h1>
           <h3>Exercise</h3>
 
-          <h4 style="font-size: smaller;"><a href="https://twitter.com/jaceklaskowski">@jaceklaskowski</a> / <a href="http://stackoverflow.com/users/1305344/jacek-laskowski">StackOverflow</a> / <a href="https://github.com/jaceklaskowski">GitHub</a><br />
-          Books: <a href="https://bit.ly/mastering-apache-kafka">Mastering Apache Kafka</a> / <a href="https://bit.ly/mastering-kafka-streams">Mastering Kafka Streams</a></h4>
-
-          <footer style="font-size: small;">&copy;<a href="https://medium.com/@jaceklaskowski">Jacek Laskowski</a> 2018 / <a href="https://twitter.com/jaceklaskowski">@JacekLaskowski</a> / jacek@japila.pl</footer>
+          <h4 style="font-size: smaller;">
+            <a href="https://twitter.com/jaceklaskowski">@jaceklaskowski</a> / <a
+              href="https://stackoverflow.com/users/1305344/jacek-laskowski">StackOverflow</a> / <a
+              href="https://github.com/jaceklaskowski">GitHub</a> / <a
+              href="https://www.linkedin.com/in/jaceklaskowski/">LinkedIn</a>
+            <br>
+            The "Internals" Books: <a href="https://bit.ly/apache-kafka-internals">Apache Kafka</a> • <a
+              href="https://bit.ly/kafka-streams-internals">Kafka Streams</a>
+          </h4>
         </section>
 
         <section id="exercise" data-markdown>
           <textarea data-template>
             ## Exercise: Developing Kafka Application With Producer API
 
-            1. Use [Producer](http://kafka.apache.org/20/javadoc/org/apache/kafka/clients/producer/Producer.html) API (with [KafkaProducer](http://kafka.apache.org/20/javadoc/org/apache/kafka/clients/producer/KafkaProducer.html))
+            1. Use [Producer](http://kafka.apache.org/27/javadoc/org/apache/kafka/clients/producer/Producer.html) API (with [KafkaProducer](http://kafka.apache.org/20/javadoc/org/apache/kafka/clients/producer/KafkaProducer.html))
             1. Use <b>kafka-console-consumer</b> to verify that the message got through
           </textarea>
         </section>
@@ -71,19 +89,18 @@
           </code></pre>
         </section>
 
-        <section id="questions" data-markdown>
+        <section style="text-align: left" data-markdown id="questions">
           <textarea data-template>
             # Questions?
 
-            * Read <a href="https://bit.ly/mastering-apache-kafka">Mastering Apache Kafka</a>
-            * Read <a href="https://bit.ly/mastering-kafka-streams">Mastering Kafka Streams</a>
-            * Follow <a href="https://twitter.com/jaceklaskowski">@jaceklaskowski</a> on twitter
-            * Upvote <a href="http://stackoverflow.com/users/1305344/jacek-laskowski">my questions and answers</a> on StackOverflow
-
-            <br /><br />
-            <footer style="font-size: small;">&copy;<a href="https://medium.com/@jaceklaskowski">Jacek Laskowski</a> 2018 / @jaceklaskowski / jacek@japila.pl</footer>
+            * Read [The Internals of Apache Kafka](https://bit.ly/apache-kafka-internals)
+            * Read [The Internals of Kafka Streams](https://bit.ly/kafka-streams-internals)
+            * Follow [@jaceklaskowski](https://twitter.com/jaceklaskowski) on twitter (DMs open)
+            * Upvote [my questions and answers on StackOverflow](http://stackoverflow.com/users/1305344/jacek-laskowski)
+            * Contact me at **jacek@japila.pl**
           </textarea>
         </section>
+
       </div>
     </div>
 

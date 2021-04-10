@@ -32,28 +32,35 @@
     <div class="reveal">
 
       <div class="footer">
-        <footer style="font-size: small;">&copy;<a href="https://medium.com/@jaceklaskowski">Jacek Laskowski</a> 2019 / <a href="https://twitter.com/jaceklaskowski">@JacekLaskowski</a> / jacek@japila.pl</footer>
+        <footer style="font-size: small;">
+          &copy; <a href="https://medium.com/@jaceklaskowski">Jacek Laskowski</a> 2021 / <a
+            href="https://twitter.com/jaceklaskowski">@JacekLaskowski</a> / jacek@japila.pl
+        </footer>
       </div>
 
       <div class="slides">
 
         <section class="intro" data-transition="zoom" id="home">
           <p>
-            <img width="15%" style="background:none; border:none; box-shadow:none;" data-src="images/kafka-logo.png">
+            <img width="14%" style="background:none; border:none; box-shadow:none;" data-src="images/kafka-logo.png">
             <img width="7%" src="images/jacek_laskowski_20141201_512px.png" style="border: 0">
           </p>
           <h1 style="font-size: 3.44em;">Kafka Streams</h1>
-          <h2>stream processing applications</h2>
-          <h3>Kafka Streams 2.1.0</h3>
+          <h2>Stream Processing Library for Kafka</h2>
+          <h3>Apache Kafka™ 2.7.0</h3>
 
           <h4 style="font-size: smaller;">
-            <a href="https://twitter.com/jaceklaskowski">@jaceklaskowski</a> / <a href="http://stackoverflow.com/users/1305344/jacek-laskowski">StackOverflow</a> / <a href="https://github.com/jaceklaskowski">GitHub</a>
+            <a href="https://twitter.com/jaceklaskowski">@jaceklaskowski</a> / <a
+              href="https://stackoverflow.com/users/1305344/jacek-laskowski">StackOverflow</a> / <a
+              href="https://github.com/jaceklaskowski">GitHub</a> / <a
+              href="https://www.linkedin.com/in/jaceklaskowski/">LinkedIn</a>
             <br>
-            The "Internals" Books: <a href="https://bit.ly/mastering-apache-kafka">Apache Kafka</a> / <a href="https://bit.ly/mastering-kafka-streams">Kafka Streams</a>
+            The "Internals" Books: <a href="https://bit.ly/apache-kafka-internals">Apache Kafka</a> • <a
+              href="https://bit.ly/kafka-streams-internals">Kafka Streams</a>
           </h4>
         </section>
 
-        <section id="agenda" style="font-size: 90%" data-markdown>
+        <section id="agenda" data-markdown>
           <textarea data-template>
             ## Agenda
 
@@ -69,11 +76,13 @@
 
             1. **Kafka Streams** is a client library for **stream processing applications** that process data stored in Kafka
             1. Uses Kafka Producer and Consumer APIs
-            1. Offers necessary stream processing primitives
+            1. Stream processing primitives
               * High-level **Streams DSL**
               * Low-level **Processor API**
-            1. Supports **exactly-once processing** semantics to guarantee that each record will be processed once and only once
-            1. Supports **fault-tolerant local state** for stateful operations (e.g. windowed joins and aggregations)
+            1. Supports **Exactly-Once Processing**
+              * Records are processed once and only once
+            1. Supports **Fault-Tolerant Local State** for stateful operations
+              * e.g. windowed joins and aggregations
             1. [Home Page](https://kafka.apache.org/documentation/streams/)
 
           </textarea>
@@ -86,9 +95,9 @@
 
               1. **Streams DSL** is a high-level API built on top of the Processor API
               1. Built-in abstractions for streams and tables
-                * KStream
-                * KTable
-                * GlobalKTable
+                * **KStream**
+                * **KTable**
+                * **GlobalKTable**
               1. Declarative, functional programming style
                 * Stateless transformations (e.g. **map** and **filter**)
                 * Stateful transformations (e.g. **count**, **reduce**, **join**, and windowing)
@@ -105,7 +114,7 @@
                 1. Apply transformations
                 1. Write output streams (to Kafka topics)
               1. Interactive queries (e.g. via a REST API)
-              1. Read [Kafka Streams — Stream Processing Library on Apache Kafka](https://jaceklaskowski.gitbooks.io/mastering-kafka-streams/kafka-streams.html)
+              1. Find more in [The Internals of Kafka Streams](https://jaceklaskowski.gitbooks.io/mastering-kafka-streams/)
             </textarea>
           </section>
         </section>
@@ -114,7 +123,14 @@
           <textarea data-template>
             ## Low-Level Processor API
 
-            1. **Processor API** is...FIXME
+            1. Stream **Processor API** is a low-level API to compose topologies made up of custom processors
+              * Node in a processor topology for a single processing step
+            1. [Processor[KIn,VIn,KOut,VOut]](https://kafka.apache.org/27/javadoc/org/apache/kafka/streams/processor/api/Processor.html)
+              * (KIn,VIn) --> Processor --> (KOut,VOut)
+            1. Allows for stateless and stateful operations
+              * Arbitrary stream processors
+              * Connect processors with state stores
+            1. Combining the convenience of Streams DSL with the power and flexibility of Processor API
 
           </textarea>
         </section>
@@ -132,11 +148,12 @@
         <section style="text-align: left" data-markdown id="questions">
           <textarea data-template>
             # Questions?
-            
-            * Read [The Internals of Apache Kafka](http://bit.ly/mastering-apache-kafka)
-            * Read [The Internals of Kafka Streams](http://bit.ly/mastering-kafka-streams)
-            * Follow [@jaceklaskowski](https://twitter.com/jaceklaskowski) on twitter
+
+            * Read [The Internals of Apache Kafka](https://bit.ly/apache-kafka-internals)
+            * Read [The Internals of Kafka Streams](https://bit.ly/kafka-streams-internals)
+            * Follow [@jaceklaskowski](https://twitter.com/jaceklaskowski) on twitter (DMs open)
             * Upvote [my questions and answers on StackOverflow](http://stackoverflow.com/users/1305344/jacek-laskowski)
+            * Contact me at **jacek@japila.pl**
           </textarea>
         </section>
 

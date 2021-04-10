@@ -24,6 +24,7 @@ This repository contains the exercises for [Apache Kafka™ and Kafka Streams Wo
 1. [Exercise: Word Count Per Record](kafka-exercise-Word-Count-Per-Record.md)
 1. [Exercise: Global Word Count](kafka-exercise-Global-Word-Count.md)
 
-## Topic 3: Kafka Streams (Scala API)
+## Topic 3: Kafka Streams
 
-1. [Exercise: Processing Record Stream with KStream](kafka-streams-exercise-Processing-Record-Stream-with-KStream.md)
+1. [Exercise: Processing Record Stream with KStream](kafka-streams/processing-record-stream-with-kstream.md)
+1. [Exercise: Joining KStream with KTable ("Currency Exchange")](kafka-streams/kstream-join-ktable.md)

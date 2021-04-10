@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html>
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
@@ -9,23 +9,15 @@
     <meta name="description" content="Apache Kafka™ and Kafka Streams Workshop | 2 days">
     <meta name="author" content="Jacek Laskowski">
 
-    <link rel="stylesheet" href="reveal.js/css/reveal.css">
-    <link rel="stylesheet" href="reveal.js/css/theme/beige.css">
+    <link rel="stylesheet" href="reveal4/dist/reveal.css">
+    <link rel="stylesheet" href="reveal4/dist/theme/beige.css">
 
     <!-- Theme used for syntax highlighting of code -->
-    <link rel="stylesheet" href="reveal.js/lib/css/zenburn.css">
+    <!-- <link rel="stylesheet" href="reveal4/plugin/highlight/zenburn.css" id="highlight-theme"> -->
+    <link rel="stylesheet" href="reveal4/plugin/highlight/monokai.css">
 
     <!-- Jacek: custom formatting -->
     <link rel="stylesheet" href="revealjs-css/jacek.css">
-
-    <!-- Printing and PDF exports -->
-    <script>
-      var link = document.createElement('link');
-      link.rel = 'stylesheet';
-      link.type = 'text/css';
-      link.href = window.location.search.match(/print-pdf/gi) ? 'reveal.js/css/print/pdf.css' : 'reveal.js/css/print/paper.css';
-      document.getElementsByTagName('head')[0].appendChild(link);
-    </script>
   </head>
 
   <body>
@@ -218,34 +210,22 @@
       </div>
     </div>
 
-    <script src="reveal.js/lib/js/head.min.js"></script>
-    <script src="reveal.js/js/reveal.js"></script>
-
+    <script src="reveal4/dist/reveal.js"></script>
+    <script src="reveal4/plugin/notes/notes.js"></script>
+    <script src="reveal4/plugin/markdown/markdown.js"></script>
+    <script src="reveal4/plugin/highlight/highlight.js"></script>
+    <script src="reveal4/plugin/zoom/zoom.js"></script>
     <script>
       // More info about config & dependencies:
       // - https://github.com/hakimel/reveal.js#configuration
       // - https://github.com/hakimel/reveal.js#dependencies
       Reveal.initialize({
-        controls: true,
-        progress: true,
-        history: true,
-        center: true,
-        slideNumber: true,
-
-        transition: 'slide', // none/fade/slide/convex/concave/zoom
-
-        menu: {
-          markers: true,
-          openSlideNumber: true
-        },
-        dependencies: [
-          { src: 'reveal.js/lib/js/classList.js', condition: function () { return !document.body.classList; } },
-          { src: 'reveal.js/plugin/markdown/marked.js' },
-          { src: 'reveal.js/plugin/markdown/markdown.js' },
-          { src: 'reveal.js/plugin/zoom-js/zoom.js', async: true },
-          { src: 'reveal.js/plugin/notes/notes.js', async: true },
-          { src: 'reveal.js/plugin/highlight/highlight.js', async: true, callback: function () { hljs.initHighlightingOnLoad(); } }
-        ]
+        hash: true,
+        pdf: true,
+        slideNumber: 'c/t',
+        showSlideNumber: 'speaker',
+        // Learn about plugins: https://revealjs.com/plugins/
+        plugins: [RevealMarkdown, RevealHighlight, RevealNotes, RevealZoom]
       });
     </script>
     <script>

@@ -4,9 +4,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-    <title>Kafka Streams Workshop | Kafka Streams</title>
+    <title>Kafka Streams Workshop | Kafka Streams Essentials</title>
 
-    <meta name="description" content="Kafka Streams Workshop | Kafka Streams">
+    <meta name="description" content="Kafka Streams Workshop | Kafka Streams Essentials">
     <meta name="author" content="Jacek Laskowski">
 
     <link rel="stylesheet" href="reveal.js/css/reveal.css">
@@ -43,11 +43,11 @@
         <section class="intro" data-transition="zoom" id="home">
           <p>
             <img width="14%" style="background:none; border:none; box-shadow:none;" data-src="images/kafka-logo.png">
-            <img width="7%" src="images/jacek_laskowski_20141201_512px.png" style="border: 0">
+            <img width="8%" src="images/jacek_laskowski_20201229.png" style="border: 0">
           </p>
           <h1 style="font-size: 3.44em;">Kafka Streams</h1>
           <h2>Stream Processing Library for Kafka</h2>
-          <h3>Apache Kafka™ 2.7.0</h3>
+          <h3>Apache Kafka™ 3.0.0</h3>
 
           <h4 style="font-size: smaller;">
             <a href="https://twitter.com/jaceklaskowski">@jaceklaskowski</a> / <a
@@ -55,8 +55,8 @@
               href="https://github.com/jaceklaskowski">GitHub</a> / <a
               href="https://www.linkedin.com/in/jaceklaskowski/">LinkedIn</a>
             <br>
-            The "Internals" Books: <a href="https://bit.ly/apache-kafka-internals">Apache Kafka</a> • <a
-              href="https://bit.ly/kafka-streams-internals">Kafka Streams</a>
+            The "Internals" Books: <a href="https://books.japila.pl/kafka-internals/">Apache Kafka</a> • <a
+              href="https://books.japila.pl/kafka-streams-internals/">Kafka Streams</a>
           </h4>
         </section>
 
@@ -114,7 +114,7 @@
                 1. Apply transformations
                 1. Write output streams (to Kafka topics)
               1. Interactive queries (e.g. via a REST API)
-              1. Find more in [The Internals of Kafka Streams](https://jaceklaskowski.gitbooks.io/mastering-kafka-streams/)
+              1. Find more in [The Internals of Kafka Streams](https://books.japila.pl/kafka-streams-internals/)
             </textarea>
           </section>
         </section>
@@ -125,7 +125,7 @@
 
             1. Stream **Processor API** is a low-level API to compose topologies made up of custom processors
               * Node in a processor topology for a single processing step
-            1. [Processor[KIn,VIn,KOut,VOut]](https://kafka.apache.org/27/javadoc/org/apache/kafka/streams/processor/api/Processor.html)
+            1. [Processor[KIn,VIn,KOut,VOut]](https://kafka.apache.org/30/javadoc/org/apache/kafka/streams/processor/api/Processor.html)
               * (KIn,VIn) --> Processor --> (KOut,VOut)
             1. Allows for stateless and stateful operations
               * Arbitrary stream processors
@@ -149,8 +149,8 @@
           <textarea data-template>
             # Questions?
 
-            * Read [The Internals of Apache Kafka](https://bit.ly/apache-kafka-internals)
-            * Read [The Internals of Kafka Streams](https://bit.ly/kafka-streams-internals)
+            * Read [The Internals of Apache Kafka](https://books.japila.pl/kafka-internals/)
+            * Read [The Internals of Kafka Streams](https://books.japila.pl/kafka-streams-internals/)
             * Follow [@jaceklaskowski](https://twitter.com/jaceklaskowski) on twitter (DMs open)
             * Upvote [my questions and answers on StackOverflow](http://stackoverflow.com/users/1305344/jacek-laskowski)
             * Contact me at **jacek@japila.pl**

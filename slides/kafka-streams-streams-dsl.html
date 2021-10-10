@@ -32,24 +32,31 @@
     <div class="reveal">
 
       <div class="footer">
-        <footer style="font-size: small;">&copy;<a href="https://medium.com/@jaceklaskowski">Jacek Laskowski</a> 2019 / <a href="https://twitter.com/jaceklaskowski">@JacekLaskowski</a> / jacek@japila.pl</footer>
+        <footer style="font-size: small;">
+          &copy; <a href="https://medium.com/@jaceklaskowski">Jacek Laskowski</a> 2021 / <a
+            href="https://twitter.com/jaceklaskowski">@JacekLaskowski</a> / jacek@japila.pl
+        </footer>
       </div>
 
       <div class="slides">
 
         <section class="intro" data-transition="zoom" id="home">
           <p>
-            <img width="15%" style="background:none; border:none; box-shadow:none;" data-src="images/kafka-logo.png">
-            <img width="7%" src="images/jacek_laskowski_20141201_512px.png" style="border: 0">
+            <img width="14%" style="background:none; border:none; box-shadow:none;" data-src="images/kafka-logo.png">
+            <img width="8%" src="images/jacek_laskowski_20201229.png" style="border: 0">
           </p>
           <h1 style="font-size: 2.44em;">High-Level</h1>
           <h1>Streams DSL</h1>
-          <h3>Kafka Streams 2.1.0</h3>
+          <h3>Kafka Streams 3.0.0</h3>
 
           <h4 style="font-size: smaller;">
-            <a href="https://twitter.com/jaceklaskowski">@jaceklaskowski</a> / <a href="http://stackoverflow.com/users/1305344/jacek-laskowski">StackOverflow</a> / <a href="https://github.com/jaceklaskowski">GitHub</a>
+            <a href="https://twitter.com/jaceklaskowski">@jaceklaskowski</a> / <a
+              href="https://stackoverflow.com/users/1305344/jacek-laskowski">StackOverflow</a> / <a
+              href="https://github.com/jaceklaskowski">GitHub</a> / <a
+              href="https://www.linkedin.com/in/jaceklaskowski/">LinkedIn</a>
             <br>
-            The "Internals" Books: <a href="https://bit.ly/mastering-apache-kafka">Apache Kafka</a> / <a href="https://bit.ly/mastering-kafka-streams">Kafka Streams</a>
+            The "Internals" Books: <a href="https://books.japila.pl/kafka-internals/">Apache Kafka</a> • <a
+              href="https://books.japila.pl/kafka-streams-internals/">Kafka Streams</a>
           </h4>
         </section>
 
@@ -95,7 +102,7 @@
                 1. Read input streams (from Kafka topics)
                 1. Apply transformations
                 1. Write output streams (to Kafka topics or console)
-              1. Read up on it in [The Internals of Kafka Streams](https://jaceklaskowski.gitbooks.io/mastering-kafka-streams/kafka-streams.html)
+              1. Read up on it in [The Internals of Kafka Streams](https://books.japila.pl/kafka-streams-internals/)
             </textarea>
           </section>
         </section>
@@ -109,7 +116,7 @@
             1. Loads a changelog stream into a KTable
             1. Loads a changelog stream into a GlobalKTable
             1. Streams from records in one or more Kafka topics
-            1. [StreamsBuilder API](http://kafka.apache.org/21/javadoc/org/apache/kafka/streams/StreamsBuilder.html)
+            1. [StreamsBuilder API](http://kafka.apache.org/30/javadoc/org/apache/kafka/streams/StreamsBuilder.html)
           </textarea>
         </section>
 
@@ -122,7 +129,7 @@
             1. Data records (in a record stream) are always interpreted as an "INSERT"
               * No record replaces an existing row with the same key
             1. Examples: credit card transactions, page view events, server log entries
-            1. [KStream API](http://kafka.apache.org/21/javadoc/org/apache/kafka/streams/kstream/KStream.html)
+            1. [KStream API](http://kafka.apache.org/30/javadoc/org/apache/kafka/streams/kstream/KStream.html)
           </textarea>
         </section>
 
@@ -135,7 +142,7 @@
               * "UPDATE" of the last value for the same record key
               * "INSERT" if a given key doesn't exist yet
             1. A record with a **null** value represents a "DELETE" or tombstone for the record's key
-            1. [KTable API](http://kafka.apache.org/21/javadoc/org/apache/kafka/streams/kstream/KTable.html)
+            1. [KTable API](http://kafka.apache.org/30/javadoc/org/apache/kafka/streams/kstream/KTable.html)
           </textarea>
         </section>
 
@@ -149,7 +156,7 @@
               * Local GlobalKTable instance of each application instance will be populated with data from all partitions of the topic
             1. Provides the ability to look up current values of data records by keys
             1. Can only be used as right-hand side input for stream-table joins
-            1. [GlobalKTable API](http://kafka.apache.org/21/javadoc/org/apache/kafka/streams/kstream/GlobalKTable.html)
+            1. [GlobalKTable API](http://kafka.apache.org/30/javadoc/org/apache/kafka/streams/kstream/GlobalKTable.html)
           </textarea>
         </section>
 
@@ -157,17 +164,19 @@
           <textarea data-template>
             ## Consumed
 
-            1. **Consumed** defines the optional parameters that describe how to consume a record stream
+            1. **Consumed** defines the optional parameters (metadata) that describe how to consume a record stream
               * Used in **stream**, **table**, **globalTable**, and **addGlobalStore** operators
-            1. Read up on it in [The Internals of Kafka Streams](https://jaceklaskowski.gitbooks.io/mastering-kafka-streams/kafka-streams-Consumed.html)
+            1. Read up on it in [The Internals of Kafka Streams](https://books.japila.pl/kafka-streams-internals/kstream/Consumed/)
           </textarea>
         </section>
 
         <section style="font-size: 90%" data-markdown id="produced">
           <textarea data-template>
             ## Produced
-
-            1. FIXME
+            
+            1. **Produced** defines the optional parameters (metadata) that describe how to produce a record stream
+              * Used in **KStream.to** operator
+            1. Read up on it in [The Internals of Kafka Streams](https://books.japila.pl/kafka-streams-internals/kstream/Produced/)
           </textarea>
         </section>
 
@@ -179,7 +188,7 @@
             1. Performs continuous computation on data from one or more input topics
             1. Sends output to zero, one, or more output topics
             1. Executes a DAG topology of Processors
-            1. [KafkaStreams API](http://kafka.apache.org/21/javadoc/org/apache/kafka/streams/KafkaStreams.html)
+            1. [KafkaStreams API](http://kafka.apache.org/30/javadoc/org/apache/kafka/streams/KafkaStreams.html)
           </textarea>
         </section>
 
@@ -192,8 +201,8 @@
               * Better type inferencing
               * Enhanced expressiveness
               * Less boilerplates
-            1. [Official documentation](https://kafka.apache.org/21/documentation/streams/developer-guide/dsl-api.html#scala-dsl)
-            1. [Scala API for Kafka Streams](https://jaceklaskowski.gitbooks.io/mastering-kafka-streams/kafka-streams-scala.html) in the Mastering Kafka Streams gitbook
+            1. [Official documentation](https://kafka.apache.org/30/documentation/streams/developer-guide/dsl-api.html#scala-dsl)
+            1. [Scala API for Kafka Streams](https://books.japila.pl/kafka-streams-internals/scala) in The Internals of Kafka Streams
           </textarea>
         </section>
 
@@ -201,6 +210,8 @@
           <textarea data-template>
             # Demo
             ## Processing Record Stream <br> with KStream
+
+            1. [Demo: Developing Kafka Streams Application](https://books.japila.pl/kafka-streams-internals/demo/developing-kafka-streams-application/)
           </textarea>
         </section>
 
@@ -208,6 +219,8 @@
           <textarea data-template>
             # Demo
             ## Kafka Streams DSL for Scala
+
+            1. [Scala API for Kafka Streams](https://books.japila.pl/kafka-streams-internals/scala/)
           </textarea>
         </section>
 
@@ -232,11 +245,12 @@
         <section style="text-align: left" data-markdown id="questions">
           <textarea data-template>
             # Questions?
-            
-            * Read [The Internals of Apache Kafka](http://bit.ly/mastering-apache-kafka)
-            * Read [The Internals of Kafka Streams](http://bit.ly/mastering-kafka-streams)
-            * Follow [@jaceklaskowski](https://twitter.com/jaceklaskowski) on twitter
+
+            * Read [The Internals of Apache Kafka](https://books.japila.pl/kafka-internals/)
+            * Read [The Internals of Kafka Streams](https://books.japila.pl/kafka-streams-internals/)
+            * Follow [@jaceklaskowski](https://twitter.com/jaceklaskowski) on twitter (DMs open)
             * Upvote [my questions and answers on StackOverflow](http://stackoverflow.com/users/1305344/jacek-laskowski)
+            * Contact me at **jacek@japila.pl**
           </textarea>
         </section>
 

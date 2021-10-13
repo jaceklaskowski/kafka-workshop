@@ -2,17 +2,17 @@
 
 ## Table of Contents
 
-1. [Kafka Streams and Apache Kafka Workshop (2 days)](https://jaceklaskowski.github.io/kafka-workshop/slides/00_agenda-2-days-Kafka-Streams-Apache-Kafka-Workshop.html) &mdash; being taught online, 11-12 October 2021
-1. [Apache Kafka™ and Kafka Streams Workshop (2 days)](https://jaceklaskowski.github.io/kafka-workshop/slides/00_agenda-2-days-Apache-Kafka-Kafka-Streams-Workshop.html) &mdash; taught online, 13-14 September 2021
-1. [Apache Kafka™ and Kafka Streams Workshop (2 days)](https://jaceklaskowski.github.io/kafka-workshop/slides/00_agenda-2-days-Apache-Kafka-Kafka-Streams-Workshop.html) &mdash; taught online, 8-9 April 2021
-1. [Apache Kafka™ Administration Workshop (2 days)](https://jaceklaskowski.github.io/kafka-workshop/slides/00_agenda-2-days-Apache-Kafka-Administration-Workshop.html) &mdash; taught in [Porto, Portugal](https://en.wikipedia.org/wiki/Porto), 27-28 February 2020
-1. [Apache Kafka™ for Administrators and Operators Workshop (2 days)](https://jaceklaskowski.github.io/kafka-workshop/slides/00_agenda-2-days-Apache-Kafka-Administration-Workshop.html) &mdash; taught in [Warsaw, Poland](https://en.wikipedia.org/wiki/Warsaw), 10-11 December 2019
-1. [Apache Kafka™ for Administrators and Operators Workshop (2 days)](https://jaceklaskowski.github.io/kafka-workshop/slides/00_agenda-2-days-Apache-Kafka-Administration-Workshop.html) &mdash; taught in [Lodz, Poland](https://en.wikipedia.org/wiki/%C5%81%C3%B3d%C5%BA), 5-6 and 12-13 September 2019
-1. [Apache Kafka™ for Administrators and Operators Workshop (2 days)](https://jaceklaskowski.github.io/kafka-workshop/slides/00_agenda-2-days-Apache-Kafka-Administration-Workshop.html) &mdash; taught in [Porto, Portugal](https://en.wikipedia.org/wiki/Porto), 16-17 and 18-19 July 2019
-1. [Apache Kafka™ Workshop (3 days)](https://jaceklaskowski.github.io/kafka-workshop/slides/00_agenda-3-days-Apache-Kafka-Workshop.html) &mdash; taught in [Győr, Hungary](https://en.wikipedia.org/wiki/Gy%C5%91r), 13-15 February 2019
-1. [Apache Kafka™ Workshop (5 days)](https://jaceklaskowski.github.io/kafka-workshop/slides/00_agenda-5-days-Apache-Kafka-Workshop.html) &mdash; taught in [Warsaw, Poland](https://en.wikipedia.org/wiki/Warsaw), 5-11 December 2018
-1. (Polish Edition) [Apache Kafka Workshop (2 days)](https://jaceklaskowski.github.io/kafka-workshop/slides/00-agenda-2-days-Apache-Kafka-Workshop-PL.html) &mdash; taught in [Warsaw, Poland](https://en.wikipedia.org/wiki/Warsaw)
-1. [Apache Kafka and Kafka Streams (2 days)](https://jaceklaskowski.github.io/kafka-workshop/slides/00-agenda-2-days-Kafka-and-Kafka-Streams-Workshop.html) &mdash; taught in [Warsaw, Poland](https://en.wikipedia.org/wiki/Warsaw)
+1. [Kafka Streams and Apache Kafka Workshop (2 days)](https://jaceklaskowski.github.io/kafka-workshop/slides/00_agenda-2-days-Kafka-Streams-Apache-Kafka-Workshop.html) &mdash; online, 11-12 October 2021
+1. [Apache Kafka™ and Kafka Streams Workshop (2 days)](https://jaceklaskowski.github.io/kafka-workshop/slides/00_agenda-2-days-Apache-Kafka-Kafka-Streams-Workshop.html) &mdash; online, 13-14 September 2021
+1. [Apache Kafka™ and Kafka Streams Workshop (2 days)](https://jaceklaskowski.github.io/kafka-workshop/slides/00_agenda-2-days-Apache-Kafka-Kafka-Streams-Workshop.html) &mdash; online, 8-9 April 2021
+1. [Apache Kafka™ Administration Workshop (2 days)](https://jaceklaskowski.github.io/kafka-workshop/slides/00_agenda-2-days-Apache-Kafka-Administration-Workshop.html) &mdash; [Porto, Portugal](https://en.wikipedia.org/wiki/Porto), 27-28 February 2020
+1. [Apache Kafka™ for Administrators and Operators Workshop (2 days)](https://jaceklaskowski.github.io/kafka-workshop/slides/00_agenda-2-days-Apache-Kafka-Administration-Workshop.html) &mdash; [Warsaw, Poland](https://en.wikipedia.org/wiki/Warsaw), 10-11 December 2019
+1. [Apache Kafka™ for Administrators and Operators Workshop (2 days)](https://jaceklaskowski.github.io/kafka-workshop/slides/00_agenda-2-days-Apache-Kafka-Administration-Workshop.html) &mdash; [Lodz, Poland](https://en.wikipedia.org/wiki/%C5%81%C3%B3d%C5%BA), 5-6 and 12-13 September 2019
+1. [Apache Kafka™ for Administrators and Operators Workshop (2 days)](https://jaceklaskowski.github.io/kafka-workshop/slides/00_agenda-2-days-Apache-Kafka-Administration-Workshop.html) &mdash; [Porto, Portugal](https://en.wikipedia.org/wiki/Porto), 16-17 and 18-19 July 2019
+1. [Apache Kafka™ Workshop (3 days)](https://jaceklaskowski.github.io/kafka-workshop/slides/00_agenda-3-days-Apache-Kafka-Workshop.html) &mdash; [Győr, Hungary](https://en.wikipedia.org/wiki/Gy%C5%91r), 13-15 February 2019
+1. [Apache Kafka™ Workshop (5 days)](https://jaceklaskowski.github.io/kafka-workshop/slides/00_agenda-5-days-Apache-Kafka-Workshop.html) &mdash; [Warsaw, Poland](https://en.wikipedia.org/wiki/Warsaw), 5-11 December 2018
+1. (Polish Edition) [Apache Kafka Workshop (2 days)](https://jaceklaskowski.github.io/kafka-workshop/slides/00-agenda-2-days-Apache-Kafka-Workshop-PL.html) &mdash; [Warsaw, Poland](https://en.wikipedia.org/wiki/Warsaw)
+1. [Apache Kafka and Kafka Streams (2 days)](https://jaceklaskowski.github.io/kafka-workshop/slides/00-agenda-2-days-Kafka-and-Kafka-Streams-Workshop.html) &mdash; [Warsaw, Poland](https://en.wikipedia.org/wiki/Warsaw)
 
 ### Day 1 &mdash; Apache Kafka™
 

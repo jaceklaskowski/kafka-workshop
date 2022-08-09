@@ -4,16 +4,16 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-    <title>Apache Kafka™ and Kafka Streams Workshop | 2 days</title>
+    <title>Apache Kafka and Kafka Streams Workshop | 2 days</title>
 
-    <meta name="description" content="Apache Kafka™ and Kafka Streams Workshop | 2 days">
+    <meta name="description" content="Apache Kafka and Kafka Streams Workshop | 2 days">
     <meta name="author" content="Jacek Laskowski">
 
+    <link rel="stylesheet" href="reveal4/dist/reset.css">
     <link rel="stylesheet" href="reveal4/dist/reveal.css">
     <link rel="stylesheet" href="reveal4/dist/theme/beige.css">
 
     <!-- Theme used for syntax highlighting of code -->
-    <!-- <link rel="stylesheet" href="reveal4/plugin/highlight/zenburn.css" id="highlight-theme"> -->
     <link rel="stylesheet" href="reveal4/plugin/highlight/monokai.css">
 
     <!-- Jacek: custom formatting -->
@@ -25,7 +25,7 @@
 
       <div class="footer">
         <footer style="font-size: small;">
-          &copy; <a href="https://medium.com/@jaceklaskowski">Jacek Laskowski</a> 2021 / <a
+          &copy; <a href="https://medium.com/@jaceklaskowski">Jacek Laskowski</a> 2022 / <a
             href="https://twitter.com/jaceklaskowski">@JacekLaskowski</a>
           / jacek@japila.pl
         </footer>
@@ -36,7 +36,7 @@
         <section class="intro" data-transition="zoom" id="home">
           <p>
             <img width="14%" style="background:none; border:none; box-shadow:none;" data-src="images/kafka-logo.png">
-            <img width="7%" src="images/jacek_laskowski_20141201_512px.png" style="border: 0">
+            <img width="10%" src="images/jacek_laskowski_20201229_200x200.png" style="border: 0">
           </p>
           <h1 style="font-size: 2.77em;">Apache Kafka™<br>and Kafka Streams<br>Workshop <small>2 Days</small></h1>
 
@@ -46,15 +46,14 @@
               href="https://github.com/jaceklaskowski">GitHub</a> / <a
               href="https://www.linkedin.com/in/jaceklaskowski/">LinkedIn</a>
             <br>
-            The "Internals" Books: <a href="https://bit.ly/apache-kafka-internals">Apache Kafka</a> • <a
-              href="https://bit.ly/kafka-streams-internals">Kafka Streams</a>
+            The "Internals" Books: <a href="https://books.japila.pl">books.japila.pl</a>
           </h4>
         </section>
 
         <section>
           <section id="speaker" style="font-size: 85%" data-markdown>
             <textarea data-template>
-              <p><img width="12%" src="images/jacek_laskowski_20141201_512px.png" style="border: 0"></p>
+              <p><img width="12%" src="images/jacek_laskowski_20201229_200x200.png" style="border: 0"></p>
 
               * **Jacek Laskowski** is a Freelance IT Consultant
               * Specializing in [Spark](https://spark.apache.org), [Delta Lake](https://delta.io/), [Kafka](https://kafka.apache.org), [Kafka Streams](https://kafka.apache.org)
@@ -66,16 +65,12 @@
               * Follow [@JacekLaskowski](https://twitter.com/jaceklaskowski) on twitter <br>for more #ApacheSpark, #DeltaLake, #ApacheKafka, #KafkaStreams
             </textarea>
           </section>
-          <section id="gitbooks">
-            <p><img width="12%" src="images/jacek_laskowski_20141201_512px.png" style="border: 0"></p>
-            <div style="text-align: left">
-              <p>"The Internals Of" Online Books:</p>
-              <p>
-                <ol>
-                  <li>Quite a few at <a href="https://books.japila.pl/">https://books.japila.pl/</a></li>
-                </ol>
-              </p>
-            </div>
+          <section id="books" data-markdown>
+            <script type="text/template">
+              # "The Internals Of" Online Books
+
+              Go to [https://books.japila.pl](https://books.japila.pl)
+            </script>
           </section>
           <section id="stackoverflow-apache-kafka-streams">
             <div style="text-align: center">
@@ -113,37 +108,41 @@
             </textarea>
           </section>
 
-          <section id="day1" data-markdown style="font-size: 80%">
+          <section id="day1" data-markdown>
             <textarea data-template>
+              <!-- .slide: style="font-size: 80%" -->
               ## Day 1 &mdash; Kafka Fundamentals
 
               1. [The Essentials of Apache Kafka](apache-kafka-essentials.html)
-                * [Exercise: Installing and Running Kafka](https://jaceklaskowski.github.io/kafka-workshop/exercises/kafka-exercise-Installing-and-Running-Kafka-Broker.html)
-                * [Exercise: Exploring Zookeeper](https://jaceklaskowski.github.io/kafka-workshop/exercises/kafka-exercise-Exploring-Zookeeper.html)
+                  * [Exercise: Installing and Running Kafka](https://jaceklaskowski.github.io/kafka-workshop/exercises/kafka-exercise-Installing-and-Running-Kafka-Broker.html)
+                  * [Exercise: Exploring Zookeeper](https://jaceklaskowski.github.io/kafka-workshop/exercises/kafka-exercise-Exploring-Zookeeper.html)
               1. Kafka Configuration (Properties)
-                * [Exercise: Configuring Multi-Broker Kafka Cluster](https://jaceklaskowski.github.io/kafka-workshop/exercises/kafka-exercise-Configuring-Multi-Broker-Kafka-Cluster.html)
+                  * [Exercise: Configuring Multi-Broker Kafka Cluster](https://jaceklaskowski.github.io/kafka-workshop/exercises/kafka-exercise-Configuring-Multi-Broker-Kafka-Cluster.html)
               1. [Managing Kafka Topics](kafka-managing-kafka-topics.html)
-                * [Exercise: Using kafka-topics with Multi-Broker
-                Cluster](https://jaceklaskowski.github.io/kafka-workshop/exercises/kafka-exercise-Using-kafka-topics-with-Multi-Broker-Cluster.html)
-                * [Exercise: Partition Leader Election and Consumer
-                Fail-Over](https://jaceklaskowski.github.io/kafka-workshop/exercises/kafka-exercise-partition-leader-election-and-consumer-fail-over.html)
+                  * [Exercise: Using kafka-topics with Multi-Broker
+                  Cluster](https://jaceklaskowski.github.io/kafka-workshop/exercises/kafka-exercise-Using-kafka-topics-with-Multi-Broker-Cluster.html)
+                  * [Exercise: Partition Leader Election and Consumer
+                  Fail-Over](https://jaceklaskowski.github.io/kafka-workshop/exercises/kafka-exercise-partition-leader-election-and-consumer-fail-over.html)
             </textarea>
           </section>
 
-          <section id="day2" data-markdown style="font-size: 70%">
+          <section id="day2" data-markdown>
             <textarea data-template>
+              <!-- .slide: style="font-size: 70%" -->
               ## Day 2 &mdash; Kafka Development
 
               1. Developing Kafka Applications
-                * [Exercise: Developing Kafka Producer](https://jaceklaskowski.github.io/kafka-workshop/exercises/kafka-exercise-Developing-Kafka-Producer.html)
-                * [Exercise: Developing Kafka Consumer](https://jaceklaskowski.github.io/kafka-workshop/exercises/kafka-exercise-Developing-Kafka-Consumer.html)
+                  * [Exercise: Developing Kafka Producer](https://jaceklaskowski.github.io/kafka-workshop/exercises/kafka-exercise-Developing-Kafka-Producer.html)
+                  * [Exercise: Developing Kafka Consumer](https://jaceklaskowski.github.io/kafka-workshop/exercises/kafka-exercise-Developing-Kafka-Consumer.html)
               1. [Kafka Consumers, Consumer Groups, and Partition Rebalancing](kafka-consumers-consumer-groups-and-partition-rebalancing.html)
-                * [Exercise: Using Consumer Group](https://jaceklaskowski.github.io/kafka-workshop/exercises/kafka-exercise-using-consumer-group.html)
-              1. [Kafka Streams](kafka-streams-essentials.html)
-                * [Exercise: Joining KStream with KTable ("Currency Exchange")](https://jaceklaskowski.github.io/kafka-workshop/exercises/kafka-streams/kstream-join-ktable.html)
+                  * [Exercise: Using Consumer Group](https://jaceklaskowski.github.io/kafka-workshop/exercises/kafka-exercise-using-consumer-group.html)
+              1. [Kafka Streams Essentials](kafka-streams-essentials.html)
+              1. [High-Level Streams DSL](kafka-streams-streams-dsl.html)
+                  * [Exercise: Processing Record Stream with KStream](https://jaceklaskowski.github.io/kafka-workshop/exercises/kafka-streams/processing-record-stream-with-kstream.html)
+                  * [Exercise: Joining KStream with KTable ("Currency Exchange")](https://jaceklaskowski.github.io/kafka-workshop/exercises/kafka-streams/kstream-join-ktable.html)
               1. [Exercise: Using Kafka with Docker](https://jaceklaskowski.github.io/kafka-workshop/exercises/kafka-exercise-Using-Kafka-with-Docker.html)
               1. [Monitoring Kafka Cluster](Monitoring-Kafka-Cluster.html)
-                * Demo: Monitoring Kafka using jconsole
+                  * Demo: Monitoring Kafka using jconsole
             </textarea>
           </section>
 
@@ -174,7 +173,7 @@
               </li>
               <li><a href="https://docs.docker.com/compose/">Docker Compose</a></li>
               <li><a href="https://git-scm.com/">git</a></li>
-              <li><a href="https://github.com/edenhill/kafkacat#kafkacat">kafkacat Utility</a></li>
+              <li><a href="https://github.com/edenhill/kcat#kcat">kcat Utility</a></li>
             </ul>
           </section>
         </section>
@@ -199,8 +198,8 @@
           <textarea data-template>
             # Questions?
 
-            * Read [The Internals of Apache Kafka](https://bit.ly/apache-kafka-internals)
-            * Read [The Internals of Kafka Streams](https://bit.ly/kafka-streams-internals)
+            * Read [The Internals of Apache Kafka](https://books.japila.pl/kafka-internals/)
+            * Read [The Internals of Kafka Streams](https://books.japila.pl/kafka-streams-internals)
             * Follow [@jaceklaskowski](https://twitter.com/jaceklaskowski) on twitter (DMs open)
             * Upvote [my questions and answers on StackOverflow](http://stackoverflow.com/users/1305344/jacek-laskowski)
             * Contact me at **jacek@japila.pl**

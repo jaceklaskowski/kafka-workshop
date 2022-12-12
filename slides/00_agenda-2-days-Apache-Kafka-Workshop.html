@@ -104,11 +104,14 @@
               1. [The Essentials of Apache Kafka](apache-kafka-essentials.html)
                   * [Exercise: Installing and Running Kafka](https://jaceklaskowski.github.io/kafka-workshop/exercises/kafka-exercise-Installing-and-Running-Kafka-Broker.html)
                   * [Exercise: Exploring Zookeeper](https://jaceklaskowski.github.io/kafka-workshop/exercises/kafka-exercise-Exploring-Zookeeper.html)
-              1. Using Kafka with Docker
+              1. [Using (Confluent) Kafka with Docker](https://docs.confluent.io/platform/current/platform-quickstart.html#step-1-download-and-start-cp)
               1. Developing Kafka Applications
                   * [Exercise: Developing Kafka Producer](https://jaceklaskowski.github.io/kafka-workshop/exercises/kafka-exercise-Developing-Kafka-Producer.html)
                   * [Exercise: Developing Kafka Consumer](https://jaceklaskowski.github.io/kafka-workshop/exercises/kafka-exercise-Developing-Kafka-Consumer.html)
-              1. Kafka Configuration (Properties)
+              1. [Partitioner](https://kafka.apache.org/33/javadoc/org/apache/kafka/clients/producer/Partitioner.html)
+              1. [Sending Records with Callback](https://kafka.apache.org/33/javadoc/org/apache/kafka/clients/producer/KafkaProducer.html#send-org.apache.kafka.clients.producer.ProducerRecord-org.apache.kafka.clients.producer.Callback-)
+              1. [Transactional Producer](https://books.japila.pl/kafka-internals/transactions/)
+              1. Kafka Client and Broker Configuration
                   * [Exercise: Configuring Multi-Broker Kafka Cluster](https://jaceklaskowski.github.io/kafka-workshop/exercises/kafka-exercise-Configuring-Multi-Broker-Kafka-Cluster.html)
               1. [Managing Kafka Topics](kafka-managing-kafka-topics.html)
                   * [Exercise: Using kafka-topics with Multi-Broker
@@ -123,6 +126,8 @@
 
               1. [Kafka Consumers, Consumer Groups, and Partition Rebalancing](kafka-consumers-consumer-groups-and-partition-rebalancing.html)
                   * [Exercise: Using Consumer Group](https://jaceklaskowski.github.io/kafka-workshop/exercises/kafka-exercise-using-consumer-group.html)
+              1. [ConsumerRebalanceListener](https://kafka.apache.org/33/javadoc/org/apache/kafka/clients/consumer/ConsumerRebalanceListener.html)
+              1. [ConsumerPartitionAssignor](https://kafka.apache.org/33/javadoc/org/apache/kafka/clients/consumer/ConsumerPartitionAssignor.html)
               1. [Kafka Streams Essentials](kafka-streams-essentials.html)
               1. [High-Level Streams DSL](kafka-streams-streams-dsl.html)
                   * [Exercise: Processing Record Stream with KStream](https://jaceklaskowski.github.io/kafka-workshop/exercises/kafka-streams/processing-record-stream-with-kstream.html)
@@ -155,13 +160,12 @@
                   <li><a href="https://adoptium.net/temurin/releases/?version=17">Eclipse Temurin</a> or compatible</li>
                 </ul>
               </li>
-              <li><a href="https://www.docker.com/">Docker</a>
+              <li><a href="https://docs.docker.com/engine/install/">Docker installed and running</a>
                 <ul>
-                  <li><a href="https://docs.docker.com/docker-for-mac/">Docker Desktop for Mac</a></li>
-                  <li><a href="https://docs.docker.com/docker-for-windows/">Docker for Windows</a></li>
+                  <li>Incl. <a href="https://docs.docker.com/compose/install/">Docker Compose</a></li>
                 </ul>
               </li>
-              <li><a href="https://docs.docker.com/compose/">Docker Compose</a></li>
+              
             </ul>
           </section>
         </section>

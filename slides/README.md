@@ -2,6 +2,7 @@
 
 ## Table of Contents
 
+1. [Stream Data Processing with Apache Kafka Workshop (2 days)](https://jaceklaskowski.github.io/kafka-workshop/slides/00_agenda-2-days-Apache-Kafka-Workshop.html) &mdash; online, 13-14 December 2022
 1. [Stream Data Processing with Apache Kafka Workshop (2 days)](https://jaceklaskowski.github.io/kafka-workshop/slides/00_agenda-2-days-Apache-Kafka-Workshop.html) &mdash; online, 29-30 November 2022
 1. [ksqlDB Workshop (1 day)](https://jaceklaskowski.github.io/kafka-workshop/slides/00_agenda-1-day-ksqlDB.html) &mdash; 26 September 2022
 1. [Stream Data Processing with Apache Kafka and Kafka Streams Workshop (2 days)](https://jaceklaskowski.github.io/kafka-workshop/slides/00_agenda-2-days-Apache-Kafka-Kafka-Streams-Workshop.html) &mdash; online, 9-10 August 2022

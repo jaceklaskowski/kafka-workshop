@@ -2,10 +2,11 @@
 
 ## Table of Contents
 
-1. [Stream Data Processing with Apache Kafka Workshop (2 days)](https://jaceklaskowski.github.io/kafka-workshop/slides/00_agenda-2-days-Apache-Kafka-Workshop.html) &mdash; online, 13-14 December 2022
-1. [Stream Data Processing with Apache Kafka Workshop (2 days)](https://jaceklaskowski.github.io/kafka-workshop/slides/00_agenda-2-days-Apache-Kafka-Workshop.html) &mdash; online, 29-30 November 2022
+1. [Apache Kafka Workshop (2 days)](https://jaceklaskowski.github.io/kafka-workshop/slides/00_agenda-2-days-Apache-Kafka-Workshop.html) &mdash; [Toruń, Poland](https://en.wikipedia.org/wiki/Toru%C5%84), 18-19 September 2023
+1. [Stream Processing with Apache Kafka Workshop (2 days)](https://jaceklaskowski.github.io/kafka-workshop/slides/00_agenda-2-days-Apache-Kafka-Workshop.html) &mdash; online, 13-14 December 2022
+1. [Stream Processing with Apache Kafka Workshop (2 days)](https://jaceklaskowski.github.io/kafka-workshop/slides/00_agenda-2-days-Apache-Kafka-Workshop.html) &mdash; online, 29-30 November 2022
 1. [ksqlDB Workshop (1 day)](https://jaceklaskowski.github.io/kafka-workshop/slides/00_agenda-1-day-ksqlDB.html) &mdash; 26 September 2022
-1. [Stream Data Processing with Apache Kafka and Kafka Streams Workshop (2 days)](https://jaceklaskowski.github.io/kafka-workshop/slides/00_agenda-2-days-Apache-Kafka-Kafka-Streams-Workshop.html) &mdash; online, 9-10 August 2022
+1. [Stream Processing with Apache Kafka and Kafka Streams Workshop (2 days)](https://jaceklaskowski.github.io/kafka-workshop/slides/00_agenda-2-days-Apache-Kafka-Kafka-Streams-Workshop.html) &mdash; online, 9-10 August 2022
 1. [Kafka Streams and Apache Kafka Workshop (1 day)](https://jaceklaskowski.github.io/kafka-workshop/slides/00_agenda-1-day-Apache-Kafka-Kafka-Streams-Workshop.html) &mdash; [Bydgoszcz, Poland](https://en.wikipedia.org/wiki/Bydgoszcz), 26 March 2022
 1. [Kafka Streams and Apache Kafka Workshop (2 days)](https://jaceklaskowski.github.io/kafka-workshop/slides/00_agenda-2-days-Kafka-Streams-Apache-Kafka-Workshop.html) &mdash; online, 11-12 October 2021
 1. [Apache Kafka™ and Kafka Streams Workshop (2 days)](https://jaceklaskowski.github.io/kafka-workshop/slides/00_agenda-2-days-Apache-Kafka-Kafka-Streams-Workshop.html) &mdash; online, 13-14 September 2021
@@ -37,12 +38,10 @@
 
 ## Contact The Author
 
-* Read [The Internals of Apache Kafka](https://bit.ly/apache-kafka-internals)
-* Read [The Internals of Kafka Streams](https://bit.ly/kafka-streams-internals)
+* [The Internals Online Books](https://books.japila.pl)
 * Follow [@jaceklaskowski](https://twitter.com/jaceklaskowski) on twitter
+* Connect on [LinkedIn](https://www.linkedin.com/in/jaceklaskowski/)
 * Upvote [Jacek Laskowski's questions and answers on StackOverflow](http://stackoverflow.com/users/1305344/jacek-laskowski)
 * Use [Jacek's code on GitHub](https://github.com/jaceklaskowski)
 * Read [blog posts on Medium](https://medium.com/@jaceklaskowski)
 * Upvote [Jacek's answers on Quora](https://www.quora.com/profile/Jacek-Laskowski)
-* Connect [on LinkedIn](https://www.linkedin.com/in/jaceklaskowski/)
-* Visit [Jacek Laskowski's blog](https://blog.jaceklaskowski.pl)

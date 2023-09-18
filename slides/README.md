@@ -2,7 +2,7 @@
 
 ## Table of Contents
 
-1. [Apache Kafka Workshop (2 days)](https://jaceklaskowski.github.io/kafka-workshop/slides/00_agenda-2-days-Apache-Kafka-Workshop.html) &mdash; [Toruń, Poland](https://en.wikipedia.org/wiki/Toru%C5%84), 18-19 September 2023
+1. [Apache Kafka for Admins and Ops Workshop (2 days)](https://jaceklaskowski.github.io/kafka-workshop/slides/00_agenda-2-days-Apache-Kafka-Admins-Ops-Workshop.html) &mdash; [Toruń, Poland](https://en.wikipedia.org/wiki/Toru%C5%84), 18-19 September 2023
 1. [Stream Processing with Apache Kafka Workshop (2 days)](https://jaceklaskowski.github.io/kafka-workshop/slides/00_agenda-2-days-Apache-Kafka-Workshop.html) &mdash; online, 13-14 December 2022
 1. [Stream Processing with Apache Kafka Workshop (2 days)](https://jaceklaskowski.github.io/kafka-workshop/slides/00_agenda-2-days-Apache-Kafka-Workshop.html) &mdash; online, 29-30 November 2022
 1. [ksqlDB Workshop (1 day)](https://jaceklaskowski.github.io/kafka-workshop/slides/00_agenda-1-day-ksqlDB.html) &mdash; 26 September 2022

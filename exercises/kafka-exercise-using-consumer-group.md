@@ -4,7 +4,7 @@ In this exercise you will create a **consumer group** and observe what happens w
 
 Duration: **30 mins**
 
-**TIP**: Use [kafkacat](https://github.com/edenhill/kafkacat) for more control (than `kafka-console-producer` that [does not support sending messages to a given partition](https://stackoverflow.com/q/26553412/1305344)).
+**TIP**: Use [kcat](https://github.com/edenhill/kcat) for more control (than `kafka-console-producer` that [does not support sending messages to a given partition](https://stackoverflow.com/q/26553412/1305344)).
 
 ## Procedure
 
@@ -23,7 +23,7 @@ Duration: **30 mins**
 1. Start a Kafka producer that is attached to partition `0`. Send a couple of messages with the key `0` for easier identification what producer sends what messages.
 
     ```text
-    kafkacat -P -b :9092 -t t1 -p 0 -K :
+    kcat -P -b :9092 -t t1 -p 0 -K :
     ```
 
     (`-K` is for a key-value separator)
@@ -31,7 +31,7 @@ Duration: **30 mins**
 1. Start another Kafka producer to send messages to partition `2` (with `2` key)
 
     ```text
-    kafkacat -P -b :9092 -t t1 -p 2 -K :
+    kcat -P -b :9092 -t t1 -p 2 -K :
     ```
 
 At this point you should have 3 partitions, 2 producers and 1 consumer. Observe what and how messages are consumed. Simply send messages so you can identity what message used what partition.

@@ -8,6 +8,23 @@ The course is designed to help you master the essential aspects and operation of
 
 No prior experience with Apache Kafka™ or Kafka Streams required.
 
+## Apache Kafka for Scala/Java Developers (2-Day Workshop)
+
+[Sample Agenda](./apache_kafka_for_scala_java_developers.md)
+
+A client-focused, hands-on track for Scala developers with no prior Kafka
+experience — no Kafka Connect, no Kafka Streams.
+See the [full agenda and exercises](exercises/00_agenda.md).
+
+1. Kafka Clients (Producers and Consumers)
+2. Developing Kafka Producers
+    1. [Producer API](http://kafka.apache.org/43/javadoc/org/apache/kafka/clients/producer/Producer.html)
+    2. [KafkaProducer](http://kafka.apache.org/43/javadoc/org/apache/kafka/clients/producer/KafkaProducer.html)
+3. Developing Kafka Consumers
+    1. [Consumer API](https://kafka.apache.org/43/javadoc/org/apache/kafka/clients/consumer/Consumer.html)
+    2. [KafkaConsumer](https://kafka.apache.org/43/javadoc/org/apache/kafka/clients/consumer/KafkaConsumer.html), [TopicPartition](https://kafka.apache.org/43/javadoc/org/apache/kafka/common/TopicPartition.html), [ConsumerRecord](https://kafka.apache.org/43/javadoc/org/apache/kafka/clients/consumer/ConsumerRecord.html)
+    3. [ConsumerRebalanceListener](https://kafka.apache.org/43/javadoc/org/apache/kafka/clients/consumer/ConsumerRebalanceListener.html)
+
 ## Apache Kafka™ for Administrators and Operators
 
 1. [The Essentials of Apache Kafka](https://jaceklaskowski.github.io/kafka-workshop/slides/apache-kafka-essentials.html) (Architecture and Core Concepts)
@@ -17,27 +34,13 @@ No prior experience with Apache Kafka™ or Kafka Streams required.
 1. [Kafka Consumers, Consumer Groups, and Partition Rebalancing](https://jaceklaskowski.github.io/kafka-workshop/slides/kafka-consumers-consumer-groups-and-partition-rebalancing.html)
 1. Kafka Configuration
     1. Kafka Server and Scheduled Recurring Tasks
-    2. [AdminClient](http://kafka.apache.org/20/javadoc/org/apache/kafka/clients/admin/AdminClient.html)
+    2. [AdminClient](http://kafka.apache.org/43/javadoc/org/apache/kafka/clients/admin/AdminClient.html)
 1. [Monitoring Kafka Cluster](https://jaceklaskowski.github.io/kafka-workshop/slides/Monitoring-Kafka-Cluster.html)
     1. KafkaMetricsGroup
 1. Troubleshooting and Debugging
     1. LogManager and log.dirs (/tmp/kafka-logs) - Failure and Recovery
 1. Internals of KafkaServer and Other Services
 1. [Kafka Security](https://jaceklaskowski.github.io/kafka-workshop/slides/kafka-security.html)
-
-## Apache Kafka for Developers
-
-1. Kafka Producers and Consumers
-2. Developing Kafka Producers
-    1. [Producer API](http://kafka.apache.org/20/javadoc/org/apache/kafka/clients/producer/Producer.html)
-    2. [KafkaProducer](http://kafka.apache.org/20/javadoc/org/apache/kafka/clients/producer/KafkaProducer.html)
-3. Developing Kafka Consumers
-    1. [Consumer API](https://kafka.apache.org/20/javadoc/org/apache/kafka/clients/consumer/Consumer.html)
-    2. [KafkaConsumer](https://kafka.apache.org/20/javadoc/org/apache/kafka/clients/consumer/KafkaConsumer.html), [TopicPartition](https://kafka.apache.org/20/javadoc/org/apache/kafka/common/TopicPartition.html), [ConsumerRecord](https://kafka.apache.org/20/javadoc/org/apache/kafka/clients/consumer/ConsumerRecord.html)
-
-## Apache Kafka for Developers (Advanced Concepts)
-
-- [ConsumerRebalanceListener](https://kafka.apache.org/20/javadoc/org/apache/kafka/clients/consumer/ConsumerRebalanceListener.html)
 
 ## Kafka Streams (Scala API)
 

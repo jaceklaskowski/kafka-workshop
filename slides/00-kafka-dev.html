@@ -4,9 +4,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-    <title>Apache Kafka for Developers Workshop | 2 days</title>
+    <title>Apache Kafka for Scala/Java Developers Workshop | 2 days</title>
 
-    <meta name="description" content="Apache Kafka for Developers Workshop | 2 days">
+    <meta name="description" content="Apache Kafka for Scala/Java Developers Workshop | 2 days">
     <meta name="author" content="Jacek Laskowski">
 
     <link rel="stylesheet" href="reveal5/dist/reset.css">
@@ -25,7 +25,7 @@
 
       <div class="footer">
         <footer style="font-size: small;">
-          &copy; <a href="https://medium.com/@jaceklaskowski">Jacek Laskowski</a> 2023 / <a
+          &copy; <a href="https://medium.com/@jaceklaskowski">Jacek Laskowski</a> 2026 / <a
             href="https://twitter.com/jaceklaskowski">@JacekLaskowski</a>
           / jacek@japila.pl
         </footer>
@@ -38,10 +38,10 @@
             <img width="14%" style="background:none; border:none; box-shadow:none;" data-src="images/kafka-logo.png">
             <img width="10%" src="images/jacek_laskowski_20201229_200x200.png" style="border: 0">
           </p>
-          <h1 style="font-size: 2.77em;">Apache Kafka<br>for Developers<br>Workshop <small>2 Days</small></h1>
+          <h1 style="font-size: 2.77em;">Apache Kafka<br>for Scala/Java Developers<br>Workshop <small>2 Days</small></h1>
 
           <h4 style="font-size: smaller;">
-            <a href="https://twitter.com/jaceklaskowski">@jaceklaskowski</a> / 
+            <a href="https://x.com/jaceklaskowski">@jaceklaskowski</a> /
             <a href="https://jaceklaskowski.medium.com/">Medium</a> /
             <a href="https://stackoverflow.com/users/1305344/jacek-laskowski">StackOverflow</a> /
             <a href="https://github.com/jaceklaskowski">GitHub</a> /
@@ -56,8 +56,13 @@
             <textarea data-template>
               <p><img width="12%" src="images/jacek_laskowski_20201229_200x200.png" style="border: 0"></p>
 
-              * **Jacek Laskowski** is a Freelance Data Engineer
-              * Specializing in [Apache Spark](https://books.japila.pl/apache-spark-internals/), [Delta Lake](https://books.japila.pl/delta-lake-internals/), [Databricks](https://databricks.com), [Apache Kafka](https://books.japila.pl/kafka-internals/), [Kafka Streams](https://books.japila.pl/kafka-streams-internals/), [ksqlDB](https://books.japila.pl/ksqldb-internals/)
+              * **Jacek Laskowski** is a Freelance AI Engineer
+              * Specializing in
+              [MLflow](https://mlflow.org/),
+              [Databricks](https://github.com/jaceklaskowski/learn-databricks),
+              [Apache Spark](https://books.japila.pl/apache-spark-internals/),
+              [Delta Lake](https://books.japila.pl/delta-lake-internals/),
+              [Unity Catalog](https://books.japila.pl/unity-catalog-internals/)
               * Development | Consulting | Training | Mentoring | Speaking
               * Best known by [The Internals Of](https://books.japila.pl) online books
               * 📨 jacek@japila.pl
@@ -81,7 +86,7 @@
               <p>
                 Practical understanding of<br />
                 <b><span style="font-size: 200%">Apache Kafka</span></b><br />
-                for Developers<br />
+                for Scala and Java Developers<br />
               </p>
             </textarea>
           </section>
@@ -104,7 +109,6 @@
 
               1. [The Essentials of Apache Kafka](apache-kafka-essentials.html)
                   * [Exercise: Installing and Running Kafka](https://jaceklaskowski.github.io/kafka-workshop/exercises/kafka-exercise-Installing-and-Running-Kafka-Broker.html)
-                  * KRaft
               1. Developing Kafka Applications
                   * [Exercise: Developing Kafka Producer](https://jaceklaskowski.github.io/kafka-workshop/exercises/kafka-exercise-Developing-Kafka-Producer.html)
                   * [Exercise: Developing Kafka Consumer](https://jaceklaskowski.github.io/kafka-workshop/exercises/kafka-exercise-Developing-Kafka-Consumer.html)
@@ -122,13 +126,13 @@
 
               1. [Kafka Consumers, Consumer Groups, and Partition Rebalancing](kafka-consumers-consumer-groups-and-partition-rebalancing.html)
                   * [Exercise: Using Consumer Group](https://jaceklaskowski.github.io/kafka-workshop/exercises/kafka-exercise-using-consumer-group.html)
+                  * [Exercise 06: Consumer Groups in Action](../exercises/06_consumer_groups.md)
                   * [Exercise: Partition Leader Election and Consumer Fail-Over](https://jaceklaskowski.github.io/kafka-workshop/exercises/kafka-exercise-partition-leader-election-and-consumer-fail-over.html)
-              1. [ConsumerRebalanceListener](https://kafka.apache.org/33/javadoc/org/apache/kafka/clients/consumer/ConsumerRebalanceListener.html)
-              1. [ConsumerPartitionAssignor](https://kafka.apache.org/33/javadoc/org/apache/kafka/clients/consumer/ConsumerPartitionAssignor.html)
-              1. [Partitioner](https://kafka.apache.org/33/javadoc/org/apache/kafka/clients/producer/Partitioner.html)
-              1. [Sending Records with Callback](https://kafka.apache.org/33/javadoc/org/apache/kafka/clients/producer/KafkaProducer.html#send-org.apache.kafka.clients.producer.ProducerRecord-org.apache.kafka.clients.producer.Callback-)
+              1. [ConsumerRebalanceListener](https://kafka.apache.org/43/javadoc/org/apache/kafka/clients/consumer/ConsumerRebalanceListener.html)
+              1. [ConsumerPartitionAssignor](https://kafka.apache.org/43/javadoc/org/apache/kafka/clients/consumer/ConsumerPartitionAssignor.html)
+              1. [Partitioner](https://kafka.apache.org/43/javadoc/org/apache/kafka/clients/producer/Partitioner.html)
+              1. [Sending Records with Callback](https://kafka.apache.org/43/javadoc/org/apache/kafka/clients/producer/KafkaProducer.html#send-org.apache.kafka.clients.producer.ProducerRecord-org.apache.kafka.clients.producer.Callback-)
               1. [Transactional Producer](https://books.japila.pl/kafka-internals/transactions/)
-              1. [Using (Confluent) Kafka with Docker](https://docs.confluent.io/platform/current/platform-quickstart.html#step-1-download-and-start-cp)
               1. [Kafka Streams Essentials](kafka-streams-essentials.html)
               1. [High-Level Streams DSL](kafka-streams-streams-dsl.html)
                   * [Exercise: Processing Record Stream with KStream](https://jaceklaskowski.github.io/kafka-workshop/exercises/kafka-streams/processing-record-stream-with-kstream.html)

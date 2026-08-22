@@ -28,3 +28,18 @@ This repository contains the exercises for [Apache Kafka™ and Kafka Streams Wo
 
 1. [Exercise: Processing Record Stream with KStream](kafka-streams/processing-record-stream-with-kstream.md)
 1. [Exercise: Joining KStream with KTable ("Currency Exchange")](kafka-streams/kstream-join-ktable.md)
+
+## Topic 4: Apache Kafka for Scala Developers (2-Day Workshop)
+
+No Kafka Connect, no Kafka Streams — see [00_agenda.md](00_agenda.md) for the full agenda.
+
+1. [Exercise: Running Kafka with Docker](01_kafka_docker.md)
+1. [Exercise: Topics & CLI Tools](02_topics_and_cli.md)
+1. [Exercise: Your First Scala Producer](03_scala_producer.md)
+1. [Exercise: Producer Reliability & Custom Partitioning](04_producer_reliability.md)
+1. [Exercise: Your First Scala Consumer](05_scala_consumer.md)
+1. [Exercise: Consumer Groups in Action](06_consumer_groups.md)
+1. [Exercise: Manual Offset Commits](07_offset_management.md)
+1. [Exercise: Custom Serialization](08_custom_serialization.md)
+1. [Exercise: Integration Testing with Testcontainers](09_testing_with_testcontainers.md)
+1. [Exercise (Stretch): Exactly-Once with Transactions](10_transactions_exactly_once.md)

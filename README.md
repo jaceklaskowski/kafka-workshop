@@ -39,6 +39,12 @@ No prior experience with Apache Kafka™ or Kafka Streams required.
 
 - [ConsumerRebalanceListener](https://kafka.apache.org/20/javadoc/org/apache/kafka/clients/consumer/ConsumerRebalanceListener.html)
 
+## Apache Kafka for Scala Developers (2-Day Workshop)
+
+A client-focused, hands-on track for Scala developers with no prior Kafka
+experience — no Kafka Connect, no Kafka Streams. See the
+[full agenda and exercises](exercises/00_agenda.md).
+
 ## Kafka Streams (Scala API)
 
 - Introduction to Kafka Streams (Core Concepts)

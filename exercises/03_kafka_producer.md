@@ -1,4 +1,4 @@
-# Exercise 03: Your First Scala Producer
+# Exercise 03: Your First Kafka Producer
 
 Duration: **30 mins**
 
@@ -20,17 +20,16 @@ Duration: **30 mins**
 
    Use [mvnrepository](https://mvnrepository.com/artifact/org.apache.kafka/kafka-clients/) to know the proper entry for `kafka-clients` dependency.
 
-4. Write the code of a Kafka producer
-   1. Name of the package: **kafka101**
-   2. Name of the object: **OrderProducerApp**
-   3. Create a `KafkaProducer[String, String]`
-   4. Start with an empty `Properties` object and fill out the missing properties guided by exceptions at runtime
-   5. Eventually, you should have a `Properties` object with `bootstrap.servers`,
+4. Write the code of a Kafka producer **OrderProducerApp** that:
+   1. Lives in **kafka101** package
+   2. Creates a `KafkaProducer[String, String]`
+   3. Starts with an empty `Properties` object and fill out the missing properties guided by exceptions at runtime
+   4. Eventually, you should have a `Properties` object with `bootstrap.servers`,
     `key.serializer` and `value.serializer` — use the `ProducerConfig`
     constants, not raw string literals
-   6. Sends 10 `ProducerRecord`s to topic **orders**, with keys
+   5. Sends 10 `ProducerRecord`s to topic **orders**, with keys
     `order-0` .. `order-9` and a value of your choosing
-   7. Calls `close()` on the producer at the end so buffered records are
+   6. Calls `close()` on the producer at the end so buffered records are
     flushed before the JVM exits
 
 5. Run it, then verify the records arrived with the console consumer from

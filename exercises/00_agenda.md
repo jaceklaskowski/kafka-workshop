@@ -81,7 +81,7 @@ Subtotal: ~50 min theory / ~45 min practice (~1h35).
 | # | Block | Type | ~Duration |
 |---|-------|------|-----------|
 | 5 | Producer API: `ProducerRecord`, partitioning, serializers, batching | Theory | 30 min |
-| 6 | [Exercise 03: Your First Scala Producer](03_scala_producer.md) | Practice | 45 min |
+| 6 | [Exercise 03: Your First Kafka Producer](03_kafka_producer.md) | Practice | 30 min |
 | 7 | Producer reliability: `acks`, retries, idempotence, callbacks, custom partitioners | Theory | 20 min |
 | 8 | [Exercise 04: Producer Reliability & Custom Partitioning](04_producer_reliability.md) | Practice | 45 min |
 
@@ -99,7 +99,7 @@ break and shorter Q&A/coffee breaks.
 | # | Block | Type | ~Duration |
 |---|-------|------|-----------|
 | 1 | Consumer API: the poll loop, deserializers, consumer configuration | Theory | 30 min |
-| 2 | [Exercise 05: Your First Scala Consumer](05_scala_consumer.md) | Practice | 45 min |
+| 2 | [Exercise 05: Your First Kafka Consumer](05_kafka_consumer.md) | Practice | 30 min |
 | 3 | Consumer groups & partition rebalancing (eager vs. cooperative-sticky) | Theory | 25 min |
 | 4 | [Exercise 06: Consumer Groups in Action](06_consumer_groups.md) | Practice | 30 min |
 

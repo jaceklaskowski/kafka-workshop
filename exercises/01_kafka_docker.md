@@ -5,27 +5,54 @@ https://hub.docker.com/layers/apache/kafka/4.3.1
 
 ## Pull and run
 
-```bash
+```shell
 docker pull apache/kafka:4.3.1
-docker run -d --name kafka -p 9092:9092 apache/kafka:4.3.1
 ```
 
-This starts a single-node Kafka broker in KRaft mode (no ZooKeeper required —
-the official `apache/kafka` images have run ZK-free since Kafka 3.x). The
-container's default config listens on `PLAINTEXT://localhost:9092`, so from
-the host you can connect with `localhost:9092`.
+```shell
+docker run --rm --name kafka -p 9092:9092 apache/kafka:4.3.1
+```
 
-## Quick smoke test
+This starts a single-node Kafka broker in KRaft mode.
+
+The container's default config listens on `PLAINTEXT://localhost:9092`, so from the host you can connect with `localhost:9092`.
+
+<details>
+<summary>Naming conflict?</summary>
+
+If `docker run` fails with `Conflict. The container name "/kafka" is already
+in use by container ...`, a container called `kafka` already exists from a
+previous run (stopped or running).
+
+Remove it first, then re-run.
 
 ```bash
-# create a topic
-docker exec -it kafka /opt/kafka/bin/kafka-topics.sh --create --topic test --bootstrap-server localhost:9092
+docker rm -f kafka
+```
 
-# produce
-docker exec -it kafka /opt/kafka/bin/kafka-console-producer.sh --topic test --bootstrap-server localhost:9092
+</details>
 
-# consume (separate terminal)
-docker exec -it kafka /opt/kafka/bin/kafka-console-consumer.sh --topic test --from-beginning --bootstrap-server localhost:9092
+## Quick Smoke Test
+
+### Send Message
+
+```shell
+docker exec -it kafka \
+  /opt/kafka/bin/kafka-console-producer.sh \
+  --topic test \
+  --bootstrap-server localhost:9092
+```
+
+### Receive Message
+
+Open a separate terminal and run the following:
+
+```shell
+docker exec -it kafka \
+  /opt/kafka/bin/kafka-console-consumer.sh \
+  --topic test \
+  --from-beginning \
+  --bootstrap-server localhost:9092
 ```
 
 ## Connecting from other containers/hosts

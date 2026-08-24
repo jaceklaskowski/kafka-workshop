@@ -3,7 +3,7 @@ marp: true
 paginate: true
 ---
 
-# Apache Kafka for Scala Developers
+# Apache Kafka for Scala/Java Developers
 
 <!-- _paginate: skip -->
 <!-- _theme: gaia -->
@@ -14,8 +14,9 @@ paginate: true
 
 ## Audience
 
-* Scala developers
+* Scala/Java developers
 * comfortable with sbt and IntelliJ IDEA
+* (optional) familiar with Docker and Docker Compose
 * **no prior Kafka experience assumed**
 
 ---
@@ -107,6 +108,12 @@ Subtotal: ~55 min theory / ~1h15 practice (~2h10).
 
 ---
 
+## Bonus, if time allows
+
+[Exercise 01b: Multi-Broker Kafka Cluster with Docker Compose](01b_kafka_docker_multi_broker.md)
+
+---
+
 ## 🍽️ Lunch Break (Day 2) — 1 hour
 
 ---
@@ -121,28 +128,22 @@ Subtotal: ~55 min theory / ~1h15 practice (~2h10).
 | 8 | [Exercise 08: Custom Serialization](08_custom_serialization.md) | Practice | 40 min |
 | 9 | Testing Kafka applications: embedded brokers vs. Testcontainers | Theory | 20 min |
 | 10 | [Exercise 09: Integration Testing with Testcontainers](09_testing_with_testcontainers.md) | Practice | 45 min |
-| 11 | *Stretch:* exactly-once semantics — idempotent & transactional producers | Theory + Practice | 30–45 min |
 
 Subtotal: ~1h00 theory / ~2h05 practice (~3h05, excl. stretch).
 
 Day 2 total: ~1h55 theory / ~3h practice (~5h15 content, excl. stretch),
 plus the lunch break and shorter Q&A/coffee breaks.
 
-If Day 2 finishes early: [Exercise 10: Exactly-Once with Transactions](10_transactions_exactly_once.md)
-is the natural next step and rounds the workshop out. If the group is
-behind schedule, that's the one to drop — everything through Exercise 09
-is the core, self-contained curriculum.
-
 ---
 
 ## What's deliberately left out
 
-- **Kafka Connect** and **Kafka Streams** — separate workshops (see the
+* **Kafka Connect** and **Kafka Streams** — separate workshops (see the
   [top-level README](../README.md)).
-- **Schema Registry / Avro** — mentioned in passing during Exercise 08 as
+* **Schema Registry / Avro** — mentioned in passing during Exercise 08 as
   "what you'd reach for in production," but not built hands-on; it pulls
   in Confluent-specific tooling that's a distraction for a 2-day
   client-focused course.
-- **Broker administration / multi-broker cluster setup** — covered only
+* **Broker administration / multi-broker cluster setup** — covered only
   to the depth a developer needs (what partitions/replication mean for
   the clients they write), not operator-level cluster configuration.

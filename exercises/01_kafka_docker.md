@@ -69,3 +69,9 @@ docker run -d --name kafka -p 9092:9092 \
 Exact env var names/defaults can shift slightly between versions — check the
 "How to use this image" section on the Docker Hub page for 4.3.1 specifics if
 the advertised-listener override doesn't take effect.
+
+## Going further
+
+Curious what a real, replicated cluster looks like? See the bonus
+[Exercise 01b: Multi-Broker Kafka Cluster with Docker Compose](01b_kafka_docker_multi_broker.md)
+(not part of the 2-day agenda).
